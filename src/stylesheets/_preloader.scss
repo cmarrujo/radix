@@ -1,0 +1,88 @@
+.rdx {
+  &-preloader {
+    background: $darkest;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    transition: opacity 3s ease-out;
+    width: 100vw;
+    z-index: 99999999999;
+
+    &[data-active='false'] {
+      opacity: 0;
+    }
+
+    @keyframes svg-fill {
+      0% {
+        y: 250;
+      }
+      
+      100% {
+        y: 0;
+      }
+    }
+
+    #mask1 {
+      .rect--svg {
+        stroke: none;
+        fill: rgb(255, 255, 255);
+        height: 250px;
+        width: 250px;
+        y: 250;
+
+        &[data-active="true"] {
+          y: unset;
+          animation: svg-fill;
+          animation-duration: 10s;
+          animation-iteration-count: 1;
+        }
+      }
+    }
+
+    .rdx-prealoder--svg_mask {
+      // border: thin solid red;
+      left: 50%;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 250px;
+      width: 250px;
+      z-index: 5;
+    }
+    
+    .rdx-prealoder--svg_masked {
+      background: url('../images/radix-logo-teal.svg') center center no-repeat;
+      left: 0;
+      position: absolute;
+      bottom: 0;
+      height: 250px;
+      width: 250px;
+      z-index: 5;
+    }
+    
+    .rdx-logo--svg_fill {
+      fill: $teal;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 250px;
+      width: 250px;
+      z-index: 1;
+    }
+    
+    .rdx-logo--svg {
+      fill: $dark;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 250px;
+      width: 250px;
+      z-index: 1;
+    }
+  }
+}

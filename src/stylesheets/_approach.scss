@@ -1,0 +1,377 @@
+.rdx {
+  overflow-x: hidden;
+
+  &-telephone {
+    font-size: 10px;
+    left: 50%;
+    position: absolute;
+    top: 60px;
+    transform: translateX(-50%);
+
+    &--contact {
+      color: $light;
+    }
+
+    &--number {
+      color: $teal;
+      text-decoration: none;
+    }
+  }
+
+  &-banner--text {
+    @include BasicGothicProBlackItalic;
+    color: $light;
+    font-size: 24px;
+    left: 46%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    width: 80%;
+    z-index: 9;
+
+    @media (min-width: 768px) {
+      font-size: 55px;
+    }
+    
+    @media (min-width: 768px) {
+      font-size: 64px;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 90px;
+    }
+  }
+
+  &-banner--video {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+
+    @media (min-width: 768px) {
+      max-height: 430px;
+    }
+    
+    @media (min-width: 768px) {
+      max-height: 575px;
+    }
+    
+    @media (min-width: 1440px) {
+      max-height: 810px;
+    }
+  }
+
+  &-pillars {
+    display: flex;
+    justify-content: space-between;
+
+    &--image {
+      flex-grow: 1;
+      filter: grayscale(100%);
+      height: 100px;
+      transition: all .25s ease-out;
+
+      @media (min-width: 768px) {
+        height: 190px;
+      }
+      
+      @media (min-width: 1440px) {
+        height: 300px;
+      }
+
+      &:hover {
+        filter: grayscale(0);
+      }
+
+      &.-dev {
+        background: url('../images/image-functional-training-recovery-nav-hover.jpg') top center no-repeat;
+        background-size: cover;
+      }
+      
+      &.-rehab {
+        background: url('../images/image-functional-training-rehab-nav-hover.jpg') top center no-repeat;
+        background-size: cover;
+      }
+      
+      &.-recovery {
+        background: url('../images/image-functional-training-recovery-nav-hover.jpg') top center no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  &-split {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+
+    @media (min-width: 1024px) {
+      flex-flow: row;
+    }
+
+    &--content {
+      border: thin solid red;
+      flex-grow: 1;
+
+      &_image {
+        background: url('../images/image-functional-training-recovery-nav-hover.jpg') top center no-repeat;
+        background-size: cover;
+        height: 20vh;
+
+        @media (min-width: 768px) {
+          height: 25vh;
+        }
+
+        @media (min-width: 1024px) {
+          height: 50vh;
+          width: 50vw;
+        }
+      }
+
+      &_desc {
+        box-sizing: border-box;
+        padding: 25px 30px;
+        line-height: 1.5;
+        position: relative;
+        height: 30vh;
+        text-align: center;
+
+        @media (min-width: 768px) {
+          height: 25vh;
+          padding: 50px 150px;
+        }
+
+        @media (min-width: 1024px) {
+          height: 50vh;
+          padding: 100px 50px;
+          width: 50vw;
+        }
+      }
+      
+      &_heading {
+        @include BasicGothicProBold;
+        color: $light;
+        font-size: 28px;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+
+        @media (min-width: 768px) {
+          font-size: 38px;
+        }
+      }
+      
+      &_subheading {
+        @include BasicGothicProItalic;
+        color: $light;
+        font-size: 16px;
+        margin: 0;
+        padding: 4px 0 8px;
+
+        @media (min-width: 768px) {
+          font-size: 20px;
+          padding: 10px 0;
+        }
+      }
+      
+      &_copy {
+        @include BasicGothicProLight;
+        color: $light;
+        font-size: 10px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+
+        @media (min-width: 768px) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  
+  &-full {
+    box-sizing: border-box;
+
+    &--content {
+      border: thin solid red;
+
+      &_image {
+        background: url('../images/image-functional-training-rehab-background.jpg') top center no-repeat;
+        background-size: cover;
+        height: 50vh;
+        padding: 85px 40px 100px;
+        text-align: center;
+
+        @media (min-width: 768px) {
+          padding: 180px 150px;
+        }
+        
+        @media (min-width: 1024px) {
+          height: 100vh;
+          padding: 0;
+          position: relative;
+
+          &-wrapper {
+            position: absolute;
+            left: 10%;
+            top: 45%;
+            transform: translateY(-50%);
+            width: 40%;
+            text-align: left;
+          }
+        }
+      }
+
+      &_desc {
+        box-sizing: border-box;
+        height: 30vh;
+        padding: 25px 30px;
+        position: relative;
+        text-align: center;
+      }
+      
+      &_heading {
+        @include BasicGothicProBold;
+        color: $light;
+        font-size: 28px;
+        margin: 0;
+        text-transform: uppercase;
+        padding: 0;
+
+        @media (min-width: 768px) {
+          font-size: 38px;
+        }
+      }
+      
+      &_subheading {
+        @include BasicGothicProItalic;
+        color: $light;
+        font-size: 16px;
+        margin: 0;
+        padding: 4px 0 8px;
+
+        @media (min-width: 768px) {
+          font-size: 20px;
+        }
+      }
+      
+      &_copy {
+        @include BasicGothicProLight;
+        color: $light;
+        font-size: 10px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+
+        @media (min-width: 768px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &-action {
+    &--strip {
+      @include BasicGothicProBold;
+      background: $teal;
+      box-sizing: border-box;
+      padding: 50px 20px;
+      text-align: center;
+      width: 100vw;
+
+      @media (min-width: 768px) {
+        padding: 50px 150px;
+
+        .btn {
+          margin: 25px 0;
+        }
+      }
+      
+      @media (min-width: 1024px) {
+        padding: 50px 150px;
+
+        .btn {
+          margin: 25px 0 0 0;
+        }
+      }
+      
+      @media (min-width: 1440px) {
+        padding: 50px 250px;
+
+        .btn {
+          margin: 25px 0 0 0;
+        }
+      }
+    }
+
+    &--text {
+      font-size: 26px;
+      margin: 0;
+
+      @media (min-width: 1024px) {
+        font-size: 36px;
+        padding: 0 75px;
+      }
+    }
+  }
+
+  &-footer {
+    background: $light;
+    box-sizing: border-box;
+    padding: 40px 25px;
+    position: relative;
+
+    &--logo {
+      text-align: center;
+
+      .rdx-logo--svg {
+        fill: $darkest;
+      }
+    }
+
+    &--heading_wrapper {
+      position: relative;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &--heading {
+      @include BasicGothicProBold;
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+    }
+    
+    &--subheading {
+      @include BasicGothicProLightItalic;
+      font-size: 16px;
+      margin: 0;
+      padding: 10px 0;
+    }
+
+    &--address_wrapper {
+      position: relative;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &--address {
+      @include BasicGothicProLight;
+      font-size: 12px;
+      margin: 0;
+      padding: 10px 0 0 0;
+    }
+
+    .rdx-social {
+      bottom: auto;
+      left: auto;
+      margin: auto;
+      padding: 25px 0 0 0;
+      position: relative;
+      transform: unset;
+      max-width: 180px;
+      width: 55%;
+    }
+  }
+}

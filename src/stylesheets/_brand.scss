@@ -1,0 +1,8 @@
+$teal: #00ffb4;
+$light: #fff;
+$dark: #1c1c1c;
+$darkest: #000;
+
+@mixin border {
+  border: thin solid red;
+}
