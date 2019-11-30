@@ -59,6 +59,10 @@
     @media (min-width: 1440px) {
       max-height: 810px;
     }
+    
+    @media (min-width: 1920px) {
+      max-height: 100vh;
+    }
   }
 
   &-pillars {
@@ -110,20 +114,15 @@
     }
 
     &--content {
-      border: thin solid red;
       flex-grow: 1;
 
       &_image {
         background: url('../images/image-functional-training-recovery-nav-hover.jpg') top center no-repeat;
         background-size: cover;
-        height: 20vh;
-
-        @media (min-width: 768px) {
-          height: 25vh;
-        }
+        height: 50vh;
 
         @media (min-width: 1024px) {
-          height: 50vh;
+          height: 100vh;
           width: 50vw;
         }
       }
@@ -133,16 +132,22 @@
         padding: 25px 30px;
         line-height: 1.5;
         position: relative;
-        height: 30vh;
+        height: 50vh;
         text-align: center;
 
+        &-inner {
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
         @media (min-width: 768px) {
-          height: 25vh;
           padding: 50px 150px;
         }
 
         @media (min-width: 1024px) {
-          height: 50vh;
+          height: 100vh;
           padding: 100px 50px;
           width: 50vw;
         }
@@ -194,8 +199,6 @@
     box-sizing: border-box;
 
     &--content {
-      border: thin solid red;
-
       &_image {
         background: url('../images/image-functional-training-rehab-background.jpg') top center no-repeat;
         background-size: cover;
@@ -319,14 +322,95 @@
   &-footer {
     background: $light;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     padding: 40px 25px;
     position: relative;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      padding: 40px 20px;
+    }
+    
+    @media (min-width: 1440px) {
+      padding: 40px 120px;
+    }
+    
+    @media (min-width: 1920px) {
+      padding: 40px 700px;
+    }
+
+    &--box {
+      // border: thin solid red;
+      flex-grow: 1;
+      position: relative;
+
+      &.-logo {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 1024px) {
+          flex-direction: row;
+          width: 120px;
+        }
+      }
+      
+      &.-info {
+        @media (min-width: 1024px) {
+          width: 0;
+
+          &.-small {
+            padding-left: 40px;
+          }
+          
+          &.-stack {
+            padding-left: 15px;
+          }
+        }
+        
+        @media (min-width: 1440px) {
+          width: 0;
+
+          &.-small {
+            padding-left: 40px;
+          }
+          
+          &.-stack {
+            padding-left: 40px;
+          }
+        }
+      }
+
+      &.-slogan {
+        @media (min-width: 1024px) {
+          line-height: 1.3;
+          width: 50px;
+        }  
+      }
+      
+      &.-social {
+        margin-top: 50px;
+        @media (min-width: 1024px) {
+          margin-top: auto;
+        }  
+      }
+    }
 
     &--logo {
       text-align: center;
 
       .rdx-logo--svg {
         fill: $darkest;
+
+        @media (min-width: 1024px) {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        height: 50px;
+        width: 50px;
       }
     }
 
@@ -334,6 +418,11 @@
       position: relative;
       text-transform: uppercase;
       text-align: center;
+
+      @media (min-width: 1024px) {
+        text-align: left;
+        padding: 5px;
+      }
     }
 
     &--heading {
@@ -341,19 +430,60 @@
       font-size: 24px;
       margin: 0;
       padding: 0;
+
+      @media (min-width: 1024px) {
+        font-size: 18px;
+      }
     }
     
     &--subheading {
-      @include BasicGothicProLightItalic;
+      @include BasicGothicProBoldItalic;
       font-size: 16px;
       margin: 0;
-      padding: 10px 0;
+      padding: 10px 40px;
+      text-align: center;
+
+      @media (min-width: 1024px) {
+        padding: 7px 0;
+        text-align: left;
+      }
+    }
+
+    &--address_outer-wrapper {
+      .rdx-footer--address {
+        color: $darkest;
+        display: block;
+        text-decoration: none;
+      }
+
+      &.-links {
+        margin: 15px 0 0 0;
+      }
+
+      @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+
+        &.-links {
+          margin: 0;
+        }  
+      }
     }
 
     &--address_wrapper {
       position: relative;
       text-transform: uppercase;
       text-align: center;
+
+      &.-contact {
+        @media (min-width: 1024px) {
+          margin: 10px 0 0 0;
+        }  
+      }
+
+      @media (min-width: 1024px) {
+        text-align: left;
+      }
     }
 
     &--address {
@@ -361,17 +491,33 @@
       font-size: 12px;
       margin: 0;
       padding: 10px 0 0 0;
+
+      @media (min-width: 1024px) {
+        font-size: 10px;
+      }
+      
+      @media (min-width: 1440px) {
+        font-size: 11px;
+      }
     }
 
     .rdx-social {
       bottom: auto;
-      left: auto;
-      margin: auto;
-      padding: 25px 0 0 0;
-      position: relative;
-      transform: unset;
-      max-width: 180px;
-      width: 55%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+
+      &--svg {
+        @media (min-width: 1024px) {
+          height: 25px;
+          width: 25px;
+        }  
+      }
+
+      @media (min-width: 1024px) {
+        padding: 0;
+      }
     }
   }
 }
