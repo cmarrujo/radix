@@ -708,5 +708,10 @@
     height: 100%;
     position: absolute;
     width: 100%;
+
+    &.-radix {
+      background: url('../images/image-lab-background.png') top center no-repeat;
+      background-size: cover;
+    }
   }
 }
