@@ -1,0 +1,14 @@
+{
+  "app.css": "stylesheets/app.css",
+  "app.css.map": "stylesheets/app.css.map",
+  "app.js": "scripts/app.js",
+  "app.js.map": "scripts/app.js.map",
+  "images/image-functional-training-banner.jpg": "images/image-functional-training-banner.jpg",
+  "images/image-functional-training-recovery-nav-hover.jpg": "images/image-functional-training-recovery-nav-hover.jpg",
+  "images/image-functional-training-rehab-background.jpg": "images/image-functional-training-rehab-background.jpg",
+  "images/image-functional-training-rehab-nav-hover.jpg": "images/image-functional-training-rehab-nav-hover.jpg",
+  "images/image-lab-background.png": "images/image-lab-background.png",
+  "images/image-menu-danny-color.png": "images/image-menu-danny-color.png",
+  "images/radix-logo-teal.svg": "images/radix-logo-teal.svg",
+  "images/radix-map.png": "images/radix-map.png"
+}

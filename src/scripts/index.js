@@ -128,6 +128,56 @@ class RDX {
     }
   }
 
+  animateMainBanner = () => {
+    const plugins = [ CSSPlugin, AttrPlugin ];
+    const timeline = new TimelineLite();
+
+    const fitness = document.querySelector('.rdx-header--pillar.-fitness') && document.querySelector('.rdx-header--pillar.-fitness');
+    if(fitness) {
+      let tween = timeline.from(fitness, 1, {
+        opacity: 0,
+        x: 50,
+        ease: Power1.easeOut
+      });
+    }
+    
+    const enhancement = document.querySelector('.rdx-header--pillar.-enhancement') && document.querySelector('.rdx-header--pillar.-enhancement');
+    if(enhancement) {
+      let tween = timeline.from(enhancement, 1, {
+        opacity: 0,
+        x: -50,
+        ease: Power1.easeOut
+      }, '-=.5');
+    }
+    
+    const center = document.querySelector('.rdx-header--pillar.-center') && document.querySelector('.rdx-header--pillar.-center');
+    if(center) {
+      let tween = timeline.from(center, 1, {
+        opacity: 0,
+        x: 50,
+        ease: Power1.easeOut
+      }, '-=.5');
+    }
+    
+    const content = document.querySelector('.rdx-content--wrapper') && document.querySelector('.rdx-content--wrapper');
+    if(content) {
+      let tween = timeline.from(content, 1, {
+        opacity: 0,
+        y: 25,
+        ease: Power1.easeOut
+      }, '-=.75');
+    }
+    
+    const social = document.querySelector('.rdx-social') && document.querySelector('.rdx-social');
+    if(social) {
+      let tween = timeline.from(social, 1, {
+        opacity: 0,
+        y: 25,
+        ease: Power1.easeOut
+      }, '-=.75');
+    }
+  }
+
   animateBanner = () => {
     const plugins = [ CSSPlugin, AttrPlugin ];
     const timeline = new TimelineLite();
@@ -178,9 +228,10 @@ class RDX {
       rdxPreloader.setAttribute('data-active', 'false');
       setTimeout(() => {
         rdxPreloader.style.display = "none";
-      }, 30);
+      }, 3000);
       this.animateBanner();
-    }, 70);
+      this.animateMainBanner();
+    }, 7000);
   }
 
   initVideoPlayer = () => {

@@ -421,7 +421,7 @@
           cursor: pointer;
 
           &:not(.-cta) {
-            font-size: 40px;
+            font-size: 25px;
 
             @media (min-width: 768px) {
               font-size: 55px;
@@ -571,16 +571,16 @@
   &-header {
     @include BasicGothicProBoldItalic;
     box-sizing: border-box;
-    font-size: 34px;
+    font-size: 36px;
     line-height: 1.1;
     margin: 0;
     padding: 0;
     text-transform: uppercase;
-
+   
     @media (min-width: 375px) {
       font-size: 40px;
     }
-   
+
     @media (min-width: 400px) {
       font-size: 45px;
     }
@@ -657,7 +657,7 @@
   }
   
   &-social {
-    bottom: 75px;
+    bottom: 50px;
     display: flex;
     left: 50%;
     position: absolute;
