@@ -3,6 +3,7 @@
 @import '_brand';
 @import '_base';
 @import '_approach';
+@import '_contact';
 @import '_preloader';
 
 .rdx {
@@ -477,9 +478,15 @@
     width: 25px;
     z-index: 99;
 
+    &.-dark {
+      .rdx-menu--bar {
+        background: $darkest;
+      }
+    }
+
     &[data-active="true"] {
       .rdx-menu--bar {
-        background: #1c1c1c;
+        background: $dark;
 
         &:nth-child(1) {
           transform: translateY(10px) rotate(45deg);

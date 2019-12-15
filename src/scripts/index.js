@@ -110,22 +110,6 @@ class RDX {
     
     // create a scene
     var scene = new ScrollMagic.Scene({
-      triggerElement: rdxActionText,
-      offset: `-${offset}px`
-    })
-    .setClassToggle(rdxActionText, 'fade-in')
-    .addTo(controller);
-    
-    // create a scene
-    var scene = new ScrollMagic.Scene({
-      triggerElement: rdxActionButton,
-      offset: `-${offset}px`
-    })
-    .setClassToggle(rdxActionButton, 'fade-in')
-    .addTo(controller);
-    
-    // create a scene
-    var scene = new ScrollMagic.Scene({
       triggerElement: rdxFooter,
       offset: `-600px`
     })
@@ -137,25 +121,32 @@ class RDX {
     const plugins = [ CSSPlugin, AttrPlugin ];
     const timeline = new TimelineLite();
 
-    const banner = document.querySelector('.rdx-banner--full.-approach');
+    const banner = document.querySelector('.rdx-banner--full.-approach') && document.querySelector('.rdx-banner--full.-approach');
     let tween = timeline.from(banner, 5, {
       opacity: 0,
       ease: Power1.easeOut
     });
 
-     const bannerTitle = document.querySelector('.rdx-banner--text');
-     tween = timeline.from(bannerTitle, 1.25, {
-       opacity: 0,
-       x: -50,
-       ease: Power4.easeOut
-     }, '-=3');
-     
-     const bannerSubTitle = document.querySelector('.rdx-banner--subtext');
-     tween = timeline.from(bannerSubTitle, 1.25, {
-       opacity: 0,
-       x: -50,
-       ease: Power4.easeOut
-     }, '-=2.75');
+    const bannerTitle = document.querySelector('.rdx-banner--text') && document.querySelector('.rdx-banner--text');
+    tween = timeline.from(bannerTitle, 1.25, {
+      opacity: 0,
+      x: -50,
+      ease: Power4.easeOut
+    }, '-=3');
+    
+    const bannerSubTitle = document.querySelector('.rdx-banner--subtext') && document.querySelector('.rdx-banner--subtext');
+    tween = timeline.from(bannerSubTitle, 1.25, {
+      opacity: 0,
+      x: -50,
+      ease: Power4.easeOut
+    }, '-=2.75');
+
+    const form = document.querySelector('.rdx-contact--form') && document.querySelector('.rdx-contact--form');
+    tween = timeline.from(form, 1.25, {
+      opacity: 0,
+      y: 50,
+      ease: Power4.easeOut
+    }, '-=2.75');
   }
 
   preloader = () => {
@@ -168,9 +159,9 @@ class RDX {
       rdxPreloader.setAttribute('data-active', 'false');
       setTimeout(() => {
         rdxPreloader.style.display = "none";
-      }, 3000);
+      }, 30);
       this.animateBanner();
-    }, 7000);
+    }, 70);
   }
 
   initVideoPlayer = () => {
