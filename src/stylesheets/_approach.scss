@@ -102,6 +102,10 @@
     &.-approach {
       background: url('../images/image-functional-training-banner.jpg') top center no-repeat;
       background-size: cover;
+
+      @media (min-width: 1920px) {
+        height: 100vh;
+      }
     }
     
     &.-contact {

@@ -577,6 +577,14 @@
     padding: 0;
     text-transform: uppercase;
 
+    @media (min-width: 375px) {
+      font-size: 40px;
+    }
+   
+    @media (min-width: 400px) {
+      font-size: 45px;
+    }
+
     @media (min-width: 768px) {
       font-size: 85px;
       line-height: 1.1;

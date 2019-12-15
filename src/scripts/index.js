@@ -19,16 +19,18 @@ class RDX {
     const rdxPillars = [].slice.call(document.querySelectorAll('.rdx-pillars--image'));
     const offset = 400;
 
-    rdxPillars.forEach((pillar) => {
-      // create a scene
-      var scene = new ScrollMagic.Scene({
-        triggerElement: pillar,
-        offset: `-${offset}px`
-      })
-      // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
-      .setClassToggle(pillar, 'fade-in')
-      .addTo(controller);
-    });
+    if(rdxPillars.length) {
+      rdxPillars.forEach((pillar) => {
+        // create a scene
+        var scene = new ScrollMagic.Scene({
+          triggerElement: pillar,
+          offset: `-${offset}px`
+        })
+        // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
+        .setClassToggle(pillar, 'fade-in')
+        .addTo(controller);
+      });
+    }
   }
   
   initSplit = () => {
@@ -38,27 +40,31 @@ class RDX {
     const rdxSplitDesc = [].slice.call(document.querySelectorAll('.rdx-split--content_desc'));
     const offset = 400;
 
-    rdxSplitImage.forEach((image) => {
-      // create a scene
-      var scene = new ScrollMagic.Scene({
-        triggerElement: image,
-        offset: `-${offset}px`
-      })
-      // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
-      .setClassToggle(image, 'fade-in')
-      .addTo(controller);
-    });
+    if(rdxSplitImage.length) {
+      rdxSplitImage.forEach((image) => {
+        // create a scene
+        var scene = new ScrollMagic.Scene({
+          triggerElement: image,
+          offset: `-${offset}px`
+        })
+        // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
+        .setClassToggle(image, 'fade-in')
+        .addTo(controller);
+      });
+    }
     
-    rdxSplitDesc.forEach((desc) => {
-      // create a scene
-      var scene = new ScrollMagic.Scene({
-        triggerElement: desc,
-        offset: `-${offset}px`
-      })
-      // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
-      .setClassToggle(desc, 'fade-in')
-      .addTo(controller);
-    });
+    if(rdxSplitImage.length) {
+      rdxSplitDesc.forEach((desc) => {
+        // create a scene
+        var scene = new ScrollMagic.Scene({
+          triggerElement: desc,
+          offset: `-${offset}px`
+        })
+        // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
+        .setClassToggle(desc, 'fade-in')
+        .addTo(controller);
+      });
+    }
   }
   
   initFull = () => {
@@ -101,20 +107,25 @@ class RDX {
     const offset = 400;
 
     // create a scene
-    var scene = new ScrollMagic.Scene({
-      triggerElement: rdxActionStrip,
-      offset: `-${offset}px`
-    })
-    .setClassToggle(rdxActionStrip, 'fade-in')
-    .addTo(controller);
+
+    if(rdxActionStrip) {
+      var scene = new ScrollMagic.Scene({
+        triggerElement: rdxActionStrip,
+        offset: `-${offset}px`
+      })
+      .setClassToggle(rdxActionStrip, 'fade-in')
+      .addTo(controller);
+    }
     
-    // create a scene
-    var scene = new ScrollMagic.Scene({
-      triggerElement: rdxFooter,
-      offset: `-600px`
-    })
-    .setClassToggle(rdxFooter, 'fade-in')
-    .addTo(controller);
+    if(rdxFooter) {
+      // create a scene
+      var scene = new ScrollMagic.Scene({
+        triggerElement: rdxFooter,
+        offset: `-600px`
+      })
+      .setClassToggle(rdxFooter, 'fade-in')
+      .addTo(controller);
+    }
   }
 
   animateBanner = () => {
@@ -122,31 +133,39 @@ class RDX {
     const timeline = new TimelineLite();
 
     const banner = document.querySelector('.rdx-banner--full.-approach') && document.querySelector('.rdx-banner--full.-approach');
-    let tween = timeline.from(banner, 5, {
-      opacity: 0,
-      ease: Power1.easeOut
-    });
+    if(banner) {
+      let tween = timeline.from(banner, 5, {
+        opacity: 0,
+        ease: Power1.easeOut
+      });
+    }
 
     const bannerTitle = document.querySelector('.rdx-banner--text') && document.querySelector('.rdx-banner--text');
-    tween = timeline.from(bannerTitle, 1.25, {
-      opacity: 0,
-      x: -50,
-      ease: Power4.easeOut
-    }, '-=3');
+    if(bannerTitle) {
+      let tween = timeline.from(bannerTitle, 1.25, {
+        opacity: 0,
+        x: -50,
+        ease: Power4.easeOut
+      }, '-=3');
+    }
     
     const bannerSubTitle = document.querySelector('.rdx-banner--subtext') && document.querySelector('.rdx-banner--subtext');
-    tween = timeline.from(bannerSubTitle, 1.25, {
-      opacity: 0,
-      x: -50,
-      ease: Power4.easeOut
-    }, '-=2.75');
+    if(bannerSubTitle) {
+      let tween = timeline.from(bannerSubTitle, 1.25, {
+        opacity: 0,
+        x: -50,
+        ease: Power4.easeOut
+      }, '-=2.75');
+    }
 
     const form = document.querySelector('.rdx-contact--form') && document.querySelector('.rdx-contact--form');
-    tween = timeline.from(form, 1.25, {
-      opacity: 0,
-      y: 50,
-      ease: Power4.easeOut
-    }, '-=2.75');
+    if(form) {
+      let tween = timeline.from(form, 1.25, {
+        opacity: 0,
+        y: 50,
+        ease: Power4.easeOut
+      }, '-=2.75');
+    }
   }
 
   preloader = () => {
