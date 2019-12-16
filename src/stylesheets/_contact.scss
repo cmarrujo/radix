@@ -7,45 +7,45 @@
     color: $teal;
   }
 
-  &-telephone {
-    font-size: 10px;
-    left: 50%;
-    position: absolute;
-    top: 20px;
-    transform: translateX(-50%);
-    z-index: 1;
+  // &-telephone {
+  //   font-size: 10px;
+  //   left: 50%;
+  //   position: absolute;
+  //   top: 20px;
+  //   transform: translateX(-50%);
+  //   z-index: 1;
 
-    @media (min-width: 1024px) {
-      font-size: 16px;
-      left: 80%;
-      top: 30px;
-    }
+  //   @media (min-width: 1024px) {
+  //     font-size: 16px;
+  //     left: 80%;
+  //     top: 30px;
+  //   }
     
-    @media (min-width: 1920px) {
-      font-size: 16px;
-      left: 90%;
-      top: 63px;
-    }
+  //   @media (min-width: 1920px) {
+  //     font-size: 16px;
+  //     left: 90%;
+  //     top: 63px;
+  //   }
 
-    &--contact {
-      color: $light;
+  //   &--contact {
+  //     color: $light;
 
-      &.-dark {
-        color: $dark;
-      }
-    }
+  //     &.-dark {
+  //       color: $dark;
+  //     }
+  //   }
 
-    &--number {
-      @include BasicGothicProDemibold;
-      color: $teal;
-      letter-spacing: -1px;
-      text-decoration: none;
+  //   &--number {
+  //     @include BasicGothicProDemibold;
+  //     color: $teal;
+  //     letter-spacing: -1px;
+  //     text-decoration: none;
 
-      &.-dark {
-        color: $dark;
-      }
-    }
-  }
+  //     &.-dark {
+  //       color: $dark;
+  //     }
+  //   }
+  // }
 
   &-banner--text {
     @include BasicGothicProBlackItalic;
@@ -269,6 +269,10 @@
           width: 90%;
         }
       }
+    }
+
+    @media (min-width: 1024px) {
+      height: 100vh;
     }
 
     &_copy {

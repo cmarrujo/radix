@@ -9,9 +9,21 @@
     transform: translateX(-50%);
     z-index: 1;
 
+    @media (min-width: 768px) {
+      font-size: 16px;
+      top: 35px;
+    }
+
     @media (min-width: 1024px) {
       font-size: 16px;
+      left: 80%;
+      top: 30px;
+    }
+    
+    @media (min-width: 1920px) {
+      font-size: 16px;
       left: 90%;
+      top: 60px;
     }
 
     &--contact {
@@ -103,8 +115,87 @@
       background: url('../images/image-functional-training-banner.jpg') top center no-repeat;
       background-size: cover;
 
+      .rdx-banner--full_copy {
+        top: 35%;
+
+        @media (min-width: 375px) {
+          top: 32%;
+          width: 85%;
+        }
+        
+        @media (min-width: 768px) {
+          left: 40px;
+          top: 310px;
+          width: 85%;
+        }
+        
+        @media (min-width: 1024px) {
+          left: 40px;
+          top: 280px;
+          width: 60%;
+        }
+        
+        @media (min-width: 1440px) {
+          left: 50px;
+          top: 330px;
+          width: 60%;
+        }
+        
+        @media (min-width: 1920px) {
+          left: 100px;
+          top: 450px;
+          width: 45%;
+        }
+      }
+
+      .rdx-banner--text {
+        @media (min-width: 375px) {
+          font-size: 38px;
+        }
+        
+        @media (min-width: 400px) {
+          font-size: 42px;
+        }
+        
+        @media (min-width: 768px) {
+          line-height: 1.1;
+          font-size: 72px;
+        }
+        
+        @media (min-width: 1440px) {
+          line-height: 1.1;
+          font-size: 100px;
+        }
+        
+        @media (min-width: 1920px) {
+          line-height: 1.1;
+          font-size: 130px;
+        }
+      }
+      
       .rdx-banner--subtext {
         display: block;
+
+        @media (min-width: 375px) {
+          font-size: 12px;
+          line-height: 1.5;
+        }
+        
+        @media (min-width: 768px) {
+          font-size: 20px;
+          line-height: 1.5;
+        }
+
+        @media (min-width: 1024px) {
+          font-size: 16px;
+          margin: 0;
+          width: 70%;
+        }
+        
+        @media (min-width: 1920px) {
+          font-size: 18px;
+          width: 100%;
+        }
       }
 
       @media (min-width: 1920px) {

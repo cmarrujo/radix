@@ -24,7 +24,8 @@ class RDX {
         // create a scene
         var scene = new ScrollMagic.Scene({
           triggerElement: pillar,
-          offset: `-${offset}px`
+          offset: `-${offset}px`,
+          reverse: false
         })
         // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
         .setClassToggle(pillar, 'fade-in')
@@ -45,7 +46,8 @@ class RDX {
         // create a scene
         var scene = new ScrollMagic.Scene({
           triggerElement: image,
-          offset: `-${offset}px`
+          offset: `-${offset}px`,
+          reverse: false
         })
         // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
         .setClassToggle(image, 'fade-in')
@@ -58,7 +60,8 @@ class RDX {
         // create a scene
         var scene = new ScrollMagic.Scene({
           triggerElement: desc,
-          offset: `-${offset}px`
+          offset: `-${offset}px`,
+          reverse: false
         })
         // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
         .setClassToggle(desc, 'fade-in')
@@ -78,7 +81,8 @@ class RDX {
       // create a scene
       var scene = new ScrollMagic.Scene({
         triggerElement: image,
-        offset: `-${offset}px`
+        offset: `-${offset}px`,
+        reverse: false
       })
       // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
       .setClassToggle(image, 'fade-in')
@@ -89,7 +93,8 @@ class RDX {
       // create a scene
       var scene = new ScrollMagic.Scene({
         triggerElement: desc,
-        offset: `-${offset}px`
+        offset: `-${offset}px`,
+        reverse: false
       })
       // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
       .setClassToggle(desc, 'fade-in')
