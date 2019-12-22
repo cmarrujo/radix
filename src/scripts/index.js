@@ -263,10 +263,8 @@ class RDX {
   }
 
   showMenu = () => {
-    const rdxLogo = document.querySelector('.rdx-logo');
     const rdxMenu = document.querySelector('.rdx-menu');
     const rdxDropdown = document.querySelector('.rdx-dropdown');
-    // const rdxSocial = document.querySelector('.rdx-social');
     // const rdxBgImage = document.querySelector('.rdx-dropdown--image');
     const rdxDropDownList = document.querySelector('.rdx-dropdown--list');
     let active = false;
@@ -275,11 +273,9 @@ class RDX {
       rdxMenu.addEventListener('click', (evt) => {
         if(active === false) {
           active = true;
-          rdxLogo.setAttribute('data-active', `${active}`);
           rdxDropdown.setAttribute('data-active', `${active}`);
           rdxDropDownList.setAttribute('data-active', `${active}`);
           // rdxBgImage.setAttribute('data-active', `${active}`);
-          // rdxSocial && rdxSocial.setAttribute('data-active', `${active}`);
           setTimeout(() => {
             rdxMenu.setAttribute('data-active', `${active}`);        
           }, 100);
@@ -289,9 +285,7 @@ class RDX {
           // rdxBgImage.setAttribute('data-active', `${active}`);
           setTimeout(() => {
             rdxDropdown.setAttribute('data-active', `${active}`);
-            rdxLogo.setAttribute('data-active', `${active}`);
             rdxMenu.setAttribute('data-active', `${active}`);
-            // rdxSocial && rdxSocial.setAttribute('data-active', `${active}`);
           }, 3000);
         }
       });

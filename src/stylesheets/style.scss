@@ -103,8 +103,8 @@
     }
 
     @media (min-width: 1024px) {
-      left: 15px;
-      top: 20px;
+      left: 10px;
+      top: 10px;
     }
     
     @media (min-width: 1280px) {
@@ -147,6 +147,11 @@
       z-index: 5;
       // border: thin solid red;
       
+      @media (min-width: 375px)
+      and (min-height: 812px) {
+        top: 28%;
+      }
+
       @media (min-width: 768px) {
         min-height: 400px;
         top: 40%;
@@ -443,6 +448,11 @@
           margin: 0;
           transition: bottom .75s ease-out 1.5s, opacity .75s ease-out 1s;
           transition-delay: .5s;
+          width: 125px;
+
+          @media (min-width: 768px) {
+            width: 200px;
+          }
 
           .btn.-line {
             margin: 0;
@@ -480,13 +490,13 @@
 
     &.-dark {
       .rdx-menu--bar {
-        background: $darkest;
+        background: $light;
       }
     }
 
     &[data-active="true"] {
       .rdx-menu--bar {
-        background: $dark;
+        background: $light;
 
         &:nth-child(1) {
           transform: translateY(10px) rotate(45deg);
@@ -630,14 +640,10 @@
       font-size: 38px;
       padding: 20px 0 5px;
     }
-    
-    @media (min-width: 1024px) {
-      padding: 20px 0;
-    }
 
     @media (min-width: 1280px) {
       font-size: 40px;
-      padding: 10px 0;
+      padding: 10px 0 5px;
     }
     
     @media (min-width: 1920px) {
@@ -661,6 +667,10 @@
       width: 75%;
     }
     
+    @media (min-width: 768px) {
+      width: 60%;
+    }
+    
     @media (min-width: 1280px) {
       font-size: 16px;
       width: 45%;
@@ -681,7 +691,7 @@
     z-index: 99;
 
     @media (min-width: 375px) {
-      bottom: 220px;
+      bottom: 170px;
     }
 
     @media (min-width: 375px) 
@@ -690,7 +700,7 @@
     }
     
     @media (min-width: 400px) {
-      bottom: 280px;
+      bottom: 200px;
     }
 
     @media (min-width: 400px) 
