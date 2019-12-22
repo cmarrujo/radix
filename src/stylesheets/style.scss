@@ -1,6 +1,6 @@
 @import '_fonts';
-@import '_general';
 @import '_brand';
+@import '_general';
 @import '_base';
 @import '_approach';
 @import '_contact';
@@ -13,7 +13,7 @@
   width: 100vw;
 
   &-video {
-    background: rgba(0, 0, 0, .80);
+    background: rgba($darkest, .80);
     display: none;
     height: 100vh;
     left: 0;
@@ -31,7 +31,7 @@
       position: absolute;
       top: -40px;
       z-index: 99999;
-      color: #fff;
+      color: $light;
       font-size: 48px;
       height: 40px;
       width: 40px;
@@ -74,15 +74,19 @@
 
   &-logo {
     @include BasicGothicProBold;
-    color: #1ff57a;
+    color: $blue;
     left: 8px;
     position: absolute;
     top: 8px;
     transition: all .25s ease-out;
     z-index: 99;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &--svg {
-      fill: $teal;
+      fill: $blue;
       height: 50px;
       width: 50px;
 
@@ -110,11 +114,11 @@
   }
 
   &-dropdown {
-    background: #1ff57a;
-    background: -moz-linear-gradient(left,  #1ff57a 0%, #08f4ca 100%);
-    background: -webkit-linear-gradient(left,  #1ff57a 0%,#08f4ca 100%);
-    background: linear-gradient(to right,  #1ff57a 0%,#08f4ca 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1ff57a', endColorstr='#08f4ca',GradientType=1 );
+    background: $blue;
+    background: -moz-linear-gradient(bottom,  $dark-base 0%, $darkest 100%);
+    background: -webkit-linear-gradient(bottom,  $dark-base 0%, $darkest 100%);
+    background: linear-gradient(to bottom,  $dark-base 0%, $darkest 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$blue, endColorstr=$dark-base,GradientType=1);
     height: 100vh;
     left: 0;
     opacity: 0;
@@ -291,7 +295,7 @@
       }
 
       &_item {
-        color: #1c1c1c;
+        color: $blue;
         font-size: 22px;
         margin: 10px 0;
         opacity: 0;
@@ -304,17 +308,14 @@
           left: -10%;
           top: 0;
         }
-        
         &:nth-child(2) {
           left: -15%;
           top: 50px;
         }
-        
         &:nth-child(3) {
           left: -20%;
           top: 100px;
         }
-        
         &:nth-child(4) {
           left: -25%;
           top: 150px;
@@ -419,6 +420,7 @@
 
         &:hover {
           cursor: pointer;
+          color: $light;
 
           &:not(.-cta) {
             font-size: 25px;
@@ -426,11 +428,9 @@
             @media (min-width: 768px) {
               font-size: 55px;
             }
-            
             @media (min-width: 1440px) {
               font-size: 70px;
             }
-            
             @media (min-width: 1920px) {
               font-size: 100px;
             }
@@ -491,11 +491,9 @@
         &:nth-child(1) {
           transform: translateY(10px) rotate(45deg);
         }
-        
         &:nth-child(2) {
           opacity: 0;
         }
-        
         &:nth-child(3) {
           transform: translateY(-10px) rotate(-45deg);
         }
@@ -503,9 +501,9 @@
     }
 
     @media (min-width: 768px) {
+      height: 30px;
       right: 25px;
       top: 25px;
-      height: 30px;
       width: 40px;
     }
     
@@ -531,7 +529,7 @@
     }
 
     &--bar {
-      background: #fff;
+      background: $light;
       height: 3px;
       margin: 5px 0;
       position: absolute;
@@ -541,11 +539,9 @@
       &:nth-child(1) {
         top: 0;
       }
-      
       &:nth-child(2) {
         top: 10px;
       }
-      
       &:nth-child(3) {
         top: 20px;
       }
@@ -554,33 +550,34 @@
 
   &-content {
     box-sizing: border-box;
-    color: white;
+    color: $light;
     left: 50%;
     padding: 25px;
     position: absolute;
-    top: 45%;
+    top: 40%;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
+    z-index: 9;
 
     @media (min-width: 375px) {
-      top: 40%;
+      top: 34%;
     }
 
     @media (min-width: 375px) 
     and (min-height: 812px) {
-      top: 34%;
+      top: 28%;
     }
     
     @media (min-width: 400px) {
-      top: 35%;
+      top: 32%;
     }
     
     @media (min-width: 768px) {
-      top: 48%;
+      top: 40%;
     }
 
-    @media (min-width: 1280px) {
+    @media (min-width: 1024px) {
       top: 50%;
     }
     
@@ -592,8 +589,10 @@
   &-header {
     @include BasicGothicProBoldItalic;
     box-sizing: border-box;
+    color: $blue;
     font-size: 36px;
-    line-height: 1.1;
+    line-height: 1;
+    letter-spacing: 0px;
     margin: 0;
     padding: 0;
     text-transform: uppercase;
@@ -607,12 +606,8 @@
     }
 
     @media (min-width: 768px) {
+      line-height: .90;
       font-size: 85px;
-      line-height: 1.1;
-    }
-    
-    @media (min-width: 1024px) {
-      line-height: 1;
     }
     
     @media (min-width: 1280px) {
@@ -621,7 +616,6 @@
     
     @media (min-width: 1920px) {
       font-size: 185px;
-      line-height: 1.1;
     }
   }
 
@@ -630,11 +624,11 @@
     font-size: 18px;
     line-height: 1.25;
     margin: 0;
-    padding: 10px 0 15px 0;
+    padding: 10px 0 5px;
 
     @media (min-width: 768px) {
       font-size: 38px;
-      padding: 20px 0 25px 0;
+      padding: 20px 0 5px;
     }
     
     @media (min-width: 1024px) {
@@ -648,20 +642,21 @@
     
     @media (min-width: 1920px) {
       font-size: 48px;
-      padding: 15px 0 30px;
+      padding: 15px 0 5px;
     }
   }
   
   &-mission {
     @include BasicGothicProLight;
-    font-size: 14px;
+    font-size: 10px;
     line-height: 1.5;
     margin: 0 auto 20px;
     padding: 0;
     width: 95%;
 
     @media (min-width: 768px) {
-      font-size: 24px;
+      font-size: 16px;
+      line-height: 1.55;
       margin: 0 auto;
       width: 75%;
     }
@@ -672,13 +667,13 @@
     }
 
     @media (min-width: 1920px) {
-      font-size: 24px;
+      font-size: 20px;
       width: 35%;
     }
   }
   
   &-social {
-    bottom: 60px;
+    bottom: 120px;
     display: flex;
     left: 50%;
     position: absolute;
@@ -686,16 +681,16 @@
     z-index: 99;
 
     @media (min-width: 375px) {
-      bottom: 120px;
+      bottom: 220px;
     }
 
     @media (min-width: 375px) 
     and (min-height: 812px) {
-      bottom: 250px;
+      bottom: 350px;
     }
     
     @media (min-width: 400px) {
-      bottom: 175px;
+      bottom: 280px;
     }
 
     @media (min-width: 400px) 
@@ -711,11 +706,6 @@
       @media (min-width: 768px) {
         height: 40px;
         width: 40px;
-      }
-      
-      @media (min-width: 1024px) {
-        height: 25px;
-        width: 25px;
       }
     }
 
@@ -735,7 +725,7 @@
 
     &[data-active="true"] {
       .rdx-social--svg {
-        fill: #1c1c1c;
+        fill: $dark;
       }
     }
 
@@ -743,7 +733,7 @@
       height: 30px;
       margin: 0 20px;
       width: 30px;
-      fill: #fff;
+      fill: $light;
 
       @media (min-width: 768px) {
         height: 40px;
@@ -762,10 +752,14 @@
   }
 
   &-overlay {
-    background: rgba(0, 0, 0, .60);
+    background: rgba($darkest, .85);
     height: 100%;
     position: absolute;
     width: 100%;
+
+    &.-underlay {
+      z-index: 0;
+    }
 
     &.-radix {
       background: url('../images/image-lab-background.png') top center no-repeat;

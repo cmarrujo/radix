@@ -4,48 +4,29 @@
   &-contact--label {
     @include BasicGothicProDemibold;
     font-size: 10px;
-    color: $teal;
+    color: $blue;
   }
 
-  // &-telephone {
-  //   font-size: 10px;
-  //   left: 50%;
-  //   position: absolute;
-  //   top: 20px;
-  //   transform: translateX(-50%);
-  //   z-index: 1;
+  &-telephone {
+    &--contact {
+      @include BasicGothicProLight;
 
-  //   @media (min-width: 1024px) {
-  //     font-size: 16px;
-  //     left: 80%;
-  //     top: 30px;
-  //   }
-    
-  //   @media (min-width: 1920px) {
-  //     font-size: 16px;
-  //     left: 90%;
-  //     top: 63px;
-  //   }
+      &.-dark {
+        color: $dark;
+      }
+    }
 
-  //   &--contact {
-  //     color: $light;
+    &--number {
+      @include BasicGothicProDemibold;
+      color: $blue;
+      letter-spacing: -1px;
+      text-decoration: none;
 
-  //     &.-dark {
-  //       color: $dark;
-  //     }
-  //   }
-
-  //   &--number {
-  //     @include BasicGothicProDemibold;
-  //     color: $teal;
-  //     letter-spacing: -1px;
-  //     text-decoration: none;
-
-  //     &.-dark {
-  //       color: $dark;
-  //     }
-  //   }
-  // }
+      &.-dark {
+        color: $dark;
+      }
+    }
+  }
 
   &-banner--text {
     @include BasicGothicProBlackItalic;
@@ -78,7 +59,7 @@
     color: $light;
     display: none;
     font-size: 10px;
-    width: 80%;
+    width: 100%;
     z-index: 9;
 
     @media (min-width: 1024px) {
@@ -152,13 +133,15 @@
 
       .rdx-banner--full_copy {
         left: 25px;
-        top: 25vh;
+        top: 155px;
         width: 80%;
 
         @media (min-width: 375px) {
           .rdx-banner--text {
             font-size: 40px;
           }
+
+          top: 180px;
         }
 
         @media (min-width: 375px) 
@@ -647,7 +630,7 @@
   &-action {
     &--strip {
       @include BasicGothicProBold;
-      background: $teal;
+      background: $blue;
       box-sizing: border-box;
       padding: 50px 20px;
       text-align: center;

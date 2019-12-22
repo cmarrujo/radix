@@ -5,7 +5,7 @@
     font-size: 10px;
     left: 50%;
     position: absolute;
-    top: 60px;
+    top: 30px;
     transform: translateX(-50%);
     z-index: 1;
 
@@ -23,7 +23,7 @@
     @media (min-width: 1920px) {
       font-size: 16px;
       left: 90%;
-      top: 60px;
+      top: 62px;
     }
 
     &--contact {
@@ -31,7 +31,7 @@
     }
 
     &--number {
-      color: $teal;
+      color: $blue;
       text-decoration: none;
     }
   }
@@ -579,7 +579,7 @@
   &-action {
     &--strip {
       @include BasicGothicProBold;
-      background: $teal;
+      background: $blue;
       box-sizing: border-box;
       padding: 50px 20px;
       text-align: center;
