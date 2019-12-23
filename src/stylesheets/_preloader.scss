@@ -1,6 +1,6 @@
 .rdx {
   &-preloader {
-    background: $darkest;
+    background: $dark-base;
     height: 100vh;
     left: 0;
     position: absolute;
@@ -35,7 +35,7 @@
         &[data-active="true"] {
           y: unset;
           animation: svg-fill;
-          animation-duration: 10s;
+          animation-duration: 7s;
           animation-iteration-count: 1;
         }
       }

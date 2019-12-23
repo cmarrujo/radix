@@ -241,7 +241,7 @@ class RDX {
       }, 3000);
       this.animateBanner();
       this.animateMainBanner();
-    }, 7000);
+    }, 5000);
   }
 
   initVideoPlayer = () => {
@@ -265,7 +265,7 @@ class RDX {
   showMenu = () => {
     const rdxMenu = document.querySelector('.rdx-menu');
     const rdxDropdown = document.querySelector('.rdx-dropdown');
-    // const rdxBgImage = document.querySelector('.rdx-dropdown--image');
+    const rdxBgImage = document.querySelector('.rdx-dropdown--image');
     const rdxDropDownList = document.querySelector('.rdx-dropdown--list');
     let active = false;
 
@@ -275,18 +275,18 @@ class RDX {
           active = true;
           rdxDropdown.setAttribute('data-active', `${active}`);
           rdxDropDownList.setAttribute('data-active', `${active}`);
-          // rdxBgImage.setAttribute('data-active', `${active}`);
+          rdxBgImage.setAttribute('data-active', `${active}`);
           setTimeout(() => {
             rdxMenu.setAttribute('data-active', `${active}`);        
           }, 100);
-        }else {
+        } else {
           active = false;
           rdxDropDownList.setAttribute('data-active', `${active}`);
-          // rdxBgImage.setAttribute('data-active', `${active}`);
+          rdxBgImage.setAttribute('data-active', `${active}`);
           setTimeout(() => {
             rdxDropdown.setAttribute('data-active', `${active}`);
             rdxMenu.setAttribute('data-active', `${active}`);
-          }, 3000);
+          }, 1800);
         }
       });
     }

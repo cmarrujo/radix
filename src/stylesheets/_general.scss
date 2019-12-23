@@ -23,16 +23,16 @@
       font-size: 18px;
       margin: 50px 20px;
       padding: 20px 0;
-      width: 350px;
+      width: 330px;
     }
 
     &.-line {
       box-shadow: inset 0 0 0 3px $light;
 
       &:hover {
-        background: $light;
+        background: $light-base;
         cursor: pointer;
-        color: #000;
+        color: $light;
       }
     }
     
@@ -42,10 +42,10 @@
       color: $light;
 
       &:hover {
-        background: $light;
-        box-shadow: inset 0 0 0 3px $light;
+        background: $light-base;
+        box-shadow: inset 0 0 0 3px $light-base;
         cursor: pointer;
-        color: $dark;
+        color: $light;
       }
     }
 
@@ -54,10 +54,10 @@
       color: $light;
 
       &:hover {
-        background: $light;
+        background: $light-base;
         cursor: pointer;
-        color: $dark;
-        box-shadow: inset 0 0 0 3px $light;
+        color: $light;
+        box-shadow: inset 0 0 0 3px $light-base;
       }
     }
   }
