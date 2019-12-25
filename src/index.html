@@ -16,9 +16,9 @@
     <div class="rdx">
 
       <div class="rdx-preloader" data-active="true">
-        <div class="rdx-prealoder--svg_mask">
-          <svg version="1.1" style="mask: url(#mask1)" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 201 201" class="rdx-logo--svg_fill">
-            <defs>
+        <div class="rdx-prealoder--svg_mask" data-active="false">
+          <svg version="1.1" style="mask: url(#mask1)" data-active="false" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 201 201" class="rdx-logo--svg_fill">
+            <defs id="rdx-defs--clip">
               <clipPath>
                 <mask id="mask1" x="0" y="0" width="200px" height="200px">
                   <rect class="rect--svg" data-active="false" x="0" y="0" style="width: 550px; height: 650px; stroke: none; fill: #ffffff"/>
@@ -133,7 +133,7 @@
               Our fitness experts are skilled at recognizing how the slightest adjustments will deliver results.
             </p>
             <!--<a href="#/" data-video="true" class="btn -line">Watch the video</a>-->
-            <a href="#/" class="btn -filled">Explore Our Performance Center</a>
+            <a href="#" class="btn -filled" data-explore>Explore Our Performance Center</a>
           </div>
         </div>
 
@@ -167,7 +167,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
     <script src="../src/scripts/animation.gsap.js"></script>
     <script src="../src/scripts/index.js"></script>
-
   </body>
   
 </html>

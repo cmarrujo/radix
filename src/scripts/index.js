@@ -1,6 +1,10 @@
 import { TimelineLite, CSSPlugin, AttrPlugin, Power1 } from "gsap/all";
 import { Power0 } from 'gsap';
+import '../scripts/threex.domeevents.js';
+import * as THREE from 'three';
+import { AmbientLight } from 'three';
 import '../stylesheets/style.scss';
+import textureWallNormalMap from '../images/back-wall.png';
 
 class RDX {
   constructor() {
@@ -11,23 +15,118 @@ class RDX {
     this.initSplit();
     this.initFull();
     this.initActionStrip();
+    this.init3DScene();
+    this.showRadixTour();
+    this.logoHandler();
+  }
 
+  showRadixTour = () => {
+    const exploreCenter = document.querySelector('.btn[data-explore]') && document.querySelector('.btn[data-explore]');
+    exploreCenter.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      console.log('click');
+    });
+  }
+
+  logoHandler = () => {
     const logo = document.querySelector('.rdx-logo');
     logo.addEventListener('click', (e) => {
       window.location.href = 'https://studiosupermassive.com/radix/';
     });
   }
 
+  init3DScene = () => {
+    let scene = new THREE.Scene();
+    let camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+    let renderer = new THREE.WebGLRenderer();
+    let geometry = null;
+    let material = null
+
+    let backWallNormalMap;
+
+    let textureLoader = new THREE.TextureLoader();
+    backWallNormalMap = new textureLoader.load(`${textureWallNormalMap}`);
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    window.addEventListener('resize', () => {
+      renderer.setSize( window.innerWidth, window.innerHeight );
+    });
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.BasicShadowMap;
+
+    let ambientLight = new AmbientLight(0xffffff, .65);
+    scene.add(ambientLight);
+    
+    let light = new THREE.PointLight(0xffffff, .8, 50);
+    light.position.set(-3, 6, -3);
+    light.castShadow = true;
+    light.shadow.camera.near = .01;
+    light.shadow.camera.far = 25;
+    scene.add(light);
+    
+    geometry = new THREE.PlaneGeometry( 55, 30, 64, 64 );
+    material = new THREE.MeshPhongMaterial({
+      color: 0xffffff, 
+      side: THREE.DoubleSide, 
+      wireframe: false,
+      map: backWallNormalMap,
+    });
+    
+    let back = new THREE.Mesh( geometry, material );
+    scene.add( back );
+
+    let keyboard = {};
+
+    camera.position.y -= 0;
+
+    // Back Wall
+    back.position.z -= 19;
+
+    // const domEvents = new THREEx.DomEvents(camera, renderer.domElement);
+    // domEvents.addEventListener(back, 'click', event => {
+    //   console.log('click');
+    // });
+
+    function animate() {
+      requestAnimationFrame( animate );
+
+      if(keyboard[37]) {
+        camera.rotation.y -= Math.PI * 0.005;
+      }
+      
+      if(keyboard[39]) {
+        camera.rotation.y += Math.PI * 0.005;
+      }
+
+      renderer.render( scene, camera );
+    }
+
+    document.querySelector('.rdx').appendChild( renderer.domElement );
+
+    animate();
+
+    function keyDown(event) {
+      keyboard[event.keyCode] = true;
+    }
+    
+    function keyUp(event) {
+      keyboard[event.keyCode] = false;
+    }
+
+    window.addEventListener('keydown', keyDown);
+    window.addEventListener('keyup', keyUp);
+  }
+
   initTrigger = () => {
     // init controller
-    var controller = new ScrollMagic.Controller();
+    let controller = new ScrollMagic.Controller();
     const rdxPillars = [].slice.call(document.querySelectorAll('.rdx-pillars--image'));
     const offset = 400;
 
     if(rdxPillars.length) {
       rdxPillars.forEach((pillar) => {
         // create a scene
-        var scene = new ScrollMagic.Scene({
+        let scene = new ScrollMagic.Scene({
           triggerElement: pillar,
           offset: `-${offset}px`,
           reverse: false
@@ -41,7 +140,7 @@ class RDX {
   
   initSplit = () => {
     // init controller
-    var controller = new ScrollMagic.Controller();
+    let controller = new ScrollMagic.Controller();
     const rdxSplitImage = [].slice.call(document.querySelectorAll('.rdx-split--content_image'));
     const rdxSplitDesc = [].slice.call(document.querySelectorAll('.rdx-split--content_desc'));
     const offset = 400;
@@ -49,7 +148,7 @@ class RDX {
     if(rdxSplitImage.length) {
       rdxSplitImage.forEach((image) => {
         // create a scene
-        var scene = new ScrollMagic.Scene({
+        const scene = new ScrollMagic.Scene({
           triggerElement: image,
           offset: `-${offset}px`,
           reverse: false
@@ -63,7 +162,7 @@ class RDX {
     if(rdxSplitImage.length) {
       rdxSplitDesc.forEach((desc) => {
         // create a scene
-        var scene = new ScrollMagic.Scene({
+        const scene = new ScrollMagic.Scene({
           triggerElement: desc,
           offset: `-${offset}px`,
           reverse: false
@@ -77,14 +176,14 @@ class RDX {
   
   initFull = () => {
     // init controller
-    var controller = new ScrollMagic.Controller();
+    let controller = new ScrollMagic.Controller();
     const rdxFullImage = [].slice.call(document.querySelectorAll('.rdx-full--content_image'));
     const rdxFullWrapper = [].slice.call(document.querySelectorAll('.rdx-full--content_image-wrapper'));
     const offset = 400;
 
     rdxFullImage.forEach((image) => {
       // create a scene
-      var scene = new ScrollMagic.Scene({
+      const scene = new ScrollMagic.Scene({
         triggerElement: image,
         offset: `-${offset}px`,
         reverse: false
@@ -96,7 +195,7 @@ class RDX {
     
     rdxFullWrapper.forEach((desc) => {
       // create a scene
-      var scene = new ScrollMagic.Scene({
+      const scene = new ScrollMagic.Scene({
         triggerElement: desc,
         offset: `-${offset}px`,
         reverse: false
@@ -109,7 +208,7 @@ class RDX {
   
   initActionStrip = () => {
     // init controller
-    var controller = new ScrollMagic.Controller();
+    let controller = new ScrollMagic.Controller();
     const rdxActionStrip = document.querySelector('.rdx-action--strip');
     const rdxActionText = document.querySelector('.rdx-action--text');
     const rdxActionButton = document.querySelector('.btn.-line.-dark');
@@ -119,7 +218,7 @@ class RDX {
     // create a scene
 
     if(rdxActionStrip) {
-      var scene = new ScrollMagic.Scene({
+      const scene = new ScrollMagic.Scene({
         triggerElement: rdxActionStrip,
         offset: `-${offset}px`
       })
@@ -129,7 +228,7 @@ class RDX {
     
     if(rdxFooter) {
       // create a scene
-      var scene = new ScrollMagic.Scene({
+      const scene = new ScrollMagic.Scene({
         triggerElement: rdxFooter,
         offset: `-600px`
       })
@@ -230,12 +329,19 @@ class RDX {
 
   preloader = () => {
     const rdxPreloader = document.querySelector('.rdx-preloader');
+    const rdxPreloaderSVGMask = document.querySelector('.rdx-prealoder--svg_mask');
+    const rdxPreloaderSVGClip = document.querySelector('#rdx-defs--clip');
+    const rdxPreloaderSVGFill = document.querySelector('.rdx-logo--svg_fill');
     const rdxPreloaderSVG = document.querySelector('.rect--svg');
 
     rdxPreloaderSVG.setAttribute('data-active', 'true');
 
     setTimeout(() => {
+      rdxPreloaderSVGClip.remove();
       rdxPreloader.setAttribute('data-active', 'false');
+      rdxPreloaderSVGMask.setAttribute('data-active', 'true');
+      rdxPreloaderSVGFill.setAttribute('data-active', 'true');
+
       setTimeout(() => {
         rdxPreloader.style.display = "none";
       }, 3000);

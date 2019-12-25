@@ -730,16 +730,18 @@
 
     @media (min-width: 768px) {
       bottom: 130px;
-      left: 40px;
-      transform: unset;
+      left: 50%;
+      transform: translateX(-50%);
     }
     
     @media (min-width: 1024px) {
       bottom: 70px;
     }
     
-    @media (min-width: 1920px) {
+    @media (min-width: 1440px) {
       bottom: 100px;
+      left: 40px;
+      transform: unset;
     }
 
     &[data-active="true"] {
@@ -771,7 +773,7 @@
   }
 
   &-overlay {
-    background: rgba($dark-base, .80);
+    background: rgba($dark-base, .60);
     height: 100%;
     position: absolute;
     width: 100%;
@@ -781,8 +783,8 @@
     }
 
     &.-radix {
-      background: url('../images/image-lab-background.png') top center no-repeat;
-      background-size: cover;
+      // background: url('../images/image-lab-background.png') top center no-repeat;
+      // background-size: cover;
     }
   }
 }

@@ -27,10 +27,13 @@
     }
 
     &--contact {
+      @include BasicGothicProBook;
       color: $light;
+      margin-right: 5px;
     }
 
     &--number {
+      @include BasicGothicProBold;
       color: $blue;
       text-decoration: none;
     }
