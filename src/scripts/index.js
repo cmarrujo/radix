@@ -1,10 +1,12 @@
 import { TimelineLite, CSSPlugin, AttrPlugin, Power1 } from "gsap/all";
 import { Power0 } from 'gsap';
-import '../scripts/threex.domeevents.js';
 import * as THREE from 'three';
 import { AmbientLight } from 'three';
 import '../stylesheets/style.scss';
-import textureWallNormalMap from '../images/back-wall.png';
+import textureWallNormalMap from '../images/pano-background-Artboard1.jpg';
+import textureWallNormalMapRight from '../images/pano-background-Artboard2.jpg';
+import textureWallNormalMapleft from '../images/pano-background-Artboard4.jpg';
+import textureWallNormalMapBack from '../images/pano-background-Artboard3.jpg';
 
 class RDX {
   constructor() {
@@ -16,7 +18,7 @@ class RDX {
     this.initFull();
     this.initActionStrip();
     this.init3DScene();
-    this.showRadixTour();
+    // this.showRadixTour();
     this.logoHandler();
   }
 
@@ -43,9 +45,15 @@ class RDX {
     let material = null
 
     let backWallNormalMap;
-
+    let rightWallNormalMap;
+    let leftWallNormalMap;
+    let frontWallNormalMap;
+    
     let textureLoader = new THREE.TextureLoader();
     backWallNormalMap = new textureLoader.load(`${textureWallNormalMap}`);
+    rightWallNormalMap = new textureLoader.load(`${textureWallNormalMapRight}`);
+    leftWallNormalMap = new textureLoader.load(`${textureWallNormalMapleft}`);
+    frontWallNormalMap = new textureLoader.load(`${textureWallNormalMapBack}`);
 
     renderer.setSize( window.innerWidth, window.innerHeight );
     window.addEventListener('resize', () => {
@@ -64,7 +72,8 @@ class RDX {
     light.shadow.camera.far = 25;
     scene.add(light);
     
-    geometry = new THREE.PlaneGeometry( 55, 30, 64, 64 );
+    // Back Wall
+    geometry = new THREE.PlaneGeometry( 60, 32, 64, 64 );
     material = new THREE.MeshPhongMaterial({
       color: 0xffffff, 
       side: THREE.DoubleSide, 
@@ -74,28 +83,70 @@ class RDX {
     
     let back = new THREE.Mesh( geometry, material );
     scene.add( back );
+    back.position.z -= 20;
+
+    camera.position.x = 0;
+    camera.position.y += 0;
+    camera.position.z += 0;
+    
+    // Right Wall
+    geometry = new THREE.PlaneGeometry( 60, 32, 64, 64 );
+    material = new THREE.MeshPhongMaterial({
+      color: 0xffffff, 
+      side: THREE.DoubleSide, 
+      wireframe: false,
+      map: rightWallNormalMap,
+    });
+    
+    let right = new THREE.Mesh( geometry, material );
+    scene.add( right );
+    right.position.x += 30;
+    right.rotation.y -= (Math.PI / 2);
+    right.position.z += 10;
+    
+    // Left Wall
+    geometry = new THREE.PlaneGeometry( 60, 32, 64, 64 );
+    material = new THREE.MeshPhongMaterial({
+      color: 0xffffff, 
+      side: THREE.DoubleSide, 
+      wireframe: false,
+      map: leftWallNormalMap,
+    });
+    
+    let left = new THREE.Mesh( geometry, material );
+    scene.add( left );
+    left.position.x -= 30;
+    left.rotation.y += (Math.PI / 2);
+    left.position.z += 10;
+    
+    // Front Wall
+    geometry = new THREE.PlaneGeometry( 60, 32, 64, 64 );
+    material = new THREE.MeshPhongMaterial({
+      color: 0xffffff, 
+      side: THREE.DoubleSide, 
+      wireframe: false,
+      map: frontWallNormalMap,
+    });
+    
+    let front = new THREE.Mesh( geometry, material );
+    scene.add( front );
+    front.position.x = 0;
+    front.rotation.y = -(Math.PI / 1);
+    front.position.z += 40;
 
     let keyboard = {};
-
-    camera.position.y -= 0;
-
-    // Back Wall
-    back.position.z -= 19;
-
-    // const domEvents = new THREEx.DomEvents(camera, renderer.domElement);
-    // domEvents.addEventListener(back, 'click', event => {
-    //   console.log('click');
-    // });
-
+    
     function animate() {
       requestAnimationFrame( animate );
 
       if(keyboard[37]) {
         camera.rotation.y -= Math.PI * 0.005;
+        console.log(camera.rotation.y);
       }
       
       if(keyboard[39]) {
         camera.rotation.y += Math.PI * 0.005;
+        console.log(camera.rotation.y);
       }
 
       renderer.render( scene, camera );
@@ -115,6 +166,25 @@ class RDX {
 
     window.addEventListener('keydown', keyDown);
     window.addEventListener('keyup', keyUp);
+
+    const exploreCenter = document.querySelector('.btn[data-explore]') && document.querySelector('.btn[data-explore]');
+    exploreCenter.addEventListener('click', (evt) => {
+      evt.preventDefault();
+
+      const plugins = [ CSSPlugin, AttrPlugin ];
+      const timeline = new TimelineLite();
+
+      let tween = timeline.to(camera.position, 1, {
+        z: 10,
+        ease: Power1.easeOut
+      });
+
+      const hiddenFigures = document.querySelectorAll('[data-hidden=false]');
+      hiddenFigures.forEach((h) => {
+        h.style.display = "none";
+      });
+
+    });
   }
 
   initTrigger = () => {
