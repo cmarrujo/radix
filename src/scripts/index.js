@@ -143,7 +143,11 @@ class RDX {
       renderer.render( scene, camera );
     }
 
-    document.querySelector('.rdx').appendChild( renderer.domElement );
+    const threeScene = document.querySelector('.rdx[data-three]') && document.querySelector('.rdx[data-three]');
+    
+    if(threeScene) {
+      threeScene.appendChild( renderer.domElement );
+    }
 
     animate();
 
