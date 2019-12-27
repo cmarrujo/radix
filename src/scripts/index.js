@@ -18,19 +18,7 @@ class RDX {
     this.initFull();
     this.initActionStrip();
     this.init3DScene();
-    // this.showRadixTour();
     this.logoHandler();
-  }
-
-  showRadixTour = () => {
-    const exploreCenter = document.querySelector('.btn[data-explore]') && document.querySelector('.btn[data-explore]');
-    
-    if(exploreCenter) {
-      exploreCenter.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        console.log('click');
-      });
-    }
   }
 
   logoHandler = () => {
@@ -171,23 +159,25 @@ class RDX {
     window.addEventListener('keyup', keyUp);
 
     const exploreCenter = document.querySelector('.btn[data-explore]') && document.querySelector('.btn[data-explore]');
-    exploreCenter.addEventListener('click', (evt) => {
-      evt.preventDefault();
-
-      const plugins = [ CSSPlugin, AttrPlugin ];
-      const timeline = new TimelineLite();
-
-      let tween = timeline.to(camera.position, 1, {
-        z: 10,
-        ease: Power1.easeOut
+    if(exploreCenter) {
+      exploreCenter.addEventListener('click', (evt) => {
+        evt.preventDefault();
+  
+        const plugins = [ CSSPlugin, AttrPlugin ];
+        const timeline = new TimelineLite();
+  
+        let tween = timeline.to(camera.position, 1, {
+          z: 10,
+          ease: Power1.easeOut
+        });
+  
+        const hiddenFigures = document.querySelectorAll('[data-hidden=false]');
+        hiddenFigures.forEach((h) => {
+          h.style.display = "none";
+        });
+  
       });
-
-      const hiddenFigures = document.querySelectorAll('[data-hidden=false]');
-      hiddenFigures.forEach((h) => {
-        h.style.display = "none";
-      });
-
-    });
+    }
   }
 
   initTrigger = () => {
