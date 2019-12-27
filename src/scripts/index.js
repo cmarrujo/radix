@@ -24,10 +24,13 @@ class RDX {
 
   showRadixTour = () => {
     const exploreCenter = document.querySelector('.btn[data-explore]') && document.querySelector('.btn[data-explore]');
-    exploreCenter.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      console.log('click');
-    });
+    
+    if(exploreCenter) {
+      exploreCenter.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        console.log('click');
+      });
+    }
   }
 
   logoHandler = () => {
