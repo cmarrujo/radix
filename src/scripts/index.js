@@ -24,7 +24,7 @@ class RDX {
   logoHandler = () => {
     const logo = document.querySelector('.rdx-logo');
     logo.addEventListener('click', (e) => {
-      window.location.href = 'https://studiosupermassive.com/radix/';
+      window.location.href = 'https://radixrecovery.com';
     });
   }
 
