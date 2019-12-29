@@ -2,15 +2,19 @@
   overflow-x: hidden;
 
   &-telephone {
-    font-size: 10px;
+    font-size: 12px;
     left: 50%;
     position: absolute;
-    top: 30px;
+    top: 25px;
     transform: translateX(-50%);
     z-index: 1;
 
+    @media (min-width: 375px) {
+      font-size: 14px;
+    }
+
     @media (min-width: 768px) {
-      font-size: 16px;
+      font-size: 18px;
       top: 35px;
     }
 
@@ -26,10 +30,15 @@
       top: 63px;
     }
     
+    @media (min-width: 1440px) {
+      font-size: 16px;
+      left: 82%;
+      top: 63px;
+    }
+    
     @media (min-width: 1920px) {
       font-size: 16px;
-      left: 90%;
-      top: 62px;
+      left: 85%;
     }
 
     &--contact {
