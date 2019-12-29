@@ -25,6 +25,13 @@
       padding: 20px 0;
       width: 330px;
     }
+    
+    @media (min-width: 1280px) {
+      font-size: 18px;
+      margin: 30px 20px;
+      padding: 20px 0;
+      width: 330px;
+    }
 
     &.-line {
       box-shadow: inset 0 0 0 3px $light;
