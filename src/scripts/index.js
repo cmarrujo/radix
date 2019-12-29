@@ -7,6 +7,7 @@ import textureWallNormalMap from '../images/pano-background-Artboard1.jpg';
 import textureWallNormalMapRight from '../images/pano-background-Artboard2.jpg';
 import textureWallNormalMapleft from '../images/pano-background-Artboard4.jpg';
 import textureWallNormalMapBack from '../images/pano-background-Artboard3.jpg';
+import autoprefixer from "autoprefixer";
 
 class RDX {
   constructor() {
