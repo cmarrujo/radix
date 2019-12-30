@@ -20,6 +20,32 @@ class RDX {
     this.initActionStrip();
     this.init3DScene();
     this.logoHandler();
+    this.initAnimations();
+
+    this.counter = 0;
+  }
+
+  initAnimations = () => {
+    let frames = [].slice.call(document.querySelectorAll('.rdx-pillars--image'));
+    frames.forEach((frame) => {
+      frame.addEventListener('mouseover', (e) => {
+        this.setFrames(e.target);
+      });
+    });
+  }
+
+  setFrames = (t) => {
+    const interval = setInterval(() => {
+      this.counter++
+      if(this.counter >= 4) {
+        clearInterval(interval);
+        this.counter = 1;
+      }
+
+      t.style.backgroundImage = `url(https://www.radixrecovery.com/images/method-nav-scroll-performance-seq${this.counter}.jpg)`;
+      t.style.backgroundSize = `cover`;
+
+    }, 250);
   }
 
   logoHandler = () => {

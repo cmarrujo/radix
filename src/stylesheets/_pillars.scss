@@ -1,30 +1,56 @@
 .rdx {
   overflow-x: hidden;
 
-  &-contact--label {
-    @include BasicGothicProDemibold;
-    font-size: 10px;
-    color: $blue;
-  }
-
   &-telephone {
-    &--contact {
-      @include BasicGothicProLight;
+    font-size: 12px;
+    left: 50%;
+    position: absolute;
+    top: 25px;
+    transform: translateX(-50%);
+    z-index: 1;
 
-      &.-dark {
-        color: $dark;
-      }
+    @media (min-width: 375px) {
+      font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+      top: 35px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 16px;
+      left: 80%;
+      top: 30px;
+    }
+    
+    @media (min-width: 1280px) {
+      font-size: 16px;
+      left: 80%;
+      top: 63px;
+    }
+    
+    @media (min-width: 1440px) {
+      font-size: 16px;
+      left: 82%;
+      top: 63px;
+    }
+    
+    @media (min-width: 1920px) {
+      font-size: 16px;
+      left: 85%;
+    }
+
+    &--contact {
+      @include BasicGothicProBook;
+      color: $light;
+      margin-right: 5px;
     }
 
     &--number {
-      @include BasicGothicProDemibold;
+      @include BasicGothicProBold;
       color: $blue;
-      letter-spacing: -1px;
       text-decoration: none;
-
-      &.-dark {
-        color: $dark;
-      }
     }
   }
 
@@ -59,7 +85,7 @@
     color: $light;
     display: none;
     font-size: 10px;
-    width: 100%;
+    width: 80%;
     z-index: 9;
 
     @media (min-width: 1024px) {
@@ -96,8 +122,108 @@
   &-banner--full {
     overflow: hidden;
     position: relative;
-    height: 88vh;
+    height: 50vh;
     width: 100vw;
+
+    @media (min-width: 1024px) {
+      height: 100vh;
+    }
+
+    &.-approach {
+      background: url('../images/method-banner-static-bg.jpg') top center no-repeat;
+      background-size: cover;
+
+      .rdx-banner--full_copy {
+        text-align: center;
+        top: 35%;
+        z-index: 1;
+
+        @media (min-width: 375px) {
+          top: 32%;
+          width: 85%;
+        }
+        
+        @media (min-width: 768px) {
+          left: 40px;
+          top: 310px;
+          width: 85%;
+        }
+        
+        @media (min-width: 1024px) {
+          left: 40px;
+          top: 280px;
+          width: 60%;
+        }
+        
+        @media (min-width: 1440px) {
+          left: 50px;
+          top: 330px;
+          width: 60%;
+        }
+        
+        @media (min-width: 1920px) {
+          left: 100px;
+          top: 450px;
+          width: 45%;
+        }
+      }
+
+      .rdx-banner--text {
+        width: 100%;
+        
+        @media (min-width: 375px) {
+          font-size: 38px;
+        }
+        
+        @media (min-width: 400px) {
+          font-size: 42px;
+        }
+        
+        @media (min-width: 768px) {
+          line-height: 1.1;
+          font-size: 72px;
+        }
+        
+        @media (min-width: 1440px) {
+          line-height: 1.1;
+          font-size: 100px;
+        }
+        
+        @media (min-width: 1920px) {
+          line-height: 1.1;
+          font-size: 130px;
+        }
+      }
+      
+      .rdx-banner--subtext {
+        display: block;
+
+        @media (min-width: 375px) {
+          font-size: 12px;
+          line-height: 1.5;
+        }
+        
+        @media (min-width: 768px) {
+          font-size: 20px;
+          line-height: 1.5;
+        }
+
+        @media (min-width: 1024px) {
+          font-size: 16px;
+          margin: 0;
+          width: 70%;
+        }
+        
+        @media (min-width: 1920px) {
+          font-size: 18px;
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 1920px) {
+        height: 100vh;
+      }
+    }
     
     &.-contact {
       background: #1ff57a;
@@ -105,166 +231,22 @@
       background: -webkit-linear-gradient(bottom,  #1ff57a 0%,#08f4ca 100%);
       background: linear-gradient(to top,  #1ff57a 0%,#08f4ca 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1ff57a', endColorstr='#08f4ca',GradientType=1 );
-
-      @media (min-width: 375px) {
-        height: 84vh;
-      }
-  
-      @media (min-width: 375px) 
-      and (min-height: 812px) {
-        height: 70vh;
-      }
-      
-      @media (min-width: 400px) {
-        height: 80vh;
-      }
-      
-      @media (min-width: 768px) {
-        height: 100vh;
-      }
-      
-      @media (min-width: 1280px) {
-        height: 70vh;
-      }
-      
-      @media (min-width: 1920px) {
-        height: 80vh;
-      }
-
-      .rdx-banner--full_copy {
-        left: 25px;
-        top: 155px;
-        width: 80%;
-
-        @media (min-width: 375px) {
-          .rdx-banner--text {
-            font-size: 40px;
-          }
-
-          top: 180px;
-        }
-
-        @media (min-width: 375px) 
-        and (min-height: 812px) {
-          top: 20vh;
-        }
-        
-        @media (min-width: 400px) {
-          top: 25vh;
-
-          .rdx-banner--text {
-            font-size: 45px;
-          }
-        }
-
-        @media (min-width: 768px) {
-          left: 90px;
-          top: 28vh;
-
-          .rdx-banner--text {
-            font-size: 75px;
-          }
-        }
-        
-        @media (min-width: 1024px) {
-          left: 90px;
-          top: 37vh;
-
-          .rdx-banner--text {
-            font-size: 75px;
-          }
-        }
-        
-        @media (min-width: 1280px) {
-          left: 90px;
-          top: 30vh;
-
-          .rdx-banner--text {
-            font-size: 75px;
-          }
-        }
-        
-        @media (min-width: 1920px) {
-          top: 35vh;
-          width: 50%;
-
-          .rdx-banner--text {
-            font-size: 95px;
-          }
-        }
-        
-        @media (min-width: 2560px) {
-          left: 150px;
-          top: 30vh;
-          width: 50%;
-
-          .rdx-banner--text {
-            font-size: 135px;
-          }
-        }
-
-        .rdx-banner--text,
-        .rdx-banner--subtext {
-          color: $dark;
-        }
-      }
-
-      .rdx-contact--form {
-        bottom: auto;
-        top: 45vh;
-
-        @media (min-width: 375px) 
-        and (min-height: 812px) {
-          top: 40vh;
-        }
-
-        @media (min-width: 768px) {
-          top: 50vh;
-          width: 75%;
-
-          .pure-group--label {
-            font-size: 16px;
-            margin-bottom: 20px;
-          }
-          
-          .pure-group--input {
-            font-size: 18px;
-            padding: 20px 10px;
-          }
-
-          .button-success {
-            font-size: 18px;
-            margin: 30px auto;
-            padding: 30px 10px;
-            width: 75%;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          bottom: 100px;
-          top: auto;
-          width: 85%;
-        }
-        
-        @media (min-width: 1280px) {
-          bottom: 70px;
-          top: auto;
-          width: 90%;
-        }
-      }
-    }
-
-    @media (min-width: 1024px) {
-      height: 100vh;
     }
 
     &_copy {
       width: 100%;
       left: 20px;
       position: absolute;
-      top: 28%;
+      top: 50%;
       transform: translateY(-50%);
       width: 90%;
+
+      @media (min-width: 768px) {
+        left: 50px;
+        position: absolute;
+        top: 50%;
+        width: 70%;
+      }
 
       @media (min-width: 1024px) {
         left: 50px;
@@ -295,7 +277,7 @@
         position: absolute;
         top: 45%;
         transform: translateY(-50%);
-        width: 45%;
+        width: 50%;
       }
     }
   }
@@ -322,6 +304,73 @@
     }
   }
 
+  &-pillars {
+    display: flex;
+    justify-content: space-between;
+
+    &--image {
+      flex-grow: 1;
+      filter: grayscale(100%);
+      height: 100px;
+      transition: all .25s ease-out;
+
+      @media (min-width: 768px) {
+        height: 190px;
+      }
+      
+      @media (min-width: 1440px) {
+        height: 300px;
+      }
+      
+      @media (min-width: 1440px) {
+        height: 400px;
+      }
+
+      &:hover {
+        filter: grayscale(0);
+      }
+
+      &.-dev {
+        background: url('../images/image-functional-training-recovery-nav-hover.jpg') top center no-repeat;
+        background-size: cover;
+        margin-top: 100px;
+        opacity: 0;
+        transition: margin-top 1s, opacity 2s;
+
+        &.fade-in {
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+      
+      &.-rehab {
+        background: url('../images/image-functional-training-rehab-nav-hover.jpg') top center no-repeat;
+        background-size: cover;
+        margin-top: 100px;
+        opacity: 0;
+        transition: margin-top 1s .25s, opacity 2s .25s;
+
+        &.fade-in {
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+      
+      &.-recovery {
+        background: url('../images/image-functional-training-recovery-nav-hover.jpg') top center no-repeat;
+        background-size: cover;
+        margin-top: 100px;
+        opacity: 0;
+        transition: margin-top 1s .5s, opacity 2s .5s;
+        
+        &.fade-in {
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
   &-split {
     display: flex;
     justify-content: space-between;
@@ -342,11 +391,6 @@
         opacity: 0;
         transition: margin-top 1s .5s, opacity 2s .5s;
         
-        &.-map {
-          background: url('../images/radix-map.png') top center no-repeat;
-          background-size: cover;
-        }
-
         &.fade-in {
           margin-top: 0;
           opacity: 1;
@@ -379,7 +423,6 @@
           position: absolute;
           top: 50%;
           transform: translate(-50%, -50%);
-          width: 80%;
         }
 
         @media (min-width: 768px) {
@@ -396,8 +439,8 @@
       &_heading {
         @include BasicGothicProBold;
         color: $light;
-        font-size: 24px;
-        line-height: 1.25;
+        font-size: 28px;
+        line-height: 1;
         margin: 0;
         padding: 0;
         text-transform: uppercase;
@@ -410,9 +453,9 @@
       &_subheading {
         @include BasicGothicProItalic;
         color: $light;
-        font-size: 14px;
+        font-size: 16px;
         margin: 0;
-        padding: 10px 0;
+        padding: 4px 0 8px;
 
         @media (min-width: 768px) {
           font-size: 20px;
@@ -427,11 +470,6 @@
         line-height: 1.5;
         margin: 0;
         padding: 0;
-
-        &.-email,
-        &.-phone {
-          padding: 2px 0;
-        }
 
         @media (min-width: 768px) {
           font-size: 15px;
@@ -847,89 +885,6 @@
 
       @media (min-width: 1024px) {
         padding: 0;
-      }
-    }
-  }
-
-  &-contact--form {
-    bottom: 75px;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
-    width: 90%;
-
-    .form-elements {
-      display: flex;
-      flex-direction: column;
-
-      @media (min-width: 1024px) {
-        bottom: 200px;
-        flex-direction: row;
-      }
-
-      .button-success {
-        @include BasicGothicProDemibold;
-        background: $darkest;
-        border-radius: 50px;
-        border: 0;
-        color: $light;
-        font-size: 14px;
-        margin: 10px auto;
-        padding: 20px 100px;
-        text-transform: uppercase;
-        width: 80%;
-
-        @media (min-width: 1024px) {
-          padding: 10px 100px;
-        }
-      }
-    }
-
-    .pure-group {
-      border: 0;
-
-      &--label {
-        @include BasicGothicProDemibold;
-        display: block;
-        font-size: 10px;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-      }
-      
-      &--input {
-        @include BasicGothicProDemibold;
-        background: transparent;
-        border: 0;
-        border-bottom: thin solid $darkest;
-        color: $darkest;
-        font-size: 14px;
-        padding: 10px;
-        text-transform: uppercase;
-        width: 100%;
-
-        @media (min-width: 1024px) {
-          padding: 20px 10px 10px;
-          width: 300px;
-        }
-        
-        @media (min-width: 1280px) {
-          padding: 20px 10px 10px;
-          width: 450px;
-        }
-        
-        @media (min-width: 1920px) {
-          padding: 20px 10px 10px;
-          width: 650px;
-        }
-        
-        @media (min-width: 2560px) {
-          padding: 20px 10px 10px;
-          width: 950px;
-        }
-      }
-
-      &.honeypot-field {
-        display: none;
       }
     }
   }
