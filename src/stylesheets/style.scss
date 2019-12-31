@@ -756,7 +756,7 @@
   }
 
   &-overlay {
-    background: rgba($dark-base, .40);
+    background: rgba($dark-base, .60);
     height: 100%;
     position: absolute;
     width: 100%;
@@ -765,9 +765,8 @@
       z-index: 0;
     }
 
-    &.-radix {
-      // background: url('../images/image-lab-background.png') top center no-repeat;
-      // background-size: cover;
+    &.-approach {
+      background: rgba($dark-base, .40);
     }
   }
 }

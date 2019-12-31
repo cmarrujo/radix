@@ -21,8 +21,16 @@ class RDX {
     this.init3DScene();
     this.logoHandler();
     this.initAnimations();
-
+    this.preloadImages();
     this.counter = 0;
+  }
+
+  preloadImages = () => {
+    this.imagesPreload = [];
+    for (var i = 1; i <= 4; ++i) {
+      this.imagesPreload[i] = new Image();
+      this.imagesPreload[i].src = `https://www.radixrecovery.com/images/method-nav-scroll-performance-seq${[i]}.jpg`;
+    }
   }
 
   initAnimations = () => {
@@ -31,21 +39,31 @@ class RDX {
       frame.addEventListener('mouseover', (e) => {
         this.setFrames(e.target);
       });
+      
+      frame.addEventListener('mouseout', (e) => {
+        this.setFrames(e.target, 'true');
+      });
     });
   }
 
-  setFrames = (t) => {
-    const interval = setInterval(() => {
-      this.counter++
-      if(this.counter >= 4) {
-        clearInterval(interval);
-        this.counter = 1;
-      }
-
-      t.style.backgroundImage = `url(https://www.radixrecovery.com/images/method-nav-scroll-performance-seq${this.counter}.jpg)`;
+  setFrames = (t, unset='false') => {
+    if(unset === 'true') {
+      t.style.backgroundImage = `url(https://www.radixrecovery.com/images/method-nav-scroll-performance-seq1.jpg)`;
       t.style.backgroundSize = `cover`;
-
-    }, 250);
+      this.counter = 0;
+    }else{
+      const interval = setInterval(() => {
+        this.counter++;
+  
+        if(this.counter >= 4) {
+          clearInterval(interval);
+          this.counter = 4;
+        }
+  
+        t.style.backgroundImage = `url(https://www.radixrecovery.com/images/method-nav-scroll-performance-seq${this.counter}.jpg)`;
+        t.style.backgroundSize = `cover`;
+      }, 200);
+    }
   }
 
   logoHandler = () => {
@@ -225,7 +243,6 @@ class RDX {
           offset: `-${offset}px`,
           reverse: false
         })
-        // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
         .setClassToggle(pillar, 'fade-in')
         .addTo(controller);
       });
@@ -247,7 +264,6 @@ class RDX {
           offset: `-${offset}px`,
           reverse: false
         })
-        // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
         .setClassToggle(image, 'fade-in')
         .addTo(controller);
       });
@@ -261,7 +277,6 @@ class RDX {
           offset: `-${offset}px`,
           reverse: false
         })
-        // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
         .setClassToggle(desc, 'fade-in')
         .addTo(controller);
       });
@@ -282,7 +297,6 @@ class RDX {
         offset: `-${offset}px`,
         reverse: false
       })
-      // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
       .setClassToggle(image, 'fade-in')
       .addTo(controller);
     });
@@ -294,7 +308,6 @@ class RDX {
         offset: `-${offset}px`,
         reverse: false
       })
-      // .setTween(".rdx-pillars--image.-dev", {opacity: 1})
       .setClassToggle(desc, 'fade-in')
       .addTo(controller);
     });
@@ -310,7 +323,6 @@ class RDX {
     const offset = 400;
 
     // create a scene
-
     if(rdxActionStrip) {
       const scene = new ScrollMagic.Scene({
         triggerElement: rdxActionStrip,

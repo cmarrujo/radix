@@ -429,10 +429,13 @@
         }
 
         &-inner {
+          box-sizing: border-box;
           left: 50%;
+          padding: 0 30px;
           position: absolute;
           top: 50%;
           transform: translate(-50%, -50%);
+          width: 100%;
 
           @media (min-width: 1024px) {
             width: 70%;
