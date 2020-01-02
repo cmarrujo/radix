@@ -20,7 +20,7 @@ class RDX {
     this.initActionStrip();
     this.init3DScene();
     this.logoHandler();
-    this.initAnimations();
+    // this.initAnimations();
     this.preloadImages();
     this.counter = 0;
   }
@@ -37,11 +37,11 @@ class RDX {
     let frames = [].slice.call(document.querySelectorAll('.rdx-pillars--image'));
     frames.forEach((frame) => {
       frame.addEventListener('mouseover', (e) => {
-        this.setFrames(e.target);
+        this.setFrames(frame);
       });
       
       frame.addEventListener('mouseout', (e) => {
-        this.setFrames(e.target, 'true');
+        this.setFrames(frame, 'true');
       });
     });
   }
