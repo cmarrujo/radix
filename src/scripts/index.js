@@ -404,6 +404,14 @@ class RDX {
         ease: Power1.easeOut
       });
     }
+    
+    const bannerLarge = document.querySelector('.rdx-banner--full.-performance') && document.querySelector('.rdx-banner--full.-performance');
+    if(bannerLarge) {
+      let tween = timeline.from(bannerLarge, 5, {
+        opacity: 0,
+        ease: Power1.easeOut
+      });
+    }
 
     const bannerTitle = document.querySelector('.rdx-banner--text') && document.querySelector('.rdx-banner--text');
     if(bannerTitle) {

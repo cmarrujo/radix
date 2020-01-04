@@ -1,174 +1,38 @@
 .rdx {
-  overflow-x: hidden;
-
-  &-telephone {
-    font-size: 12px;
-    left: 50%;
-    position: absolute;
-    top: 25px;
-    transform: translateX(-50%);
-    z-index: 1;
-
-    @media (min-width: 375px) {
-      font-size: 14px;
-    }
-
-    @media (min-width: 768px) {
-      font-size: 18px;
-      top: 35px;
-    }
-
-    @media (min-width: 1024px) {
-      font-size: 16px;
-      left: 80%;
-      top: 30px;
-    }
-    
-    @media (min-width: 1280px) {
-      font-size: 16px;
-      left: 80%;
-      top: 63px;
-    }
-    
-    @media (min-width: 1440px) {
-      font-size: 16px;
-      left: 82%;
-      top: 63px;
-    }
-    
-    @media (min-width: 1920px) {
-      font-size: 16px;
-      left: 85%;
-    }
-
-    &--contact {
-      @include BasicGothicProBook;
-      color: $light;
-      margin-right: 5px;
-    }
-
-    &--number {
-      @include BasicGothicProBold;
-      color: $blue;
-      text-decoration: none;
-    }
-  }
-
-  &-banner--text {
-    @include BasicGothicProBlackItalic;
-    color: $light;
-    font-size: 34px;
-    margin: 0;
-    text-transform: uppercase;
-    z-index: 9;
-
-    @media (min-width: 768px) {
-      font-size: 55px;
-    }
-    
-    @media (min-width: 1024px) {
-      font-size: 64px;
-      line-height: 1;
-    }
-
-    @media (min-width: 1440px) {
-      font-size: 90px;
-    }
-    
-    @media (min-width: 1920px) {
-      font-size: 135px;
-    }
-  }
-  
-  &-banner--subtext {
-    @include BasicGothicProBook;
-    color: $light;
-    display: none;
-    font-size: 10px;
-    width: 80%;
-    z-index: 9;
-
-    @media (min-width: 1024px) {
-      display: block;
-      font-size: 14px;
-      line-height: 1.5;
-      width: 60%;
-    }
-    
-    @media (min-width: 1440px) {
-      font-size: 18px;
-      line-height: 1.5;
-      width: 60%;
-    }
-    
-    @media (min-width: 1920px) {
-      font-size: 18px;
-      line-height: 1.55;
-    }
-    
-    @media (min-width: 1920px) {
-      font-size: 18px;
-      line-height: 1.55;
-      width: 42%;
-    }
-    
-    @media (min-width: 2560px) {
-      font-size: 18px;
-      line-height: 1.55;
-      width: 45%;
-    }
-  }
-
   &-banner--full {
-    overflow: hidden;
-    position: relative;
-    height: 50vh;
-    width: 100vw;
-
-    @media (min-width: 1024px) {
-      height: 100vh;
-    }
-
-    &.-approach {
-      background: url('../images/method-banner-static-bg.jpg') top center no-repeat;
+    &.-performance {
+      background: url('../images/performance-experts-banner-seq-3.jpg') top center no-repeat;
       background-size: cover;
+      height: 60vh;
+
+      @media (min-width: 1024px) {
+        height: 100vh;
+      }
 
       .rdx-banner--full_copy {
-        text-align: center;
-        top: 35%;
+        text-align: left;
+        top: 40%;
         z-index: 1;
 
         @media (min-width: 375px) {
-          top: 32%;
-          width: 85%;
-        }
-        
-        @media (min-width: 768px) {
-          left: 40px;
-          top: 310px;
           width: 85%;
         }
         
         @media (min-width: 1024px) {
-          left: 40px;
-          top: 280px;
           width: 60%;
         }
         
         @media (min-width: 1440px) {
-          left: 50px;
-          top: 330px;
           width: 60%;
         }
         
         @media (min-width: 1920px) {
-          left: 100px;
-          top: 450px;
           width: 45%;
         }
       }
 
       .rdx-banner--text {
+        line-height: 1;
         width: 100%;
         
         @media (min-width: 375px) {
@@ -180,23 +44,22 @@
         }
         
         @media (min-width: 768px) {
-          line-height: 1.1;
           font-size: 72px;
         }
         
         @media (min-width: 1440px) {
-          line-height: 1.1;
           font-size: 100px;
         }
         
         @media (min-width: 1920px) {
-          line-height: 1.1;
           font-size: 130px;
         }
       }
       
       .rdx-banner--subtext {
         display: block;
+        line-height: 1.25;
+        width: 85%;
 
         @media (min-width: 375px) {
           font-size: 12px;
@@ -211,12 +74,12 @@
         @media (min-width: 1024px) {
           font-size: 16px;
           margin: 0;
-          width: 70%;
+          width: 60%;
         }
         
         @media (min-width: 1920px) {
           font-size: 18px;
-          width: 100%;
+          width: 70%;
         }
       }
 
