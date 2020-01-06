@@ -412,6 +412,14 @@ class RDX {
         ease: Power1.easeOut
       });
     }
+    
+    const dynamicBanner = document.querySelector('.rdx-banner--full.-dynamic') && document.querySelector('.rdx-banner--full.-dynamic');
+    if(dynamicBanner) {
+      let tween = timeline.from(dynamicBanner, 5, {
+        opacity: 0,
+        ease: Power1.easeOut
+      });
+    }
 
     const bannerTitle = document.querySelector('.rdx-banner--text') && document.querySelector('.rdx-banner--text');
     if(bannerTitle) {
