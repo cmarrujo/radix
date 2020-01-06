@@ -326,7 +326,8 @@ class RDX {
     if(rdxActionStrip) {
       const scene = new ScrollMagic.Scene({
         triggerElement: rdxActionStrip,
-        offset: `-${offset}px`
+        offset: `-${offset}px`,
+        reverse: false
       })
       .setClassToggle(rdxActionStrip, 'fade-in')
       .addTo(controller);
@@ -336,7 +337,8 @@ class RDX {
       // create a scene
       const scene = new ScrollMagic.Scene({
         triggerElement: rdxFooter,
-        offset: `-600px`
+        offset: `-600px`,
+        reverse: false
       })
       .setClassToggle(rdxFooter, 'fade-in')
       .addTo(controller);

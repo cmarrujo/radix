@@ -388,6 +388,16 @@
           background: url('../images/method-5050-performance-seq1.jpg') top center no-repeat;
           background-size: cover;
         }
+        
+        &.-scifit {
+          background: url('../images/science-fitness-lab-5050-equipment.jpg') top center no-repeat;
+          background-size: cover;
+        }
+        
+        &.-atmosphere {
+          background: url('../images/science-fitness-lab-5050-atmosphere.jpg') top center no-repeat;
+          background-size: cover;
+        }
 
         @media (min-width: 1024px) {
           height: 100vh;
@@ -669,7 +679,7 @@
         padding: 80px 250px;
 
         .btn {
-          margin: 25px 0 0 0;
+          margin: 0;
         }
       }
     }
