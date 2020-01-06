@@ -188,11 +188,10 @@
     }
     
     &.-contact {
-      background: #1ff57a;
-      background: -moz-linear-gradient(bottom,  #1ff57a 0%, #08f4ca 100%);
-      background: -webkit-linear-gradient(bottom,  #1ff57a 0%,#08f4ca 100%);
-      background: linear-gradient(to top,  #1ff57a 0%,#08f4ca 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1ff57a', endColorstr='#08f4ca',GradientType=1 );
+      background: $dark-base;
+      background: -moz-linear-gradient(bottom, $dark-base 0%, $dark-base 100%);
+      background: -webkit-linear-gradient(bottom, $dark-base 0%, $dark-base 100%);
+      background: linear-gradient(to top, $dark-base 0%, $dark-base 100%);
     }
 
     &_copy {

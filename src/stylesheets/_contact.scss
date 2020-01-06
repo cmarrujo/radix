@@ -50,7 +50,7 @@
     }
     
     @media (min-width: 1920px) {
-      font-size: 135px;
+      font-size: 130px;
     }
   }
   
@@ -133,15 +133,23 @@
 
       .button-success {
         @include BasicGothicProDemibold;
-        background: $darkest;
+        background: $dark-base;
         border-radius: 50px;
         border: 0;
+        box-shadow: inset 0 0 3px $light-base;
         color: $light;
         font-size: 14px;
         margin: 10px auto;
         padding: 20px 100px;
         text-transform: uppercase;
+        transition: all .35s ease-out;
         width: 80%;
+
+        &:hover {
+          background: $light-base;
+          color: $light;
+          cursor: pointer;
+        }
 
         @media (min-width: 1024px) {
           padding: 10px 100px;
@@ -154,6 +162,7 @@
 
       &--label {
         @include BasicGothicProDemibold;
+        color: $light;
         display: block;
         font-size: 10px;
         margin-bottom: 10px;
@@ -164,7 +173,7 @@
         @include BasicGothicProDemibold;
         background: transparent;
         border: 0;
-        border-bottom: thin solid $darkest;
+        border-bottom: thin solid $light;
         color: $darkest;
         font-size: 14px;
         padding: 10px;
