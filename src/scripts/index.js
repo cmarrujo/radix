@@ -101,13 +101,28 @@ class RDX {
     let ambientLight = new AmbientLight(0xffffff, .65);
     scene.add(ambientLight);
     
-    let light = new THREE.PointLight(0xffffff, .8, 50);
+    let light = new THREE.PointLight(0xffffff, .10, 50);
     light.position.set(-3, 6, -3);
     light.castShadow = true;
     light.shadow.camera.near = .01;
     light.shadow.camera.far = 25;
     scene.add(light);
-    
+
+    geometry = new THREE.PlaneGeometry( 55, 55, 64, 64 );
+    material = new THREE.MeshBasicMaterial( {
+      color: 0x008efc, 
+      opacity: .15,
+      transparent: true,
+      side: THREE.DoubleSide,
+      wireframe: true
+    } );
+    let plane = new THREE.Mesh( geometry, material );
+    scene.add( plane );
+
+    plane.rotation.x = (Math.PI / 2);
+    plane.position.y -= 14.75;
+    plane.position.z += 10;
+
     // Back Wall
     geometry = new THREE.PlaneGeometry( 60, 32, 64, 64 );
     material = new THREE.MeshPhongMaterial({
