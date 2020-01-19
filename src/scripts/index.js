@@ -20,6 +20,7 @@ class RDX {
     this.initActionStrip();
     this.init3DScene();
     this.logoHandler();
+    this.orbsInteraction();
     // this.initAnimations();
     this.preloadImages();
     this.counter = 0;
@@ -32,6 +33,15 @@ class RDX {
       this.imagesPreload[i] = new Image();
       this.imagesPreload[i].src = `https://www.radixrecovery.com/images/method-nav-scroll-performance-seq${[i]}.jpg`;
     }
+  }
+
+  orbsInteraction = () => {
+    const orbs = [].slice.call(document.querySelectorAll('.rdx-orbs--point'));
+    orbs.forEach((orb) => {
+      orb.addEventListener('click', (evt) => {
+        alert('click');
+      })
+    });
   }
 
   initAnimations = () => {
