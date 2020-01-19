@@ -1,0 +1,59 @@
+.rdx {
+  &-panoramic {
+    &[data-dir='prev'],
+    &[data-dir='next'] {
+      // border: thin solid red;
+      color: $light;
+      font-size: 70px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+
+    &[data-dir='prev'] {
+      left: 50px;
+    }
+    
+    &[data-dir='next'] {
+      right: 50px;
+    }
+  }
+
+  &-orbs {
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    &--point {
+      background: rgba($light-base, .25);
+      border-radius: 100%;
+      height: 75px;
+      width: 75px;
+
+      &:before {
+        border: 2px solid rgba($light-base, 1);
+        border-radius: 100%;
+        content: '';
+        height: 25px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+      }
+
+      &.-p1 {
+        left: 30vw;
+        position: absolute;
+        top: 300px;
+      }
+      
+      &.-p2 {
+        left: 60vw;
+        position: absolute;
+        top: 700px;
+      }
+    }
+  }
+}

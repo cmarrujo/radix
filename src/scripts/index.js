@@ -3,10 +3,10 @@ import { Power0 } from 'gsap';
 import * as THREE from 'three';
 import { AmbientLight } from 'three';
 import '../stylesheets/style.scss';
-import textureWallNormalMap from '../images/pano-background-Artboard1.jpg';
-import textureWallNormalMapRight from '../images/pano-background-Artboard2.jpg';
-import textureWallNormalMapleft from '../images/pano-background-Artboard4.jpg';
-import textureWallNormalMapBack from '../images/pano-background-Artboard3.jpg';
+import textureWallNormalMap from '../images/pano-background-Artboard-1.jpg';
+import textureWallNormalMapRight from '../images/pano-background-Artboard-2.jpg';
+import textureWallNormalMapleft from '../images/pano-background-Artboard-5.jpg';
+import textureWallNormalMapBack from '../images/pano-background-Artboard-3.jpg';
 import autoprefixer from "autoprefixer";
 
 class RDX {
@@ -23,6 +23,7 @@ class RDX {
     // this.initAnimations();
     this.preloadImages();
     this.counter = 0;
+    this.panoCount = 0;
   }
 
   preloadImages = () => {
@@ -108,7 +109,7 @@ class RDX {
     light.shadow.camera.far = 25;
     scene.add(light);
 
-    geometry = new THREE.PlaneGeometry( 55, 55, 64, 64 );
+    geometry = new THREE.PlaneGeometry( 44, 44, 64, 64 );
     material = new THREE.MeshBasicMaterial( {
       color: 0x008efc, 
       opacity: .15,
@@ -121,10 +122,25 @@ class RDX {
 
     plane.rotation.x = (Math.PI / 2);
     plane.position.y -= 14.75;
-    plane.position.z += 10;
+    plane.position.z += 4;
+    
+    geometry = new THREE.PlaneGeometry( 44, 44, 64, 64 );
+    material = new THREE.MeshBasicMaterial( {
+      color: 0x008efc, 
+      opacity: .15,
+      transparent: true,
+      side: THREE.DoubleSide,
+      wireframe: true
+    } );
+    let ceiling = new THREE.Mesh( geometry, material );
+    scene.add( ceiling );
+
+    ceiling.rotation.x = (Math.PI / 2);
+    ceiling.position.y += 14.55;
+    ceiling.position.z += 4;
 
     // Back Wall
-    geometry = new THREE.PlaneGeometry( 60, 32, 64, 64 );
+    geometry = new THREE.PlaneGeometry( 45, 30, 64, 64 );
     material = new THREE.MeshPhongMaterial({
       color: 0xffffff, 
       side: THREE.DoubleSide, 
@@ -134,14 +150,14 @@ class RDX {
     
     let back = new THREE.Mesh( geometry, material );
     scene.add( back );
-    back.position.z -= 20;
+    back.position.z -= 18.5;
 
     camera.position.x = 0;
     camera.position.y += 0;
-    camera.position.z += 0;
+    camera.position.z -= 2;
     
     // Right Wall
-    geometry = new THREE.PlaneGeometry( 60, 32, 64, 64 );
+    geometry = new THREE.PlaneGeometry( 45, 31, 64, 64 );
     material = new THREE.MeshPhongMaterial({
       color: 0xffffff, 
       side: THREE.DoubleSide, 
@@ -151,12 +167,12 @@ class RDX {
     
     let right = new THREE.Mesh( geometry, material );
     scene.add( right );
-    right.position.x += 30;
+    right.position.x += 23;
     right.rotation.y -= (Math.PI / 2);
-    right.position.z += 10;
+    right.position.z += 3.40;
     
     // Left Wall
-    geometry = new THREE.PlaneGeometry( 60, 32, 64, 64 );
+    geometry = new THREE.PlaneGeometry( 47, 31, 64, 64 );
     material = new THREE.MeshPhongMaterial({
       color: 0xffffff, 
       side: THREE.DoubleSide, 
@@ -166,12 +182,12 @@ class RDX {
     
     let left = new THREE.Mesh( geometry, material );
     scene.add( left );
-    left.position.x -= 30;
+    left.position.x -= 23;
     left.rotation.y += (Math.PI / 2);
-    left.position.z += 10;
+    left.position.z += 4;
     
     // Front Wall
-    geometry = new THREE.PlaneGeometry( 60, 32, 64, 64 );
+    geometry = new THREE.PlaneGeometry( 47, 32, 64, 64 );
     material = new THREE.MeshPhongMaterial({
       color: 0xffffff, 
       side: THREE.DoubleSide, 
@@ -183,7 +199,7 @@ class RDX {
     scene.add( front );
     front.position.x = 0;
     front.rotation.y = -(Math.PI / 1);
-    front.position.z += 40;
+    front.position.z += 28;
 
     let keyboard = {};
     
@@ -222,6 +238,31 @@ class RDX {
     window.addEventListener('keydown', keyDown);
     window.addEventListener('keyup', keyUp);
 
+    const controls = [].slice.call(document.querySelectorAll('.rdx-panoramic'));
+    controls.forEach((control) => {
+      control.addEventListener('click', (evt) => {
+        const direction = evt.target.getAttribute('data-dir');
+
+        if(direction === 'next') {
+          const plugins = [ CSSPlugin, AttrPlugin ];
+          const timeline = new TimelineLite();
+    
+          let tween = timeline.to(camera.rotation, 1, {
+            y: (camera.rotation.y - (Math.PI / 2)),
+            ease: Power1.easeOut
+          });
+        }else if(direction === 'prev') {
+          const plugins = [ CSSPlugin, AttrPlugin ];
+          const timeline = new TimelineLite();
+    
+          let tween = timeline.to(camera.rotation, 1, {
+            y: (camera.rotation.y + (Math.PI / 2)),
+            ease: Power1.easeOut
+          });
+        }
+      });
+    });
+
     const exploreCenter = document.querySelector('.btn[data-explore]') && document.querySelector('.btn[data-explore]');
     if(exploreCenter) {
       exploreCenter.addEventListener('click', (evt) => {
@@ -231,7 +272,7 @@ class RDX {
         const timeline = new TimelineLite();
   
         let tween = timeline.to(camera.position, 1, {
-          z: 10,
+          z: 4,
           ease: Power1.easeOut
         });
   
