@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Balance",
+    "image": "../images/overview-tour-1a-modal-balance.jpg",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "title": "Performance",
+    "image": "../images/overview-tour-1a-modal-performance.jpg",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
+]

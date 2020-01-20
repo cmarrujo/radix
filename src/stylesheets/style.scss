@@ -121,6 +121,7 @@
     background: -webkit-linear-gradient(bottom,  $dark-base 0%, $dark-base 100%);
     background: linear-gradient(to bottom,  $dark-base 0%, $dark-base 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$dark-base, endColorstr=$dark-base,GradientType=1);
+    display: none;
     height: 100vh;
     left: 0;
     opacity: 0;

@@ -59,6 +59,7 @@
 
   &-modal {
     background: $dark-base;
+    display: none;
     height: 55%;
     left: 50%;
     position: absolute;
@@ -66,6 +67,24 @@
     transform: translate(-50%, -50%);
     width: 65%;
     z-index: 1;
+
+    &[data-active='true'] {
+      display: block;
+    }
+
+    &--exit {
+      height: 35px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 35px;
+      z-index: 1;
+
+      &_svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
 
     &--content {
       display: flex;

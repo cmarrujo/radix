@@ -8,6 +8,7 @@ import textureWallNormalMapRight from '../images/pano-background-Artboard-2.jpg'
 import textureWallNormalMapleft from '../images/pano-background-Artboard-5.jpg';
 import textureWallNormalMapBack from '../images/pano-background-Artboard-3.jpg';
 import autoprefixer from "autoprefixer";
+import data from "../scripts/rdxdata.json";
 
 class RDX {
   constructor() {
@@ -37,10 +38,20 @@ class RDX {
 
   orbsInteraction = () => {
     const orbs = [].slice.call(document.querySelectorAll('.rdx-orbs--point'));
-    orbs.forEach((orb) => {
-      orb.addEventListener('click', (evt) => {
-        alert('click');
-      })
+    const modal = document.querySelector('.rdx-modal') && document.querySelector('.rdx-modal');
+    const modalExit = document.querySelector('.rdx-modal--exit') && document.querySelector('.rdx-modal--exit');
+
+    if(orbs.length) {
+      orbs.forEach((orb) => {
+        orb.addEventListener('click', (evt) => {
+          modal.setAttribute('data-active', 'true');
+        });
+      });
+    }
+
+    modalExit.addEventListener('click', (evt) => {
+      debugger;
+      modal.setAttribute('data-active', 'false');
     });
   }
 
@@ -569,20 +580,30 @@ class RDX {
       rdxMenu.addEventListener('click', (evt) => {
         if(active === false) {
           active = true;
-          rdxDropdown.setAttribute('data-active', `${active}`);
-          rdxDropDownList.setAttribute('data-active', `${active}`);
-          rdxBgImage.setAttribute('data-active', `${active}`);
+          rdxDropdown.style.display = 'block';
+
+          setTimeout(() => {
+            rdxDropdown.setAttribute('data-active', `${active}`);
+            rdxDropDownList.setAttribute('data-active', `${active}`);
+            rdxBgImage.setAttribute('data-active', `${active}`);
+          }, 100);
+
           setTimeout(() => {
             rdxMenu.setAttribute('data-active', `${active}`);        
-          }, 100);
+          }, 200);
         } else {
           active = false;
           rdxDropDownList.setAttribute('data-active', `${active}`);
           rdxBgImage.setAttribute('data-active', `${active}`);
+
           setTimeout(() => {
             rdxDropdown.setAttribute('data-active', `${active}`);
             rdxMenu.setAttribute('data-active', `${active}`);
           }, 1800);
+          
+          setTimeout(() => {
+            rdxDropdown.style.display = 'none';
+          }, 2000);
         }
       });
     }
