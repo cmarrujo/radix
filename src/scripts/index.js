@@ -297,6 +297,12 @@ class RDX {
           ease: Power1.easeOut
         });
   
+        const orbs = document.querySelector('.rdx-orbs') && document.querySelector('.rdx-orbs');
+        orbs.setAttribute('data-active', 'true');
+        
+        const panoramic = document.querySelector('.rdx-panoramic') && document.querySelector('.rdx-panoramic');
+        panoramic.setAttribute('data-active', 'true');
+
         const hiddenFigures = document.querySelectorAll('[data-hidden=false]');
         hiddenFigures.forEach((h) => {
           h.style.display = "none";

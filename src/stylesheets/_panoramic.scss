@@ -1,58 +1,171 @@
 .rdx {
   &-panoramic {
-    &[data-dir='prev'],
-    &[data-dir='next'] {
-      // border: thin solid red;
-      color: $light;
-      font-size: 70px;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      text-align: center;
+    opacity: 0;
+
+    &[data-active='true'] {
+      opacity: 1;
     }
 
-    &[data-dir='prev'] {
-      left: 50px;
-    }
-    
-    &[data-dir='next'] {
-      right: 50px;
+    &--bumper {
+      &[data-dir='prev'],
+      &[data-dir='next'] {
+        // border: thin solid red;
+        color: $light;
+        font-size: 40px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+
+        @media (min-width: 1024px) {
+          font-size: 70px;
+        }
+      }
+
+      &[data-dir='prev'] {
+        left: 20px;
+
+        @media (min-width: 1024px) {
+          left: 50px;
+        }
+      }
+      
+      &[data-dir='next'] {
+        right: 20px;
+
+        @media (min-width: 1024px) {
+          right: 50px;
+        }
+      }
     }
   }
 
   &-orbs {
+    cursor: pointer;
+    display: none;
     left: 0;
     position: absolute;
     top: 0;
 
+    &[data-active='true'] {
+      display: block;
+    }
+
     &--point {
       background: rgba($light-base, .25);
       border-radius: 100%;
-      height: 75px;
-      width: 75px;
+      height: 55px;
+      width: 55px;
+
+      @media (min-width: 1024px) {
+        height: 75px;
+        width: 75px;
+      }
 
       &:before {
         border: 2px solid rgba($light-base, 1);
         border-radius: 100%;
         content: '';
-        height: 25px;
+        height: 15px;
         left: 50%;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 25px;
+        transition: all .25s ease-out;
+        width: 15px;
+
+        @media (min-width: 1024px) {
+          height: 25px;
+          width: 25px;
+        }
       }
 
-      &.-p1 {
-        left: 30vw;
+      &[data-detail='balance'] {
+        left: 10vw;
         position: absolute;
-        top: 300px;
+        top: 25vh;
+
+        @media (min-width: 1024px) {
+          left: 30vw;
+          top: 20vh;
+        }
       }
       
-      &.-p2 {
+      &[data-detail='experts'] {
         left: 60vw;
         position: absolute;
-        top: 700px;
+        top: 60vh;
+
+        @media (min-width: 1024px) {
+          left: 30vw;
+          top: 20vh;
+        }
+      }
+      
+      &[data-detail='performance'] {
+        left: 10vw;
+        position: absolute;
+        top: 25vh;
+
+        @media (min-width: 1024px) {
+          left: 30vw;
+          top: 20vh;
+        }
+      }
+      
+      &[data-detail='recovery'] {
+        left: 60vw;
+        position: absolute;
+        top: 60vh;
+
+        @media (min-width: 1024px) {
+          left: 30vw;
+          top: 20vh;
+        }
+      }
+      
+      &[data-detail='success'] {
+        left: 10vw;
+        position: absolute;
+        top: 25vh;
+
+        @media (min-width: 1024px) {
+          left: 30vw;
+          top: 20vh;
+        }
+      }
+      
+      &[data-detail='functional'] {
+        left: 60vw;
+        position: absolute;
+        top: 60vh;
+
+        @media (min-width: 1024px) {
+          left: 30vw;
+          top: 20vh;
+        }
+      }
+      
+      &[data-detail='approach'] {
+        left: 10vw;
+        position: absolute;
+        top: 25vh;
+
+        @media (min-width: 1024px) {
+          left: 30vw;
+          top: 20vh;
+        }
+      }
+      
+      &[data-detail='fitness'] {
+        left: 60vw;
+        position: absolute;
+        top: 60vh;
+
+        @media (min-width: 1024px) {
+          left: 30vw;
+          top: 20vh;
+        }
       }
     }
   }
