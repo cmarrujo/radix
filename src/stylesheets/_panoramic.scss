@@ -49,8 +49,9 @@
     &--point {
       background: rgba($light-base, .25);
       border-radius: 100%;
-      display: none;
       height: 55px;
+      opacity: 1;
+      transition: all .25s ease-out;
       width: 55px;
 
       @media (min-width: 1024px) {
@@ -67,7 +68,6 @@
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        transition: all .25s ease-out;
         width: 15px;
 
         @media (min-width: 1024px) {
@@ -78,11 +78,12 @@
 
       &[data-detail='balance'] {
         left: 10vw;
+        opacity: 0;
         position: absolute;
         top: 25vh;
 
         &[data-active='true'] {
-          display: block;
+          opacity: 1;
         }
 
         @media (min-width: 1024px) {
@@ -93,11 +94,12 @@
       
       &[data-detail='experts'] {
         left: 60vw;
+        opacity: 0;
         position: absolute;
         top: 60vh;
 
         &[data-active='true'] {
-          display: block;
+          opacity: 1;
         }
 
         @media (min-width: 1024px) {
@@ -107,12 +109,13 @@
       }
       
       &[data-detail='performance'] {
-        left: 10vw;
+        left: 25vw;
+        opacity: 0;
         position: absolute;
         top: 25vh;
 
         &[data-active='true'] {
-          display: block;
+          opacity: 1;
         }
 
         @media (min-width: 1024px) {
@@ -122,12 +125,13 @@
       }
       
       &[data-detail='recovery'] {
-        left: 60vw;
+        left: 75vw;
+        opacity: 0;
         position: absolute;
         top: 60vh;
 
         &[data-active='true'] {
-          display: block;
+          opacity: 1;
         }
 
         @media (min-width: 1024px) {
@@ -138,11 +142,12 @@
       
       &[data-detail='success'] {
         left: 10vw;
+        opacity: 0;
         position: absolute;
         top: 25vh;
 
         &[data-active='true'] {
-          display: block;
+          opacity: 1;
         }
 
         @media (min-width: 1024px) {
@@ -152,12 +157,13 @@
       }
       
       &[data-detail='functional'] {
-        left: 60vw;
+        left: 40vw;
+        opacity: 0;
         position: absolute;
-        top: 60vh;
+        top: 50vh;
 
         &[data-active='true'] {
-          display: block;
+          opacity: 1;
         }
 
         @media (min-width: 1024px) {
@@ -168,11 +174,12 @@
       
       &[data-detail='approach'] {
         left: 10vw;
+        opacity: 0;
         position: absolute;
-        top: 25vh;
+        top: 60vh;
 
         &[data-active='true'] {
-          display: block;
+          opacity: 1;
         }
 
         @media (min-width: 1024px) {
@@ -183,11 +190,12 @@
       
       &[data-detail='fitness'] {
         left: 60vw;
+        opacity: 0;
         position: absolute;
-        top: 60vh;
+        top: 30vh;
 
         &[data-active='true'] {
-          display: block;
+          opacity: 1;
         }
 
         @media (min-width: 1024px) {
@@ -201,13 +209,18 @@
   &-modal {
     background: $dark-base;
     display: none;
-    height: 55%;
+    height: 75%;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 65%;
+    width: 95%;
     z-index: 1;
+
+    @media (min-width: 1024px) {
+      height: 55%;
+      width: 65%;
+    }
 
     &[data-active='true'] {
       display: block;
@@ -229,13 +242,22 @@
 
     &--content {
       display: flex;
+      flex-direction: column;
       height: 100%;
+
+      @media (min-width: 1024px) {
+        flex-direction: row;
+      }
 
       &_image {
         background: url('../images/overview-tour-1a-modal-balance.jpg') top center no-repeat;
         background-size: cover;
         height: 100%;
         width: 50%;
+
+        @media (min-width: 1024px) {
+          width: 100%;
+        }
       }
       
       &_copy {
@@ -243,6 +265,10 @@
         height: 100%;
         position: relative;
         width: 50%;
+
+        @media (min-width: 1024px) {
+          width: 100%;
+        }
 
         &-header {
           @include BasicGothicProBold;

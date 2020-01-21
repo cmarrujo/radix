@@ -39,16 +39,21 @@ class RDX {
   orbsInteraction = () => {
     const orbs = [].slice.call(document.querySelectorAll('.rdx-orbs--point'));
     const modal = document.querySelector('.rdx-modal') && document.querySelector('.rdx-modal');
+    let modalTitle = document.querySelector('.rdx-modal--content_copy-header') && document.querySelector('.rdx-modal--content_copy-header');
+    let modalText = document.querySelector('.rdx-modal--content_copy-text') && document.querySelector('.rdx-modal--content_copy-text');
+    let modalUrl = document.querySelector('.rdx-modal--content_copy .-cta.btn') && document.querySelector('.rdx-modal--content_copy .-cta.btn');
     const modalExit = document.querySelector('.rdx-modal--exit') && document.querySelector('.rdx-modal--exit');
 
     if(orbs.length) {
       orbs.forEach((orb) => {
         orb.addEventListener('click', (evt) => {
-          // console.log(evt.target.getAttribute('data-detail'));
           const id = evt.target.getAttribute('data-id');
+
           modal.setAttribute('data-active', 'true');
 
-          console.log(data[this.panoCount].plane[id].title);
+          modalTitle.innerHTML = data[this.panoCount].plane[id].title;
+          modalText.innerHTML = data[this.panoCount].plane[id].text;
+          modalUrl.setAttribute('href', `${data[this.panoCount].plane[id].url}`);
         });
       });
     }
@@ -287,7 +292,7 @@ class RDX {
             orbsPoints.forEach((point, index) => {
               const p = point.getAttribute('data-detail');
               point.setAttribute('data-active', 'false');
-              
+
               if(p === `${data[this.panoCount].plane[0].title.toLowerCase()}`) {
                 point.setAttribute('data-active', 'true');
               }else if(p === `${data[this.panoCount].plane[1].title.toLowerCase()}`) {
@@ -313,8 +318,16 @@ class RDX {
           }
 
           if(orbsPoints.length) {
-            orbsPoints[0].setAttribute('data-detail', `${data.plains[this.panoCount].title[0]}`);
-            orbsPoints[1].setAttribute('data-detail', `${data.plains[this.panoCount].title[1]}`);
+            orbsPoints.forEach((point, index) => {
+              const p = point.getAttribute('data-detail');
+              point.setAttribute('data-active', 'false');
+              
+              if(p === `${data[this.panoCount].plane[0].title.toLowerCase()}`) {
+                point.setAttribute('data-active', 'true');
+              }else if(p === `${data[this.panoCount].plane[1].title.toLowerCase()}`) {
+                point.setAttribute('data-active', 'true');
+              }
+            });
           }
 
           console.log(this.panoCount);

@@ -4,12 +4,14 @@
       {
         "title": "Balance",
         "image": "../images/overview-tour-1a-modal-balance.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "url": "https://www.radixrecovery.com/balance"
       },
       {
         "title": "Experts",
         "image": "../images/overview-tour-1a-modal-performance.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "url": "https://www.radixrecovery.com/balance"
       }
     ]
   },
@@ -18,12 +20,14 @@
       {
         "title": "Performance",
         "image": "../images/overview-tour-1a-modal-balance.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "url": "https://www.radixrecovery.com/balance"
       },
       {
         "title": "Recovery",
         "image": "../images/overview-tour-1a-modal-performance.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "url": "https://www.radixrecovery.com/balance"
       }
     ]
   },
@@ -32,12 +36,14 @@
       {
         "title": "Success",
         "image": "../images/overview-tour-1a-modal-balance.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "url": "https://www.radixrecovery.com/balance"
       },
       {
         "title": "Functional",
         "image": "../images/overview-tour-1a-modal-performance.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "url": "https://www.radixrecovery.com/balance"
       }
     ]
   },
@@ -46,12 +52,14 @@
       {
         "title": "Approach",
         "image": "../images/overview-tour-1a-modal-balance.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "url": "https://www.radixrecovery.com/balance"
       },
       {
         "title": "Fitness",
         "image": "../images/overview-tour-1a-modal-performance.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "url": "https://www.radixrecovery.com/balance"
       }
     ]
   }
