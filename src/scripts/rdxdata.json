@@ -1,12 +1,58 @@
 [
   {
-    "title": "Balance",
-    "image": "../images/overview-tour-1a-modal-balance.jpg",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "plane": [
+      {
+        "title": "Balance",
+        "image": "../images/overview-tour-1a-modal-balance.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "title": "Experts",
+        "image": "../images/overview-tour-1a-modal-performance.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    ]
   },
   {
-    "title": "Performance",
-    "image": "../images/overview-tour-1a-modal-performance.jpg",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "plane": [
+      {
+        "title": "Performance",
+        "image": "../images/overview-tour-1a-modal-balance.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "title": "Recovery",
+        "image": "../images/overview-tour-1a-modal-performance.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    ]
+  },
+  {
+    "plane": [
+      {
+        "title": "Success",
+        "image": "../images/overview-tour-1a-modal-balance.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "title": "Functional",
+        "image": "../images/overview-tour-1a-modal-performance.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    ]
+  },
+  {
+    "plane": [
+      {
+        "title": "Approach",
+        "image": "../images/overview-tour-1a-modal-balance.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "title": "Fitness",
+        "image": "../images/overview-tour-1a-modal-performance.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    ]
   }
 ]

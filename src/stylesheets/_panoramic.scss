@@ -42,18 +42,14 @@
 
   &-orbs {
     cursor: pointer;
-    display: none;
     left: 0;
     position: absolute;
     top: 0;
 
-    &[data-active='true'] {
-      display: block;
-    }
-
     &--point {
       background: rgba($light-base, .25);
       border-radius: 100%;
+      display: none;
       height: 55px;
       width: 55px;
 
@@ -85,6 +81,10 @@
         position: absolute;
         top: 25vh;
 
+        &[data-active='true'] {
+          display: block;
+        }
+
         @media (min-width: 1024px) {
           left: 30vw;
           top: 20vh;
@@ -96,9 +96,13 @@
         position: absolute;
         top: 60vh;
 
+        &[data-active='true'] {
+          display: block;
+        }
+
         @media (min-width: 1024px) {
-          left: 30vw;
-          top: 20vh;
+          left: 60vw;
+          top: 50vh;
         }
       }
       
@@ -106,6 +110,10 @@
         left: 10vw;
         position: absolute;
         top: 25vh;
+
+        &[data-active='true'] {
+          display: block;
+        }
 
         @media (min-width: 1024px) {
           left: 30vw;
@@ -118,9 +126,13 @@
         position: absolute;
         top: 60vh;
 
+        &[data-active='true'] {
+          display: block;
+        }
+
         @media (min-width: 1024px) {
-          left: 30vw;
-          top: 20vh;
+          left: 70vw;
+          top: 55vh;
         }
       }
       
@@ -129,9 +141,13 @@
         position: absolute;
         top: 25vh;
 
+        &[data-active='true'] {
+          display: block;
+        }
+
         @media (min-width: 1024px) {
-          left: 30vw;
-          top: 20vh;
+          left: 25vw;
+          top: 60vh;
         }
       }
       
@@ -140,9 +156,13 @@
         position: absolute;
         top: 60vh;
 
+        &[data-active='true'] {
+          display: block;
+        }
+
         @media (min-width: 1024px) {
-          left: 30vw;
-          top: 20vh;
+          left: 45vw;
+          top: 50vh;
         }
       }
       
@@ -151,9 +171,13 @@
         position: absolute;
         top: 25vh;
 
+        &[data-active='true'] {
+          display: block;
+        }
+
         @media (min-width: 1024px) {
-          left: 30vw;
-          top: 20vh;
+          left: 35vw;
+          top: 55vh;
         }
       }
       
@@ -162,9 +186,13 @@
         position: absolute;
         top: 60vh;
 
+        &[data-active='true'] {
+          display: block;
+        }
+
         @media (min-width: 1024px) {
-          left: 30vw;
-          top: 20vh;
+          left: 60vw;
+          top: 25vh;
         }
       }
     }

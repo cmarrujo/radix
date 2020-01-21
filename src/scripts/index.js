@@ -44,13 +44,16 @@ class RDX {
     if(orbs.length) {
       orbs.forEach((orb) => {
         orb.addEventListener('click', (evt) => {
+          // console.log(evt.target.getAttribute('data-detail'));
+          const id = evt.target.getAttribute('data-id');
           modal.setAttribute('data-active', 'true');
+
+          console.log(data[this.panoCount].plane[id].title);
         });
       });
     }
 
     modalExit.addEventListener('click', (evt) => {
-      debugger;
       modal.setAttribute('data-active', 'false');
     });
   }
@@ -259,10 +262,11 @@ class RDX {
     window.addEventListener('keydown', keyDown);
     window.addEventListener('keyup', keyUp);
 
-    const controls = [].slice.call(document.querySelectorAll('.rdx-panoramic'));
+    const controls = [].slice.call(document.querySelectorAll('.rdx-panoramic--bumper'));
     controls.forEach((control) => {
       control.addEventListener('click', (evt) => {
         const direction = evt.target.getAttribute('data-dir');
+        const orbsPoints = [].slice.call(document.querySelectorAll('.rdx-orbs--point'));
 
         if(direction === 'next') {
           const plugins = [ CSSPlugin, AttrPlugin ];
@@ -272,6 +276,27 @@ class RDX {
             y: (camera.rotation.y - (Math.PI / 2)),
             ease: Power1.easeOut
           });
+
+          if(this.panoCount >= 3) {
+            this.panoCount = 0;  
+          }else {
+            this.panoCount++;
+          }
+
+          if(orbsPoints.length) {
+            orbsPoints.forEach((point, index) => {
+              const p = point.getAttribute('data-detail');
+              point.setAttribute('data-active', 'false');
+              
+              if(p === `${data[this.panoCount].plane[0].title.toLowerCase()}`) {
+                point.setAttribute('data-active', 'true');
+              }else if(p === `${data[this.panoCount].plane[1].title.toLowerCase()}`) {
+                point.setAttribute('data-active', 'true');
+              }
+            });
+          }
+
+          console.log(this.panoCount);
         }else if(direction === 'prev') {
           const plugins = [ CSSPlugin, AttrPlugin ];
           const timeline = new TimelineLite();
@@ -280,6 +305,19 @@ class RDX {
             y: (camera.rotation.y + (Math.PI / 2)),
             ease: Power1.easeOut
           });
+
+          if(this.panoCount <= 0) {
+            this.panoCount = 3;  
+          }else {
+            this.panoCount--;
+          }
+
+          if(orbsPoints.length) {
+            orbsPoints[0].setAttribute('data-detail', `${data.plains[this.panoCount].title[0]}`);
+            orbsPoints[1].setAttribute('data-detail', `${data.plains[this.panoCount].title[1]}`);
+          }
+
+          console.log(this.panoCount);
         }
       });
     });
@@ -297,8 +335,11 @@ class RDX {
           ease: Power1.easeOut
         });
   
-        const orbs = document.querySelector('.rdx-orbs') && document.querySelector('.rdx-orbs');
-        orbs.setAttribute('data-active', 'true');
+        const orbs = [].slice.call(document.querySelectorAll('.rdx-orbs--point'));
+        if(orbs.length) {
+          orbs[0].setAttribute('data-active', 'true');
+          orbs[1].setAttribute('data-active', 'true');
+        }
         
         const panoramic = document.querySelector('.rdx-panoramic') && document.querySelector('.rdx-panoramic');
         panoramic.setAttribute('data-active', 'true');
