@@ -3,15 +3,35 @@
     "plane": [
       {
         "title": "Balance",
-        "image": "../images/overview-tour-1a-modal-balance.jpg",
+        "detail": "balance",
+        "image": "https://www.radixrecovery.com/images/overview-tour-1a-modal-balance.jpg",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "url": "https://www.radixrecovery.com/balance"
       },
       {
-        "title": "Experts",
-        "image": "../images/overview-tour-1a-modal-performance.jpg",
+        "title": "Three Pillars",
+        "detail": "pillars",
+        "image": "https://www.radixrecovery.com/images/overview-tour-1b-modal-three-pillars.jpg",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "url": "https://www.radixrecovery.com/balance"
+        "url": "https://www.radixrecovery.com/pillars"
+      }
+    ]
+  },
+  {
+    "plane": [
+      {
+        "title": "Performance Experts",
+        "detail": "experts",
+        "image": "https://www.radixrecovery.com/images/overview-tour-2a-modal-performance-experts.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "url": "https://www.radixrecovery.com/performance-experts"
+      },
+      {
+        "title": "Functional Training",
+        "detail": "training",
+        "image": "https://www.radixrecovery.com/images/overview-tour-2b-modal-functional-training.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "url": "https://www.radixrecovery.com/functional-training"
       }
     ]
   },
@@ -19,31 +39,17 @@
     "plane": [
       {
         "title": "Performance",
-        "image": "../images/overview-tour-1a-modal-balance.jpg",
+        "detail": "performance",
+        "image": "https://www.radixrecovery.com/images/overview-tour-3-modal-performance.jpg",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "url": "https://www.radixrecovery.com/balance"
+        "url": "https://www.radixrecovery.com/performance"
       },
       {
         "title": "Recovery",
-        "image": "../images/overview-tour-1a-modal-performance.jpg",
+        "detail": "recovery",
+        "image": "https://www.radixrecovery.com/images/overview-tour-4-modal-recovery.jpg",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "url": "https://www.radixrecovery.com/balance"
-      }
-    ]
-  },
-  {
-    "plane": [
-      {
-        "title": "Success",
-        "image": "../images/overview-tour-1a-modal-balance.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "url": "https://www.radixrecovery.com/balance"
-      },
-      {
-        "title": "Functional",
-        "image": "../images/overview-tour-1a-modal-performance.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "url": "https://www.radixrecovery.com/balance"
+        "url": "https://www.radixrecovery.com/recovery"
       }
     ]
   },
@@ -51,13 +57,15 @@
     "plane": [
       {
         "title": "Approach",
-        "image": "../images/overview-tour-1a-modal-balance.jpg",
+        "detail": "approach",
+        "image": "https://www.radixrecovery.com/images/overview-tour-3-modal-performance.jpg",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "url": "https://www.radixrecovery.com/balance"
       },
       {
         "title": "Fitness",
-        "image": "../images/overview-tour-1a-modal-performance.jpg",
+        "detail": "fitness",
+        "image": "https://www.radixrecovery.com/images/overview-tour-4-modal-recovery.jpg",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "url": "https://www.radixrecovery.com/balance"
       }

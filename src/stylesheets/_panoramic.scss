@@ -92,7 +92,7 @@
         }
       }
       
-      &[data-detail='experts'] {
+      &[data-detail='pillars'] {
         left: 60vw;
         opacity: 0;
         position: absolute;
@@ -108,7 +108,7 @@
         }
       }
       
-      &[data-detail='performance'] {
+      &[data-detail='experts'] {
         left: 25vw;
         opacity: 0;
         position: absolute;
@@ -124,7 +124,7 @@
         }
       }
       
-      &[data-detail='recovery'] {
+      &[data-detail='training'] {
         left: 75vw;
         opacity: 0;
         position: absolute;
@@ -140,7 +140,7 @@
         }
       }
       
-      &[data-detail='success'] {
+      &[data-detail='performance'] {
         left: 10vw;
         opacity: 0;
         position: absolute;
@@ -156,7 +156,7 @@
         }
       }
       
-      &[data-detail='functional'] {
+      &[data-detail='recovery'] {
         left: 40vw;
         opacity: 0;
         position: absolute;
@@ -253,10 +253,10 @@
         background: url('../images/overview-tour-1a-modal-balance.jpg') top center no-repeat;
         background-size: cover;
         height: 100%;
-        width: 50%;
+        width: 100%;
 
         @media (min-width: 1024px) {
-          width: 100%;
+          width: 50%;
         }
       }
       
@@ -264,17 +264,29 @@
         color: $light;
         height: 100%;
         position: relative;
-        width: 50%;
+        width: 100%;
+
+        &-inner {
+          width: 85%;
+
+          @media (min-width: 1024px) {
+            width: auto;
+          }
+        }
 
         @media (min-width: 1024px) {
-          width: 100%;
+          width: 50%;
         }
 
         &-header {
           @include BasicGothicProBold;
           font-size: 42px;
-          margin: 0 0 15px 0;
-          padding: 0
+          margin: 0 0 5px 0;
+          padding: 0;
+
+          @media (min-width: 1024px) {
+            margin: 0 0 15px 0;
+          }
         }
         
         &-text {

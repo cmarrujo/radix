@@ -39,6 +39,7 @@ class RDX {
   orbsInteraction = () => {
     const orbs = [].slice.call(document.querySelectorAll('.rdx-orbs--point'));
     const modal = document.querySelector('.rdx-modal') && document.querySelector('.rdx-modal');
+    let modalImage = document.querySelector('.rdx-modal--content_image') && document.querySelector('.rdx-modal--content_image');
     let modalTitle = document.querySelector('.rdx-modal--content_copy-header') && document.querySelector('.rdx-modal--content_copy-header');
     let modalText = document.querySelector('.rdx-modal--content_copy-text') && document.querySelector('.rdx-modal--content_copy-text');
     let modalUrl = document.querySelector('.rdx-modal--content_copy .-cta.btn') && document.querySelector('.rdx-modal--content_copy .-cta.btn');
@@ -51,6 +52,8 @@ class RDX {
 
           modal.setAttribute('data-active', 'true');
 
+          modalImage.style.background = `url('${data[this.panoCount].plane[id].image}') top center no-repeat`;
+          modalImage.style.backgroundSize = `cover`;
           modalTitle.innerHTML = data[this.panoCount].plane[id].title;
           modalText.innerHTML = data[this.panoCount].plane[id].text;
           modalUrl.setAttribute('href', `${data[this.panoCount].plane[id].url}`);
@@ -293,9 +296,9 @@ class RDX {
               const p = point.getAttribute('data-detail');
               point.setAttribute('data-active', 'false');
 
-              if(p === `${data[this.panoCount].plane[0].title.toLowerCase()}`) {
+              if(p === `${data[this.panoCount].plane[0].detail.toLowerCase()}`) {
                 point.setAttribute('data-active', 'true');
-              }else if(p === `${data[this.panoCount].plane[1].title.toLowerCase()}`) {
+              }else if(p === `${data[this.panoCount].plane[1].detail.toLowerCase()}`) {
                 point.setAttribute('data-active', 'true');
               }
             });
@@ -322,9 +325,9 @@ class RDX {
               const p = point.getAttribute('data-detail');
               point.setAttribute('data-active', 'false');
               
-              if(p === `${data[this.panoCount].plane[0].title.toLowerCase()}`) {
+              if(p === `${data[this.panoCount].plane[0].detail.toLowerCase()}`) {
                 point.setAttribute('data-active', 'true');
-              }else if(p === `${data[this.panoCount].plane[1].title.toLowerCase()}`) {
+              }else if(p === `${data[this.panoCount].plane[1].detail.toLowerCase()}`) {
                 point.setAttribute('data-active', 'true');
               }
             });
