@@ -136,7 +136,7 @@
         background: $dark-base;
         border-radius: 50px;
         border: 0;
-        box-shadow: inset 0 0 3px $light-base;
+        box-shadow: inset 0 0 0 2px $light-base;
         color: $light;
         font-size: 14px;
         margin: 10px auto;
@@ -182,12 +182,12 @@
 
         @media (min-width: 1024px) {
           padding: 20px 10px 10px;
-          width: 300px;
+          width: 225px;
         }
         
         @media (min-width: 1280px) {
           padding: 20px 10px 10px;
-          width: 450px;
+          width: 325px;
         }
         
         @media (min-width: 1920px) {
@@ -197,7 +197,31 @@
         
         @media (min-width: 2560px) {
           padding: 20px 10px 10px;
-          width: 950px;
+          width: 650px;
+        }
+      }
+
+      &--text_call {
+        @include BasicGothicProDemibold;
+        background: transparent;
+        border: 0;
+        border: thin solid $light;
+        color: $light;
+        font-size: 14px;
+        padding: 25px 0;
+        text-transform: uppercase;
+        width: 100%;
+
+        &[data-active="true"] {
+          border: thin solid $light-base;
+        }
+
+        @media (min-width: 1024px) {
+          width: 150px;
+        }
+        
+        @media (min-width: 1920px) {
+          width: 225px;
         }
       }
 

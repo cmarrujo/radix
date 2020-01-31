@@ -3,10 +3,10 @@ import { Power0 } from 'gsap';
 import * as THREE from 'three';
 import { AmbientLight } from 'three';
 import '../stylesheets/style.scss';
-import textureWallNormalMap from '../images/pano-background-Artboard-1.jpg';
-import textureWallNormalMapRight from '../images/pano-background-Artboard-2.jpg';
-import textureWallNormalMapleft from '../images/pano-background-Artboard-5.jpg';
-import textureWallNormalMapBack from '../images/pano-background-Artboard-3.jpg';
+import textureWallNormalMap from '../images/pano-background-wall-1.jpg';
+import textureWallNormalMapRight from '../images/pano-background-wall-2.jpg';
+import textureWallNormalMapleft from '../images/pano-background-wall-4.jpg';
+import textureWallNormalMapBack from '../images/pano-background-wall-3.jpg';
 import autoprefixer from "autoprefixer";
 import data from "../scripts/rdxdata.json";
 
@@ -134,7 +134,7 @@ class RDX {
     let ambientLight = new AmbientLight(0xffffff, .65);
     scene.add(ambientLight);
     
-    let light = new THREE.PointLight(0xffffff, .10, 50);
+    let light = new THREE.PointLight(0xffffff, 1, 50);
     light.position.set(-3, 6, -3);
     light.castShadow = true;
     light.shadow.camera.near = .01;
@@ -172,7 +172,7 @@ class RDX {
     ceiling.position.z += 4;
 
     // Back Wall
-    geometry = new THREE.PlaneGeometry( 45, 30, 64, 64 );
+    geometry = new THREE.PlaneGeometry( 50, 30, 64, 64 );
     material = new THREE.MeshPhongMaterial({
       color: 0xffffff, 
       side: THREE.DoubleSide, 
@@ -189,7 +189,7 @@ class RDX {
     camera.position.z -= 2;
     
     // Right Wall
-    geometry = new THREE.PlaneGeometry( 45, 31, 64, 64 );
+    geometry = new THREE.PlaneGeometry( 50, 31, 64, 64 );
     material = new THREE.MeshPhongMaterial({
       color: 0xffffff, 
       side: THREE.DoubleSide, 
@@ -204,7 +204,7 @@ class RDX {
     right.position.z += 3.40;
     
     // Left Wall
-    geometry = new THREE.PlaneGeometry( 47, 31, 64, 64 );
+    geometry = new THREE.PlaneGeometry( 50, 31, 64, 64 );
     material = new THREE.MeshPhongMaterial({
       color: 0xffffff, 
       side: THREE.DoubleSide, 
@@ -219,7 +219,7 @@ class RDX {
     left.position.z += 4;
     
     // Front Wall
-    geometry = new THREE.PlaneGeometry( 47, 32, 64, 64 );
+    geometry = new THREE.PlaneGeometry( 50, 32, 64, 64 );
     material = new THREE.MeshPhongMaterial({
       color: 0xffffff, 
       side: THREE.DoubleSide, 
@@ -304,7 +304,6 @@ class RDX {
             });
           }
 
-          console.log(this.panoCount);
         }else if(direction === 'prev') {
           const plugins = [ CSSPlugin, AttrPlugin ];
           const timeline = new TimelineLite();
@@ -332,8 +331,6 @@ class RDX {
               }
             });
           }
-
-          console.log(this.panoCount);
         }
       });
     });

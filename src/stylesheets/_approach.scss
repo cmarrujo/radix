@@ -192,6 +192,10 @@
       background: -moz-linear-gradient(bottom, $dark-base 0%, $dark-base 100%);
       background: -webkit-linear-gradient(bottom, $dark-base 0%, $dark-base 100%);
       background: linear-gradient(to top, $dark-base 0%, $dark-base 100%);
+
+      .rdx-banner--text {
+        color: $light-base;
+      }
     }
 
     &_copy {
