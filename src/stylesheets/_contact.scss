@@ -19,8 +19,13 @@
     &--number {
       @include BasicGothicProDemibold;
       color: $blue;
+      cursor: pointer;
       letter-spacing: -1px;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
 
       &.-dark {
         color: $dark;

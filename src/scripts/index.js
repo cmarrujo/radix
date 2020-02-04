@@ -486,49 +486,66 @@ class RDX {
     const plugins = [ CSSPlugin, AttrPlugin ];
     const timeline = new TimelineLite();
 
-    const fitness = document.querySelector('.rdx-header--pillar.-fitness') && document.querySelector('.rdx-header--pillar.-fitness');
+    const fitness = document.querySelector('.rdx-header') && document.querySelector('.rdx-header');
     if(fitness) {
-      let tween = timeline.from(fitness, 1, {
-        opacity: 0,
-        x: 50,
-        ease: Power1.easeOut
-      });
-    }
-    
-    const enhancement = document.querySelector('.rdx-header--pillar.-enhancement') && document.querySelector('.rdx-header--pillar.-enhancement');
-    if(enhancement) {
-      let tween = timeline.from(enhancement, 1, {
-        opacity: 0,
-        x: -50,
-        ease: Power1.easeOut
-      }, '-=.5');
-    }
-    
-    const center = document.querySelector('.rdx-header--pillar.-center') && document.querySelector('.rdx-header--pillar.-center');
-    if(center) {
-      let tween = timeline.from(center, 1, {
-        opacity: 0,
-        x: 50,
-        ease: Power1.easeOut
-      }, '-=.5');
+      if(window.innerWidth <= 360) {
+        let tween = timeline.to(fitness, 10, {
+          x: '-1000vw',
+          ease: Power1.easeOut
+        });
+      }else if(window.innerWidth <= 480) {
+        let tween = timeline.to(fitness, 10, {
+          x: '-900vw',
+          ease: Power1.easeOut
+        });
+      }else if(window.innerWidth <= 768) {
+        let tween = timeline.to(fitness, 10, {
+          x: '-750vw',
+          ease: Power1.easeOut
+        });
+      }else if(window.innerWidth <= 1024) {
+        let tween = timeline.to(fitness, 10, {
+          x: '-625vw',
+          ease: Power1.easeOut
+        });
+      }else if(window.innerWidth <= 1280) {
+        let tween = timeline.to(fitness, 10, {
+          x: '-525vw',
+          ease: Power1.easeOut
+        });
+      }else if(window.innerWidth <= 1440) {
+        let tween = timeline.to(fitness, 10, {
+          x: '-480vw',
+          ease: Power1.easeOut
+        });
+      }else if(window.innerWidth <= 1920) {
+        let tween = timeline.to(fitness, 10, {
+          x: '-400vw',
+          ease: Power1.easeOut
+        });
+      }else if(window.innerWidth > 1920) {
+        let tween = timeline.to(fitness, 10, {
+          x: '-305vw',
+          ease: Power1.easeOut
+        });
+      }
     }
     
     const content = document.querySelector('.rdx-content--wrapper') && document.querySelector('.rdx-content--wrapper');
     if(content) {
       let tween = timeline.from(content, 1, {
         opacity: 0,
-        y: 25,
+        y: '-25%',
         ease: Power1.easeOut
-      }, '-=.75');
+      }, '-=4');
     }
     
     const social = document.querySelector('.rdx-social') && document.querySelector('.rdx-social');
     if(social) {
-      let tween = timeline.from(social, 1, {
+      let tween = timeline.from(social, 1.5, {
         opacity: 0,
-        y: 25,
         ease: Power1.easeOut
-      }, '-=.75');
+      }, '-=10');
     }
   }
 
@@ -632,7 +649,7 @@ class RDX {
   showMenu = () => {
     const rdxMenu = document.querySelector('.rdx-menu');
     const rdxDropdown = document.querySelector('.rdx-dropdown');
-    const rdxBgImage = document.querySelector('.rdx-dropdown--image');
+    // const rdxBgImage = document.querySelector('.rdx-dropdown--image');
     const rdxDropDownList = document.querySelector('.rdx-dropdown--list');
     let active = false;
 
@@ -645,7 +662,7 @@ class RDX {
           setTimeout(() => {
             rdxDropdown.setAttribute('data-active', `${active}`);
             rdxDropDownList.setAttribute('data-active', `${active}`);
-            rdxBgImage.setAttribute('data-active', `${active}`);
+            // rdxBgImage.setAttribute('data-active', `${active}`);
           }, 100);
 
           setTimeout(() => {
@@ -654,16 +671,16 @@ class RDX {
         } else {
           active = false;
           rdxDropDownList.setAttribute('data-active', `${active}`);
-          rdxBgImage.setAttribute('data-active', `${active}`);
+          // rdxBgImage.setAttribute('data-active', `${active}`);
 
           setTimeout(() => {
             rdxDropdown.setAttribute('data-active', `${active}`);
             rdxMenu.setAttribute('data-active', `${active}`);
-          }, 1800);
+          }, 1500);
           
           setTimeout(() => {
             rdxDropdown.style.display = 'none';
-          }, 2000);
+          }, 1800);
         }
       });
     }

@@ -28,8 +28,8 @@
       .rect--svg {
         stroke: none;
         fill: rgb(255, 255, 255);
-        height: 250px;
-        width: 250px;
+        height: 200px;
+        width: 200px;
         y: 250;
 
         &[data-active="true"] {
@@ -49,8 +49,8 @@
       top: 50%;
       transform: translate(-50%, -50%);
       transition: all 1s ease-out;
-      height: 250px;
-      width: 250px;
+      height: 200px;
+      width: 200px;
       z-index: 5;
     }
     
@@ -59,8 +59,8 @@
       left: 0;
       position: absolute;
       bottom: 0;
-      height: 250px;
-      width: 250px;
+      height: 200px;
+      width: 200px;
       z-index: 5;
     }
     
@@ -71,29 +71,19 @@
       top: 50%;
       transform: translate(-50%, -50%);
       transition: all .45s ease-out;
-      height: 250px;
-      width: 250px;
+      height: 200px;
+      width: 200px;
       z-index: 1;
-
-      // &[data-active="true"] {
-      //   height: 200%;
-      //   width: 200%;
-
-      //   // @media (min-width: 768px) {
-      //   //   height: 100px;
-      //   //   width: 100px;
-      //   // }
-      // }
     }
     
     .rdx-logo--svg {
-      fill: $dark;
+      fill: $mid-base;
       left: 50%;
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      height: 250px;
-      width: 250px;
+      height: 200px;
+      width: 200px;
       z-index: 1;
     }
   }
