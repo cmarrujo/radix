@@ -9,13 +9,16 @@
     &--bumper {
       &[data-dir='prev'],
       &[data-dir='next'] {
-        color: $light;
         cursor: pointer;
-        font-size: 40px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         text-align: center;
+        width: 50px;
+
+        .rdx-icon--arrow {
+          fill: $light;
+        }
 
         @media (min-width: 1024px) {
           font-size: 70px;
@@ -24,7 +27,7 @@
 
       &[data-dir='prev'] {
         left: 20px;
-
+        
         @media (min-width: 1024px) {
           left: 50px;
         }
@@ -49,7 +52,6 @@
       background: rgba($light-base, .25);
       border-radius: 100%;
       height: 55px;
-      transition: all .5s ease-out;
       width: 55px;
 
       @media (min-width: 768px) {
@@ -94,7 +96,7 @@
         left: 10vw;
         opacity: 0;
         position: absolute;
-        top: 25vh;
+        top: 20vh;
         transition: top .5s .70s ease-out, opacity .5s .70s ease-out;
 
         &[data-active='true'] {
@@ -105,7 +107,7 @@
 
         @media (min-width: 768px) {
           left: 30vw;
-          top: 20vh;
+          top: 15vh;
 
           &[data-active='true'] {
             opacity: 1;
@@ -141,26 +143,24 @@
       }
       
       &[data-detail='experts'] {
-        left: 25vw;
+        left: 35vw;
         opacity: 0;
         position: absolute;
-        top: 25vh;
+        top: 35vh;
         transition: top .5s .70s ease-out, opacity .5s .70s ease-out;
 
         &[data-active='true'] {
           opacity: 1;
-          height: 55px;
-          width: 55px;
+          top: 30vh;
         }
 
         @media (min-width: 768px) {
           left: 30vw;
-          top: 20vh;
+          top: 30vh;
 
           &[data-active='true'] {
             opacity: 1;
-            height: 75px;
-            width: 75px;
+            top: 25vh;
           }
         }
       }
@@ -294,7 +294,6 @@
     z-index: 1;
 
     @media (min-width: 1024px) {
-      height: 55%;
       width: 65%;
     }
 
@@ -303,11 +302,11 @@
     }
 
     &--exit {
-      height: 35px;
+      height: 30px;
       position: absolute;
       right: 20px;
       top: 20px;
-      width: 35px;
+      width: 30px;
       z-index: 1;
 
       &_svg {

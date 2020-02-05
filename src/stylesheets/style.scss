@@ -312,15 +312,6 @@
         text-decoration: none;
         transition: left 1s ease-out .5s, opacity .5s ease-out .5s, font-size .35s;
 
-        &:not(.-cta) {
-          // text-shadow:
-          //   1px  1px 0 $blue,
-          //   -1px -1px 0 $blue,  
-          //   1px -1px 0 $blue,
-          //   -1px  1px 0 $blue,
-          //   1px  1px 0 $blue;
-        }
-
         &:nth-child(1) {
           left: -10%;
           top: 0;

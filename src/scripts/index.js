@@ -61,9 +61,11 @@ class RDX {
       });
     }
 
-    modalExit.addEventListener('click', (evt) => {
-      modal.setAttribute('data-active', 'false');
-    });
+    if(modalExit) {
+      modalExit.addEventListener('click', (evt) => {
+        modal.setAttribute('data-active', 'false');
+      });
+    }
   }
 
   initAnimations = () => {
@@ -272,8 +274,8 @@ class RDX {
 
     const controls = [].slice.call(document.querySelectorAll('.rdx-panoramic--bumper'));
     controls.forEach((control) => {
-      control.addEventListener('click', (evt) => {
-        const direction = evt.target.getAttribute('data-dir');
+      control.addEventListener('click', (evt, index) => {
+        const direction = control.getAttribute('data-dir');
         const orbsPoints = [].slice.call(document.querySelectorAll('.rdx-orbs--point'));
 
         if(direction === 'next') {
