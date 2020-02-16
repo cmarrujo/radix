@@ -19,14 +19,16 @@ class RDX {
     this.initSplit();
     this.initFull();
     this.initActionStrip();
-    this.init3DScene();
     this.logoHandler();
     this.orbsInteraction();
-    // this.initAnimations();
     this.preloadImages();
     this.counter = 0;
     this.panoCount = 0;
-  }
+
+    this.isHomePage = window.location.pathname === '/';
+    if(this.isHomePage) {
+      this.init3DScene();
+    }
 
   preloadImages = () => {
     this.imagesPreload = [];
@@ -66,19 +68,6 @@ class RDX {
         modal.setAttribute('data-active', 'false');
       });
     }
-  }
-
-  initAnimations = () => {
-    let frames = [].slice.call(document.querySelectorAll('.rdx-pillars--image'));
-    frames.forEach((frame) => {
-      frame.addEventListener('mouseover', (e) => {
-        this.setFrames(frame);
-      });
-      
-      frame.addEventListener('mouseout', (e) => {
-        this.setFrames(frame, 'true');
-      });
-    });
   }
 
   setFrames = (t, unset='false') => {
