@@ -2,72 +2,80 @@
   {
     "plane": [
       {
-        "title": "Balance",
-        "detail": "balance",
+        "title": "The Three Pillars of Success ",
+        "detail": "pillars",
         "image": "https://www.radixrecovery.com/images/overview-tour-1a-modal-balance.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "url": "https://www.radixrecovery.com/balance"
+        "text": "Recovery, Performance, and Balance are the roots of our training. This makes our method adaptable by all no matter your performance goals. We can support you as you build strength,  enhance your athletic conditioning, increase balance, or achieve weight-loss.",
+        "url": "https://www.radixrecovery.com/our-approach.html",
+        "label": "Learn about our approach"
       },
       {
-        "title": "Three Pillars",
-        "detail": "pillars",
+        "title": "Balance ",
+        "detail": "balance",
         "image": "https://www.radixrecovery.com/images/overview-tour-1b-modal-three-pillars.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "url": "https://www.radixrecovery.com/pillars"
+        "text": "Our training can improve your coordination, muscle response, and decrease your risk of injury.",
+        "url": "",
+        "label": ""
       }
     ]
   },
   {
     "plane": [
       {
-        "title": "Performance Experts",
+        "title": "Train with Performance Experts",
         "detail": "experts",
         "image": "https://www.radixrecovery.com/images/overview-tour-2a-modal-performance-experts.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "url": "https://www.radixrecovery.com/performance-experts"
+        "text": "Our personal trainers offer with a wide range of experience, education, and certification in functional training, health and fitness.  With our trainers' 45+ years of combined experience, we to cover all aspects of your health and help you meet your performance and fitness goals.",
+        "url": "https://www.radixrecovery.com/performance-experts.html",
+        "label": "Meet our team"
       },
       {
-        "title": "Functional Training",
-        "detail": "training",
+        "title": "State-of-the-Art Technology and Equipment",
+        "detail": "equipment",
         "image": "https://www.radixrecovery.com/images/overview-tour-2b-modal-functional-training.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "url": "https://www.radixrecovery.com/functional-training"
+        "text": "We believe fitness and technology come hand-in-hand in creating safe movement and obtaining peak wellness. Our facility is equipped with the most advanced state-of-the-art scientifically tested fitness equipment to ensure you get the most out of your experience.",
+        "url": "https://www.radixrecovery.com/science-fitness-lab.html",
+        "label": "Check out our tech"
       }
     ]
   },
   {
     "plane": [
       {
-        "title": "Performance",
+        "title": "Enhance your Athletic Performance",
         "detail": "performance",
         "image": "https://www.radixrecovery.com/images/overview-tour-3-modal-performance.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "url": "https://www.radixrecovery.com/performance"
+        "text": "We prepare athletes, children, and seniors to reach their performance goals and increase their fitness levels.",
+        "url": "",
+        "label": ""
       },
+      {
+        "title": "The Radix Approach Works for All",
+        "detail": "approach",
+        "image": "https://www.radixrecovery.com/images/overview-tour-4-modal-recovery.jpg",
+        "text": "We offer a wide range of fitness testing and training programs. Including weight-loss, children’s fitness, sports performance, active aging, special needs, athletic performance and a wide range of specialty fitness options for individual and team fitness.",
+        "url": "https://www.radixrecovery.com/recovery",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "plane": [
       {
         "title": "Recovery",
         "detail": "recovery",
-        "image": "https://www.radixrecovery.com/images/overview-tour-4-modal-recovery.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "url": "https://www.radixrecovery.com/recovery"
-      }
-    ]
-  },
-  {
-    "plane": [
-      {
-        "title": "Approach",
-        "detail": "approach",
         "image": "https://www.radixrecovery.com/images/overview-tour-3-modal-performance.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "url": "https://www.radixrecovery.com/balance"
+        "text": "At Radix we use innovative recovery techniques to balance the impact of the stress that our bodies experience as they increase movement.  Everyone including athletes, children, and seniors can benefit and safely continue healthy movement with these specialty fitness techniques.",
+        "url": "https://www.radixrecovery.com/balance",
+        "label": ""
       },
       {
-        "title": "Fitness",
-        "detail": "fitness",
+        "title": "Go to the Next Level",
+        "detail": "level",
         "image": "https://www.radixrecovery.com/images/overview-tour-4-modal-recovery.jpg",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "url": "https://www.radixrecovery.com/balance"
+        "text": "Come check out our Recovery and Performance Center, meet the team, and find out how you can elevate your life through health and fitness.",
+        "url": "https://www.radixrecovery.com/contact-us.html",
+        "label": "Set up an appointment"
       }
     ]
   }
