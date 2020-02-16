@@ -420,6 +420,16 @@ html {
           background: url('../images/image-performance-experts-maca-nav.jpg') top center no-repeat;
           background-size: cover;
         }
+        
+        &.-development {
+          background: url('../images/functional-training-5050-development.jpg') top center no-repeat;
+          background-size: cover;
+        }
+        
+        &.-fitness {
+          background: url('../images/functional-training-5050-fitness-wellness.jpg') top center no-repeat;
+          background-size: cover;
+        }
 
         @media (min-width: 1024px) {
           height: 100vh;
@@ -551,6 +561,14 @@ html {
   &-full {
     box-sizing: border-box;
 
+    &.-reverse {
+      @media (min-width: 1024px) {
+        .rdx-full--content_image-wrapper {
+          left: 10%;
+        }
+      }
+    }
+
     &--content {
       &_image {
         height: 50vh;
@@ -559,7 +577,7 @@ html {
         margin-top: 100px;
         opacity: 0;
         transition: margin-top 1s .5s, opacity 2s .5s;
-        
+
         &.fade-in {
           margin-top: 0;
           opacity: 1;
@@ -567,6 +585,11 @@ html {
 
         &.-recovery {
           background: url('../images/image-method-recovery-background.jpg') top center no-repeat;
+          background-size: cover;
+        }
+
+        &.-rehab {
+          background: url('../images/functional-training-100-rehab.jpg') top center no-repeat;
           background-size: cover;
         }
 
