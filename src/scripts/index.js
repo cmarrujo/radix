@@ -5,8 +5,8 @@ import { AmbientLight } from 'three';
 import '../stylesheets/style.scss';
 import textureWallNormalMap from '../images/pano-background-wall-1.jpg';
 import textureWallNormalMapRight from '../images/pano-background-wall-2.jpg';
-import textureWallNormalMapleft from '../images/pano-background-wall-4.jpg';
 import textureWallNormalMapBack from '../images/pano-background-wall-3.jpg';
+import textureWallNormalMapleft from '../images/pano-background-wall-4.jpg';
 import autoprefixer from "autoprefixer";
 import data from "../scripts/rdxdata.json";
 
@@ -22,13 +22,17 @@ class RDX {
     this.logoHandler();
     this.orbsInteraction();
     this.preloadImages();
+    this.loadInitial3D();
     this.counter = 0;
     this.panoCount = 0;
+  }
 
-    this.isHomePage = window.location.pathname === '/';
-    if(this.isHomePage) {
+  loadInitial3D() {
+    const rdxMain = window.location.pathname === '/';
+    if(rdxMain) {
       this.init3DScene();
     }
+  }
 
   preloadImages = () => {
     this.imagesPreload = [];

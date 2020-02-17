@@ -701,13 +701,13 @@
   }
   
   &-social {
-    bottom: 5vh;
+    // bottom: 5vh;
     display: flex;
     margin: 15px auto;
-    left: 50%;
-    transform: translateX(-50%);
+    // left: 50%;
+    // transform: translateX(-50%);
     max-width: 160px;
-    position: absolute;
+    // position: absolute;
     width: 50%;
 
     .-social-media {
