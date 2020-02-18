@@ -42,7 +42,7 @@
     z-index: 9;
 
     @media (min-width: 400px) {
-      font-size: 48px;
+      font-size: 42px;
     }
 
     @media (min-width: 768px) {
@@ -71,7 +71,7 @@
     width: 100%;
     z-index: 9;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       display: block;
       font-size: 14px;
       line-height: 1.5;

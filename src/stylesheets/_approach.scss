@@ -102,6 +102,10 @@ html {
     width: 80%;
     z-index: 9;
 
+    &.-thank-you {
+      display: block;
+    }
+
     @media (min-width: 1024px) {
       display: block;
       font-size: 14px;
@@ -203,39 +207,81 @@ html {
       background: linear-gradient(to top, $dark-base 0%, $dark-base 100%);
       height: 100vh;
 
+      &.-thank-you {
+        height: 40vh;
+      }
+
       @media (min-width: 375px) 
         and (min-height: 812px) {
           height: 80vh;
+
+          &.-thank-you {
+            height: 35vh;
+          }
       }
      
       @media (min-width: 768px) {
           height: 100vh;
+
+          &.-thank-you {
+            height: 35vh;
+          }
       }
       
       @media (min-width: 1024px) {
           height: 75vh;
+
+          &.-thank-you {
+            height: 50vh;
+          }
       }
       
       @media (min-width: 1440px) {
           height: 100vh;
+
+          &.-thank-you {
+            height: 60vh;
+          }
+      }
+      
+      @media (min-width: 1920px) {
+
+          &.-thank-you {
+            height: 70vh;
+          }
       }
 
       .rdx-banner--text {
         color: $light-base;
       }
-    }
+    }    
 
     &_copy {
       padding: 80px 0 0 25px;
       width: 90%;
 
+      &.-thank-you {
+        padding: 100px 0 0 25px;
+      }
+
       @media (min-width: 768px) {
         padding: 150px 0 0 40px;
         width: 70%;
+
+
+        &.-thank-you {
+          padding: 150px 0 0 40px;
+          width: 80%;
+        }
       }
 
       @media (min-width: 1024px) {
         width: 60%;
+
+        &.-thank-you {
+          padding: 200px 0 0 50px;
+          width: 80%;
+        }
       }
       
       @media (min-width: 1440px) {
@@ -245,6 +291,10 @@ html {
       @media (min-width: 1920px) {
         padding: 300px 0 0 150px;
         width: 60%;
+
+        &.-thank-you {
+          padding: 300px 0 0 150px;
+        }
       }
       
       @media (min-width: 2560px) {
