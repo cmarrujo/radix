@@ -154,6 +154,8 @@ html {
 
       .rdx-banner--full_copy {
         left: 50%;
+        padding: 0;
+        position: absolute;
         text-align: center;
         top: 40%;
         transform: translateX(-50%);

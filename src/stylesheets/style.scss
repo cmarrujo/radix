@@ -581,18 +581,27 @@
     z-index: 9;
 
     &--wrapper {
-      left: 50%;
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%;
-
-      @media (min-width: 400px) {
+      margin: 100px auto 30px;
+      width: 100%;
+      
+      @media (min-width: 768px) {
+        margin: 150px auto 30px;
+        width: 95%;
+      }
+      
+      @media (min-width: 1024px) {
+        margin: 150px auto 30px;
+        width: 75%;
+      }
+      
+      @media (min-width: 1280px) {
+        margin: 150px auto 30px;
         width: 65%;
       }
       
-      @media (min-width: 768px) {
-        width: 45%;
+      @media (min-width: 1920px) {
+        margin: 260px auto 30px;
+        width: 50%;
       }
     }
   }
@@ -633,30 +642,26 @@
       }
     }
 
-    // @media (min-width: 375px)
-    // and (min-height: 812px) {
-    //   width: 825vw;
-    // }
-
     @media (min-width: 768px) {
       font-size: 550px;
     }
-
-    // @media (min-width: 1920px) {
-    //   width: 400vw;
-    // }
   }
 
   &-subheader {
     @include BasicGothicProLightItalic;
-    font-size: 24px;
-    line-height: 1.25;
+    font-size: 20px;
+    line-height: 1.35;
     margin: 0;
-    padding: 10px 0 5px;
+    padding: 10px 0;
+
+    @media (min-width: 400px) {
+      font-size: 24px; 
+    }
 
     @media (min-width: 768px) {
-      font-size: 38px;
-      padding: 20px 0 5px;
+      font-size: 44px;
+      line-height: 1.25;
+      padding: 20px 0;
     }
 
     @media (min-width: 1280px) {
@@ -664,8 +669,14 @@
       padding: 10px 0 5px;
     }
     
+    @media (min-width: 1440px) {
+      font-size: 48px;
+      padding: 20px 0;
+    }
+    
     @media (min-width: 1920px) {
-      font-size: 75px;
+      font-size: 72px;
+      line-height: 1.2;
       padding: 15px 0;
     }
   }
@@ -673,16 +684,20 @@
   &-mission {
     @include BasicGothicProLight;
     font-size: 10px;
-    line-height: 1.5;
+    line-height: 1.65;
     margin: 0 auto 20px;
     padding: 0;
     width: 95%;
 
+    @media (min-width: 400px) {
+      font-size: 12px;
+    }
+
     @media (min-width: 768px) {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.55;
       margin: 0 auto;
-      width: 85%;
+      width: 80%;
     }
     
     @media (min-width: 1024px) {
@@ -695,19 +710,19 @@
     }
 
     @media (min-width: 1920px) {
-      font-size: 24px;
-      width: 85%;
+      font-size: 20px;
+      width: 60%;
     }
   }
   
   &-social {
-    // bottom: 5vh;
+    bottom: 10vh;
     display: flex;
+    left: 50%;
     margin: 15px auto;
-    // left: 50%;
-    // transform: translateX(-50%);
-    max-width: 160px;
-    // position: absolute;
+    max-width: 135px;
+    position: absolute;
+    transform: translateX(-50%);
     width: 50%;
 
     .-social-media {

@@ -2,10 +2,10 @@
   {
     "plane": [
       {
-        "title": "The Three Pillars of Success ",
+        "title": "The Three Pillars of Success",
         "detail": "pillars",
         "image": "https://www.radixrecovery.com/images/overview-tour-1a-modal-balance.jpg",
-        "text": "Recovery, Performance, and Balance are the roots of our training. This makes our method adaptable by all no matter your performance goals. We can support you as you build strength,  enhance your athletic conditioning, increase balance, or achieve weight-loss.",
+        "text": "Recovery, Performance, and Balance are the roots of our training. This makes our method adaptable by all no matter your performance goals. No matter if your goal is to build strength, rehabilitation, enhance athletic conditioning, increasing balance, or weight-loss the Radix Approach works for all.",
         "url": "https://www.radixrecovery.com/our-approach.html",
         "label": "Learn about our approach"
       },
@@ -13,7 +13,7 @@
         "title": "Balance ",
         "detail": "balance",
         "image": "https://www.radixrecovery.com/images/overview-tour-1b-modal-three-pillars.jpg",
-        "text": "Our training can improve your coordination, muscle response, and decrease your risk of injury.",
+        "text": "The way your body responds to gravity and spatial orientation requires complex coordination of muscle systems, our training can improve your muscle response and decrease your risk of injury.",
         "url": "",
         "label": ""
       }
@@ -25,7 +25,7 @@
         "title": "Train with Performance Experts",
         "detail": "experts",
         "image": "https://www.radixrecovery.com/images/overview-tour-2a-modal-performance-experts.jpg",
-        "text": "Our personal trainers offer with a wide range of experience, education, and certification in functional training, health and fitness.  With our trainers' 45+ years of combined experience, we to cover all aspects of your health and help you meet your performance and fitness goals.",
+        "text": "Our personal trainers offer with a wide range of experience, education, and certification in functional training, health and fitness.  With our trainers' 45+ years of combined experience, we provide additional support with nutrition, fitness testing, and supplementationto cover all aspects of your health and help you meet your goals.",
         "url": "https://www.radixrecovery.com/performance-experts.html",
         "label": "Meet our team"
       },
@@ -33,7 +33,7 @@
         "title": "State-of-the-Art Technology and Equipment",
         "detail": "equipment",
         "image": "https://www.radixrecovery.com/images/overview-tour-2b-modal-functional-training.jpg",
-        "text": "We believe fitness and technology come hand-in-hand in creating safe movement and obtaining peak wellness. Our facility is equipped with the most advanced state-of-the-art scientifically tested fitness equipment to ensure you get the most out of your experience.",
+        "text": "We believe fitness and technology come hand-in-hand in creating safe movement, promoting growth, and obtaining peek wellness. Our high-end facility is equipped with the most advanced state-of-the-art scientifically tested fitness equipment to-date to ensureyou get the most of your experience.",
         "url": "https://www.radixrecovery.com/science-fitness-lab.html",
         "label": "Check out our tech"
       }
@@ -53,9 +53,9 @@
         "title": "The Radix Approach Works for All",
         "detail": "approach",
         "image": "https://www.radixrecovery.com/images/overview-tour-4-modal-recovery.jpg",
-        "text": "We offer a wide range of fitness testing and training programs. Including weight-loss, children’s fitness, sports performance, active aging, special needs, athletic performance and a wide range of specialty fitness options for individual and team fitness.",
+        "text": "We offer advanced fitness testing and training programs, supplementation, and nutrition support for physical therapy, medical rehibition, weight-loss, children’s fitness, sports performance, active aging, special needs, athletic performance and wide range of specialty fitness needs for individuals and team fitness.",
         "url": "https://www.radixrecovery.com/recovery",
-        "label": ""
+        "label": "Learn about Functional Training"
       }
     ]
   },
@@ -65,15 +65,15 @@
         "title": "Recovery",
         "detail": "recovery",
         "image": "https://www.radixrecovery.com/images/overview-tour-3-modal-performance.jpg",
-        "text": "At Radix we use innovative recovery techniques to balance the impact of the stress that our bodies experience as they increase movement.  Everyone including athletes, children, and seniors can benefit and safely continue healthy movement with these specialty fitness techniques.",
+        "text": "Our greatest emphasis at Radix is on physical assessment, therapy and health knowledge. We range in a large variety of care fromprofessional athletes to the actively aging.",
         "url": "https://www.radixrecovery.com/balance",
         "label": ""
       },
       {
-        "title": "Go to the Next Level",
+        "title": "Get to the Next Level",
         "detail": "level",
         "image": "https://www.radixrecovery.com/images/overview-tour-4-modal-recovery.jpg",
-        "text": "Come check out our Recovery and Performance Center, meet the team, and find out how you can elevate your life through health and fitness.",
+        "text": "Come check out our Recovery and Performance Center, meet the team, and find out how you can elevate your life through healthand fitness.",
         "url": "https://www.radixrecovery.com/contact-us.html",
         "label": "Set up an appointment"
       }

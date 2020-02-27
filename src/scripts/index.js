@@ -530,7 +530,7 @@ class RDX {
     if(content) {
       let tween = timeline.from(content, 1, {
         opacity: 0,
-        y: '-25%',
+        y: '25%',
         ease: Power1.easeOut
       }, '-=4');
     }
@@ -540,7 +540,7 @@ class RDX {
       let tween = timeline.from(social, 1.5, {
         opacity: 0,
         ease: Power1.easeOut
-      }, '-=10');
+      }, '-=3');
     }
   }
 
