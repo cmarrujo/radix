@@ -14,7 +14,7 @@
         top: 50%;
         transform: translateY(-50%);
         text-align: center;
-        width: 50px;
+        width: 35px;
 
         .rdx-icon--arrow {
           fill: $light;
@@ -98,7 +98,7 @@
         opacity: 0;
         position: absolute;
         top: 20vh;
-        transition: top .5s .70s ease-out, width .5s .70s ease-out, height .5s .70s ease-out, opacity .5s .70s ease-out;
+        transition: all .45s .25s ease-out;
         transform-origin: center;
         width: 5px;
 
@@ -126,7 +126,7 @@
         opacity: 0;
         position: absolute;
         top: 60vh;
-        transition: top .5s .70s ease-out, width .5s .70s ease-out, height .5s .70s ease-out, opacity .5s .70s ease-out;
+        transition: all .45s .25s ease-out;
         transform-origin: center;
         width: 5px;
 
@@ -154,13 +154,14 @@
         opacity: 0;
         position: absolute;
         top: 35vh;
-        transition: top .5s .70s ease-out, width .5s .70s ease-out, height .5s .70s ease-out, opacity .5s .70s ease-out;
+        transition: all .45s .25s ease-out;
         transform-origin: center;
         width: 5px;
         
         &[data-active='true'] {
           opacity: 1;
-          top: 30vh;
+          height: 55px;
+          width: 55px;
         }
 
         @media (min-width: 768px) {
@@ -169,7 +170,8 @@
 
           &[data-active='true'] {
             opacity: 1;
-            top: 25vh;
+            height: 75px;
+            width: 75px;
           }
         }
       }
@@ -180,13 +182,14 @@
         opacity: 0;
         position: absolute;
         top: 55vh;
-        transition: top .5s .70s ease-out, width .5s .70s ease-out, height .5s .70s ease-out, opacity .5s .70s ease-out;
+        transition: all .45s .25s ease-out;
         transform-origin: center;
         width: 5px;
 
         &[data-active='true'] {
           opacity: 1;
-          top: 60vh;
+          height: 55px;
+          width: 55px;
         }
 
         @media (min-width: 768px) {
@@ -195,7 +198,8 @@
 
           &[data-active='true'] {
             opacity: 1;
-            top: 55vh;
+            height: 75px;
+            width: 75px;
           }
         }
       }
@@ -206,13 +210,14 @@
         opacity: 0;
         position: absolute;
         top: 20vh;
-        transition: top .5s .70s ease-out, width .5s .70s ease-out, height .5s .70s ease-out, opacity .5s .70s ease-out;
+        transition: all .45s .25s ease-out;
         transform-origin: center;
         width: 5px;
 
         &[data-active='true'] {
           opacity: 1;
-          top: 25vh;
+          height: 55px;
+          width: 55px;
         }
 
         @media (min-width: 768px) {
@@ -221,7 +226,8 @@
 
           &[data-active='true'] {
             opacity: 1;
-            top: 60vh;
+            height: 75px;
+            width: 75px;
           }
         }
       }
@@ -232,13 +238,14 @@
         opacity: 0;
         position: absolute;
         top: 45vh;
-        transition: top .5s .70s ease-out, width .5s .70s ease-out, height .5s .70s ease-out, opacity .5s .70s ease-out;
+        transition: all .45s .25s ease-out;
         transform-origin: center;
         width: 5px;
 
         &[data-active='true'] {
           opacity: 1;
-          top: 50vh;
+          height: 55px;
+          width: 55px;
         }
 
         @media (min-width: 768px) {
@@ -247,7 +254,8 @@
 
           &[data-active='true'] {
             opacity: 1;
-            top: 50vh;
+            height: 75px;
+            width: 75px;
           }
         }
       }
@@ -258,13 +266,14 @@
         opacity: 0;
         position: absolute;
         top: 55vh;
-        transition: top .5s .70s ease-out, width .5s .70s ease-out, height .5s .70s ease-out, opacity .5s .70s ease-out;
+        transition: all .45s .25s ease-out;
         transform-origin: center;
         width: 5px;
 
         &[data-active='true'] {
           opacity: 1;
-          top: 60vh;
+          height: 55px;
+          width: 55px;
         }
 
         @media (min-width: 768px) {
@@ -273,7 +282,8 @@
 
           &[data-active='true'] {
             opacity: 1;
-            top: 55vh;
+            height: 75px;
+            width: 75px;
           }
         }
       }
@@ -284,13 +294,14 @@
         opacity: 0;
         position: absolute;
         top: 25vh;
-        transition: top .5s .70s ease-out, width .5s .70s ease-out, height .5s .70s ease-out, opacity .5s .70s ease-out;
+        transition: all .45s .25s ease-out;
         transform-origin: center;
         width: 5px;
 
         &[data-active='true'] {
           opacity: 1;
-          top: 30vh;
+          height: 55px;
+          width: 55px;
         }
 
         @media (min-width: 768px) {
@@ -299,7 +310,8 @@
 
           &[data-active='true'] {
             opacity: 1;
-            top: 25vh;
+            height: 75px;
+            width: 75px;
           }
         }
       }

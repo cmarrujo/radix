@@ -137,6 +137,33 @@ html {
     }
   }
 
+  &-banner--scroll {
+    bottom: 50px;
+    height: 100px;
+    left: 50%;
+    position: absolute;
+    width: 100px;
+
+    &_text {
+      color: $light;
+      font-size: 10px;
+      left: 50%;
+      position: absolute;
+      top: 15%;
+      transform: translate(-50%, -50%);
+    }
+    
+    &_icon {
+      fill: $light;
+      height: 25px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 25px;
+    }
+  }
+
   &-banner--full {
     overflow: hidden;
     position: relative;
@@ -171,7 +198,7 @@ html {
         }
         
         @media (min-width: 2560px) {
-          width: 35%;
+          width: 50%;
         }
       }
       
@@ -192,7 +219,7 @@ html {
         }
         
         @media (min-width: 1920px) {
-          font-size: 28px;
+          font-size: 48px;
           // width: 100%;
         }
       }

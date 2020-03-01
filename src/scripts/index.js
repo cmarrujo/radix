@@ -291,11 +291,13 @@ class RDX {
               const p = point.getAttribute('data-detail');
               point.setAttribute('data-active', 'false');
 
-              if(p === `${data[this.panoCount].plane[0].detail.toLowerCase()}`) {
-                point.setAttribute('data-active', 'true');
-              }else if(p === `${data[this.panoCount].plane[1].detail.toLowerCase()}`) {
-                point.setAttribute('data-active', 'true');
-              }
+              setTimeout(() => {
+                if(p === `${data[this.panoCount].plane[0].detail.toLowerCase()}`) {
+                  point.setAttribute('data-active', 'true');
+                }else if(p === `${data[this.panoCount].plane[1].detail.toLowerCase()}`) {
+                  point.setAttribute('data-active', 'true');
+                }
+              }, 750);
             });
           }
 
@@ -318,12 +320,14 @@ class RDX {
             orbsPoints.forEach((point, index) => {
               const p = point.getAttribute('data-detail');
               point.setAttribute('data-active', 'false');
-              
-              if(p === `${data[this.panoCount].plane[0].detail.toLowerCase()}`) {
-                point.setAttribute('data-active', 'true');
-              }else if(p === `${data[this.panoCount].plane[1].detail.toLowerCase()}`) {
-                point.setAttribute('data-active', 'true');
-              }
+
+              setTimeout(() => {
+                if(p === `${data[this.panoCount].plane[0].detail.toLowerCase()}`) {
+                  point.setAttribute('data-active', 'true');
+                }else if(p === `${data[this.panoCount].plane[1].detail.toLowerCase()}`) {
+                  point.setAttribute('data-active', 'true');
+                }
+              }, 750);
             });
           }
         }
@@ -554,6 +558,13 @@ class RDX {
         opacity: 0,
         ease: Power1.easeOut
       });
+      const bannerScroll = document.querySelector('.rdx-banner--scroll') && document.querySelector('.rdx-banner--scroll');
+      if(bannerScroll) {
+        let tween = timeline.from(bannerScroll, 3, {
+          opacity: 0,
+          ease: Power1.easeOut
+        });
+      }
     }
     
     const bannerLarge = document.querySelector('.rdx-banner--full.-performance') && document.querySelector('.rdx-banner--full.-performance');
