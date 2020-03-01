@@ -557,14 +557,7 @@ class RDX {
       let tween = timeline.from(banner, 5, {
         opacity: 0,
         ease: Power1.easeOut
-      });
-      const bannerScroll = document.querySelector('.rdx-banner--scroll') && document.querySelector('.rdx-banner--scroll');
-      if(bannerScroll) {
-        let tween = timeline.from(bannerScroll, 3, {
-          opacity: 0,
-          ease: Power1.easeOut
-        });
-      }
+      });      
     }
     
     const bannerLarge = document.querySelector('.rdx-banner--full.-performance') && document.querySelector('.rdx-banner--full.-performance');
@@ -598,6 +591,14 @@ class RDX {
         opacity: 0,
         x: -50,
         ease: Power4.easeOut
+      }, '-=2.75');
+    }
+
+    const bannerScroll = document.querySelector('.rdx-banner--scroll') && document.querySelector('.rdx-banner--scroll');
+    if(bannerScroll) {
+      let tween = timeline.from(bannerScroll, 1.25, {
+        opacity: 0,
+        ease: Power1.easeOut
       }, '-=2.75');
     }
 

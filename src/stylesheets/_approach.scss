@@ -138,11 +138,16 @@ html {
   }
 
   &-banner--scroll {
-    bottom: 50px;
+    bottom: 0;
     height: 100px;
     left: 50%;
     position: absolute;
+    transform: translateX(-50%);
     width: 100px;
+
+    @media (min-width: 1024px) {
+      bottom: 50px;
+    }
 
     &_text {
       color: $light;
