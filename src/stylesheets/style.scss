@@ -56,7 +56,6 @@
     }
 
     &--overlay {
-      // @include border;
       left: 50%;
       position: absolute;
       top: 50%;
@@ -70,6 +69,13 @@
 
       &:focus {
         outline: none;
+      }
+
+      &.-banner {
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 0;
       }
     }
   }
