@@ -731,14 +731,22 @@
   }
   
   &-social {
-    // bottom: 10vh;
     display: flex;
-    // top: 50%;
     margin: 30px auto;
     max-width: 135px;
-    // position: absolute;
-    // transform: translateY(-50%);
     width: 50%;
+
+    &.-main {
+      bottom: 10vh;
+      display: flex;
+      left: 50%;
+      margin: 30px auto;
+      max-width: 135px;
+      position: absolute;
+      top: unset;
+      transform: translateX(-50%);
+      width: 50%;
+    }
 
     @media (min-width: 768px) {
       max-width: 155px;
