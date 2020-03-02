@@ -164,33 +164,26 @@
         box-shadow: inset 0 0 0 2px $light-base;
         color: $light;
         font-size: 14px;
-        margin: 10px auto;
-        padding: 20px 100px;
+        margin: 15px auto 30px;
+        padding: 15px 60px;
         text-transform: uppercase;
         transition: all .35s ease-out;
-        width: 80%;
 
         &:hover {
           background: $light-base;
           color: $light;
           cursor: pointer;
         }
-
-        @media (min-width: 400px) {
-          padding: 25px 100px;
-        }
         
         @media (min-width: 768px) {
           font-size: 24px;
-          padding: 25px 100px;
-          width: 55%;
+          padding: 20px 80px;
         }
         
         @media (min-width: 1024px) {
           font-size: 18px;
           margin: 15px auto;
-          padding: 10px 70px;
-          width: 20%;
+          padding: 10px 50px;
         }
         
         @media (min-width: 1440px) {
@@ -199,10 +192,7 @@
         
         @media (min-width: 1920px) {
           margin: 10px auto;
-        }
-        
-        @media (min-width: 2560px) {
-          width: 15%;
+          padding: 10px 60px;
         }
       }
     }
@@ -221,7 +211,7 @@
           margin: 0 0;
         }
       }
-      
+
       &.-input-button {
         margin: 5px 0;
       }
@@ -248,7 +238,7 @@
         background: transparent;
         border: 0;
         border-bottom: thin solid $light;
-        color: $darkest;
+        color: $light;
         font-size: 14px;
         padding: 10px;
         text-transform: uppercase;
@@ -256,22 +246,22 @@
 
         @media (min-width: 1024px) {
           padding: 20px 10px 10px;
-          width: 225px;
+          width: 180px;
         }
         
         @media (min-width: 1280px) {
           padding: 20px 10px 10px;
-          width: 325px;
+          width: 300px;
         }
         
         @media (min-width: 1920px) {
           padding: 20px 10px 10px;
-          width: 480px;
+          width: 420px;
         }
         
         @media (min-width: 2560px) {
           padding: 20px 10px 10px;
-          width: 700px;
+          width: 575px;
         }
       }
 
@@ -282,38 +272,43 @@
         border: thin solid $light;
         color: $light;
         font-size: 14px;
-        padding: 10px 0;
+        padding: 15px 0;
         text-transform: uppercase;
-        width: 100%;
+        width: 50%;
+        float: left;
 
         &[data-active="true"] {
           border: thin solid $light-base;
+
+          &:focus {
+            outline: 0;
+          }
         }
 
-        @media (min-width: 400px) {
-          padding: 20px 0;
+        &.-text_text {
+          border-right: 0;
+        }
+        
+        &.-text_call {
+          border-left: 0;
         }
         
         @media (min-width: 768px) {
           font-size: 18px;
-          padding: 25px 0;
+          padding: 20px 0;
         }
 
         @media (min-width: 1024px) {
           padding: 18px 0;
-          width: 115px;
+          width: 90px;
         }
         
         @media (min-width: 1440px) {
-          width: 200px;
+          width: 100px;
         }
         
         @media (min-width: 1920px) {
-          width: 250px;
-        }
-        
-        @media (min-width: 2560px) {
-          width: 275px;
+          width: 150px;
         }
       }
 

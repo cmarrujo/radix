@@ -23,11 +23,36 @@ class RDX {
     this.orbsInteraction();
     this.preloadImages();
     this.loadInitial3D();
+    this.callTextToggle();
     this.counter = 0;
     this.panoCount = 0;
   }
 
-  loadInitial3D() {
+  clearToggle = () => {
+    const callTextBtn = [].slice.call(document.querySelectorAll('.pure-group--text_call'));
+    
+    if(callTextBtn.length) {
+      callTextBtn.forEach((toggle) => {
+        toggle.setAttribute('data-active', 'false');
+        toggle.style.outline = 0;
+      });
+    }
+  }
+
+  callTextToggle = () => {
+    const callTextBtn = [].slice.call(document.querySelectorAll('.pure-group--text_call'));
+
+    if(callTextBtn.length) {
+      callTextBtn.forEach((toggle) => {
+        toggle.addEventListener('click', (evt) => {
+          this.clearToggle();
+          evt.target.setAttribute('data-active', 'true');
+        });
+      });
+    }
+  }
+
+  loadInitial3D = () => {
     const rdxMain = window.location.pathname === '/';
     if(rdxMain) {
       this.init3DScene();

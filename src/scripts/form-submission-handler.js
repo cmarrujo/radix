@@ -34,7 +34,7 @@
     var formData = {};
     fields.forEach(function(name){
       var element = elements[name];
-      
+
       // singular form elements just have one value
       formData[name] = element.value;
 
@@ -57,7 +57,6 @@
     formData.formGoogleSend
       = form.dataset.email || ""; // no email by default
 
-    console.log(formData);
     return {data: formData, honeypot};
   }
 
@@ -73,16 +72,15 @@
     }
 
     disableAllButtons(form);
+    
     var url = form.action;
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);
     // xhr.withCredentials = true;
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
-        console.log(xhr.status, xhr.statusText);
-        console.log(xhr.responseText);
         form.reset();
-        var formElements = form.querySelector(".form-elements")
+        var formElements = form.querySelector(".form-elements");
         if (formElements) {
           formElements.style.display = "none"; // hide form
           window.location.href = "https://www.radixrecovery.com/thank-you.html";
@@ -95,13 +93,21 @@
     };
     // url encode form data for sending as post data
     var encoded = Object.keys(data).map(function(k) {
+        var textCall = [].slice.call(document.querySelectorAll(".pure-group--text_call"));
+        textCall.forEach((txt) => {
+          if(txt.getAttribute('data-active') === 'true') {
+            if((data[k]) === txt.getAttribute('value')) {
+              data[k] = 'PREFFERED';
+            }
+          }
+        });
         return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
     }).join('&');
     xhr.send(encoded);
   }
   
   function loaded() {
-    console.log("Contact form submission handler loaded successfully.");
+    // console.log("Contact form submission handler loaded successfully.");
     // bind to the submit event of our form
     var forms = document.querySelectorAll("form.gform");
     for (var i = 0; i < forms.length; i++) {
