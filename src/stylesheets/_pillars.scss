@@ -6,7 +6,7 @@
       height: 60vh;
 
       @media (min-width: 1024px) {
-        height: 100vh;
+        height: 75vh;
       }
 
       .rdx-banner--full_copy {
@@ -93,7 +93,7 @@
       height: 60vh;
 
       @media (min-width: 1024px) {
-        height: 100vh;
+        height: 75vh;
       }
 
       .rdx-banner--full_copy {
@@ -113,7 +113,7 @@
         }
         
         @media (min-width: 1920px) {
-          width: 45%;
+          width: 50%;
         }
       }
 
@@ -180,6 +180,14 @@
       height: 60vh;
 
       @media (min-width: 1024px) {
+        height: 75vh;
+      }
+      
+      @media (min-width: 1440px) {
+        height: 90vh;
+      }
+      
+      @media (min-width: 1920px) {
         height: 100vh;
       }
 

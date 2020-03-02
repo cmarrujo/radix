@@ -71,11 +71,20 @@
         outline: none;
       }
 
+      &._btn {
+        display: none;
+      }
+
       &.-banner {
+        display: none;
         left: 0;
         position: absolute;
         top: 0;
         z-index: 0;
+
+        @media (min-width: 1024px) {
+          display: block;
+        }
       }
     }
   }
@@ -722,14 +731,26 @@
   }
   
   &-social {
-    bottom: 10vh;
+    // bottom: 10vh;
     display: flex;
-    left: 50%;
-    margin: 15px auto;
+    // top: 50%;
+    margin: 30px auto;
     max-width: 135px;
-    position: absolute;
-    transform: translateX(-50%);
+    // position: absolute;
+    // transform: translateY(-50%);
     width: 50%;
+
+    @media (min-width: 768px) {
+      max-width: 155px;
+    }
+    
+    @media (min-width: 1024px) {
+      margin: 0;
+      max-width: 135px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
     .-social-media {
       cursor: pointer;

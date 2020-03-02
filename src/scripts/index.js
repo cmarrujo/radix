@@ -618,7 +618,7 @@ class RDX {
     const rdxPreloaderSVGClip = document.querySelector('#rdx-defs--clip');
     const rdxPreloaderSVGFill = document.querySelector('.rdx-logo--svg_fill');
     const rdxPreloaderSVG = document.querySelector('.rect--svg');
-    const rdxBannerVideo = document.querySelector('.rdx-video--player.-banner');
+    const rdxBannerPlay = document.querySelector('.rdx-video--player.-banner');
 
     rdxPreloaderSVG.setAttribute('data-active', 'true');
 
@@ -628,10 +628,11 @@ class RDX {
       rdxPreloaderSVGMask.setAttribute('data-active', 'true');
       rdxPreloaderSVGFill.setAttribute('data-active', 'true');
 
+      rdxBannerPlay && rdxBannerPlay.play();
+
       setTimeout(() => {
         rdxPreloader.style.display = "none";
       }, 3000);
-      rdxBannerVideo && rdxBannerVideo.play();
       this.animateBanner();
       this.animateMainBanner();
     }, 5000);
