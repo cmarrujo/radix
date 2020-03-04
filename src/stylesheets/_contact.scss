@@ -36,7 +36,7 @@
   &-banner--text {
     @include BasicGothicProBlackItalic;
     color: $light;
-    font-size: 34px;
+    font-size: 40px;
     margin: 0;
     text-transform: uppercase;
     z-index: 9;
@@ -46,7 +46,7 @@
     }
 
     @media (min-width: 768px) {
-      font-size: 55px;
+      font-size: 60px;
     }
     
     @media (min-width: 1024px) {
@@ -125,7 +125,7 @@
   }
 
   &-contact--form {
-    margin: 30px auto 0;
+    margin: 20px auto 0;
     width: 90%;
 
     @media (min-width: 768px) {
@@ -154,6 +154,8 @@
       @media (min-width: 1024px) {
         bottom: 200px;
         flex-direction: row;
+        margin: auto;
+        max-width: 90vw;
       }
 
       .button-success {
@@ -165,7 +167,7 @@
         color: $light;
         font-size: 14px;
         margin: 15px auto 30px;
-        padding: 15px 60px;
+        padding: 15px 50px;
         text-transform: uppercase;
         transition: all .35s ease-out;
 
@@ -177,13 +179,14 @@
         
         @media (min-width: 768px) {
           font-size: 24px;
+          margin: 20px auto 30px;
           padding: 20px 80px;
         }
         
         @media (min-width: 1024px) {
           font-size: 18px;
           margin: 15px auto;
-          padding: 10px 50px;
+          padding: 10px 40px;
         }
         
         @media (min-width: 1440px) {
@@ -209,11 +212,20 @@
         
         @media (min-width: 1024px) {
           margin: 0 0;
+          padding-left: 10px;
+          padding-right: 10px;
+          width: 25%;
         }
       }
 
       &.-input-button {
         margin: 5px 0;
+
+        @media (min-width: 1024px) {
+          padding-left: 0;
+          padding-right: 7px;
+          width: 20%;
+        }
       }
 
       &--label {
@@ -246,22 +258,18 @@
 
         @media (min-width: 1024px) {
           padding: 20px 10px 10px;
-          width: 180px;
         }
         
         @media (min-width: 1280px) {
           padding: 20px 10px 10px;
-          width: 300px;
         }
         
         @media (min-width: 1920px) {
           padding: 20px 10px 10px;
-          width: 420px;
         }
         
         @media (min-width: 2560px) {
           padding: 20px 10px 10px;
-          width: 575px;
         }
       }
 
@@ -272,9 +280,10 @@
         border: thin solid $light;
         color: $light;
         font-size: 14px;
-        padding: 15px 0;
+        margin: 0 2.5%;
+        padding: 10px 0;
         text-transform: uppercase;
-        width: 50%;
+        width: 45%;
         float: left;
 
         &[data-active="true"] {
@@ -284,14 +293,6 @@
             outline: 0;
           }
         }
-
-        &.-text_text {
-          border-right: 0;
-        }
-        
-        &.-text_call {
-          border-left: 0;
-        }
         
         @media (min-width: 768px) {
           font-size: 18px;
@@ -300,16 +301,17 @@
 
         @media (min-width: 1024px) {
           padding: 18px 0;
-          width: 90px;
+          margin: 0 1%;
+          width: 48%;
         }
         
-        @media (min-width: 1440px) {
-          width: 100px;
-        }
+        // @media (min-width: 1440px) {
+        //   width: 100px;
+        // }
         
-        @media (min-width: 1920px) {
-          width: 150px;
-        }
+        // @media (min-width: 1920px) {
+        //   width: 150px;
+        // }
       }
 
       &.honeypot-field {

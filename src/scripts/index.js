@@ -422,7 +422,7 @@ class RDX {
         // create a scene
         const scene = new ScrollMagic.Scene({
           triggerElement: image,
-          offset: `-${offset}px`,
+          offset: `-${offset + 50}px`,
           reverse: false
         })
         .setClassToggle(image, 'fade-in')
@@ -430,12 +430,12 @@ class RDX {
       });
     }
     
-    if(rdxSplitImage.length) {
+    if(rdxSplitDesc.length) {
       rdxSplitDesc.forEach((desc) => {
         // create a scene
         const scene = new ScrollMagic.Scene({
           triggerElement: desc,
-          offset: `-${offset}px`,
+          offset: `-${offset + 50}px`,
           reverse: false
         })
         .setClassToggle(desc, 'fade-in')
