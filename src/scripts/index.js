@@ -300,10 +300,12 @@ class RDX {
           const plugins = [ CSSPlugin, AttrPlugin ];
           const timeline = new TimelineLite();
     
-          let tween = timeline.to(camera.rotation, 1, {
-            y: (camera.rotation.y - (Math.PI / 2)),
-            ease: Power1.easeOut
-          });
+          setTimeout(() => {
+            let tween = timeline.to(camera.rotation, 1, {
+              y: (camera.rotation.y - (Math.PI / 2)),
+              ease: Power1.easeOut
+            });  
+          }, 1000);
 
           if(this.panoCount >= 3) {
             this.panoCount = 0;  
@@ -322,18 +324,20 @@ class RDX {
                 }else if(p === `${data[this.panoCount].plane[1].detail.toLowerCase()}`) {
                   point.setAttribute('data-active', 'true');
                 }
-              }, 750);
+              }, 1750);
             });
           }
 
         }else if(direction === 'prev') {
           const plugins = [ CSSPlugin, AttrPlugin ];
           const timeline = new TimelineLite();
-    
-          let tween = timeline.to(camera.rotation, 1, {
-            y: (camera.rotation.y + (Math.PI / 2)),
-            ease: Power1.easeOut
-          });
+
+          setTimeout(() => {
+            let tween = timeline.to(camera.rotation, 1, {
+              y: (camera.rotation.y + (Math.PI / 2)),
+              ease: Power1.easeOut
+            });
+          }, 1000);
 
           if(this.panoCount <= 0) {
             this.panoCount = 3;  
@@ -352,7 +356,7 @@ class RDX {
                 }else if(p === `${data[this.panoCount].plane[1].detail.toLowerCase()}`) {
                   point.setAttribute('data-active', 'true');
                 }
-              }, 750);
+              }, 1750);
             });
           }
         }
