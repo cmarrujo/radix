@@ -163,11 +163,11 @@ class RDX {
 
     geometry = new THREE.PlaneGeometry( 44, 44, 64, 64 );
     material = new THREE.MeshBasicMaterial( {
-      color: 0x008efc, 
+      color: 0x000000, 
       opacity: .15,
       transparent: true,
       side: THREE.DoubleSide,
-      wireframe: true
+      wireframe: false
     } );
     let plane = new THREE.Mesh( geometry, material );
     scene.add( plane );
@@ -178,11 +178,11 @@ class RDX {
     
     geometry = new THREE.PlaneGeometry( 44, 44, 64, 64 );
     material = new THREE.MeshBasicMaterial( {
-      color: 0x008efc, 
+      color: 0x000000, 
       opacity: .15,
       transparent: true,
       side: THREE.DoubleSide,
-      wireframe: true
+      wireframe: false
     } );
     let ceiling = new THREE.Mesh( geometry, material );
     scene.add( ceiling );
@@ -381,6 +381,9 @@ class RDX {
           orbs[0].setAttribute('data-active', 'true');
           orbs[1].setAttribute('data-active', 'true');
         }
+        
+        const panoramicOverlay = document.querySelector('.rdx-overlay') && document.querySelector('.rdx-overlay');
+        panoramicOverlay.setAttribute('data-active', 'true');
         
         const panoramic = document.querySelector('.rdx-panoramic') && document.querySelector('.rdx-panoramic');
         panoramic.setAttribute('data-active', 'true');

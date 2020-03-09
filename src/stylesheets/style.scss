@@ -823,6 +823,10 @@
     position: absolute;
     width: 100%;
 
+    &[data-active='true'] {
+      background: rgba($dark-base, .20);
+    }
+
     &.-underlay {
       z-index: 0;
     }
