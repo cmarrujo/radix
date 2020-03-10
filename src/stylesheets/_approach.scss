@@ -472,7 +472,7 @@ html {
         height: 30vh;
         margin-top: 100px;
         opacity: 0;
-        transition: margin-top 1s .5s, opacity 2s .5s;
+        transition: margin-top 1.25s ease-out, opacity 1s ease-out;
 
         @media (min-width: 375px) {
           height: 50vh;
@@ -487,9 +487,20 @@ html {
           margin-top: 0;
           opacity: 1;
         }
+        
+        &.fade-delay {
+          margin-top: 0;
+          opacity: 1;
+          transition-delay: 1.25s;
+        }
 
+        &.-recovery {
+          background: url('../images/recovery-5050-seq1.jpg') top center no-repeat;
+          background-size: cover;
+        }
+        
         &.-balance {
-          background: url('../images/method-5050-balance.jpg') top center no-repeat;
+          background: url('../images/balance-5050.jpg') top center no-repeat;
           background-size: cover;
         }
         

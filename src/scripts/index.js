@@ -392,7 +392,6 @@ class RDX {
         hiddenFigures.forEach((h) => {
           h.style.display = "none";
         });
-  
       });
     }
   }
@@ -432,7 +431,7 @@ class RDX {
           offset: `-${offset + 50}px`,
           reverse: false
         })
-        .setClassToggle(image, 'fade-in')
+        .setClassToggle(image, 'fade-delay')
         .addTo(controller);
       });
     }
