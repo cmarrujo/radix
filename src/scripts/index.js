@@ -75,19 +75,29 @@ class RDX {
     let modalText = document.querySelector('.rdx-modal--content_copy-text') && document.querySelector('.rdx-modal--content_copy-text');
     let modalUrl = document.querySelector('.rdx-modal--content_copy .-cta.btn') && document.querySelector('.rdx-modal--content_copy .-cta.btn');
     const modalExit = document.querySelector('.rdx-modal--exit') && document.querySelector('.rdx-modal--exit');
+    const modalCta = document.querySelector('[data-modalcta]') && document.querySelector('[data-modalcta]');
 
     if(orbs.length) {
       orbs.forEach((orb) => {
         orb.addEventListener('click', (evt) => {
           const id = evt.target.getAttribute('data-id');
 
-          modal.setAttribute('data-active', 'true');
+          modal.style.display = "block";
+          setTimeout(() => {
+            modal.setAttribute('data-active', 'true');
+          }, 250);
 
           modalImage.style.background = `url('${data[this.panoCount].plane[id].image}') top center no-repeat`;
           modalImage.style.backgroundSize = `cover`;
           modalTitle.innerHTML = data[this.panoCount].plane[id].title;
           modalText.innerHTML = data[this.panoCount].plane[id].text;
           modalUrl.setAttribute('href', `${data[this.panoCount].plane[id].url}`);
+          if(data[this.panoCount].plane[id].label !== "") {
+            modalCta.innerHTML = data[this.panoCount].plane[id].label;
+            modalCta.style.display = "inline-block";
+          }else{
+            modalCta.style.display = "none";
+          }
         });
       });
     }
@@ -95,6 +105,9 @@ class RDX {
     if(modalExit) {
       modalExit.addEventListener('click', (evt) => {
         modal.setAttribute('data-active', 'false');
+        setTimeout(() => { 
+            modal.style.display = "none";
+          }, 500);
       });
     }
   }
@@ -260,12 +273,12 @@ class RDX {
 
       if(keyboard[37]) {
         camera.rotation.y -= Math.PI * 0.005;
-        console.log(camera.rotation.y);
+        // console.log(camera.rotation.y);
       }
       
       if(keyboard[39]) {
         camera.rotation.y += Math.PI * 0.005;
-        console.log(camera.rotation.y);
+        // console.log(camera.rotation.y);
       }
 
       renderer.render( scene, camera );
@@ -295,11 +308,14 @@ class RDX {
       control.addEventListener('click', (evt, index) => {
         const direction = control.getAttribute('data-dir');
         const orbsPoints = [].slice.call(document.querySelectorAll('.rdx-orbs--point'));
-
+        const modal = document.querySelector('.rdx-modal');
+        
         if(direction === 'next') {
           const plugins = [ CSSPlugin, AttrPlugin ];
           const timeline = new TimelineLite();
     
+          modal && modal.setAttribute('data-active', 'false');
+
           setTimeout(() => {
             let tween = timeline.to(camera.rotation, 1, {
               y: (camera.rotation.y - (Math.PI / 2)),
@@ -331,6 +347,8 @@ class RDX {
         }else if(direction === 'prev') {
           const plugins = [ CSSPlugin, AttrPlugin ];
           const timeline = new TimelineLite();
+
+          modal && modal.setAttribute('data-active', 'false');
 
           setTimeout(() => {
             let tween = timeline.to(camera.rotation, 1, {

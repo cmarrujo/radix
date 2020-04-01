@@ -323,9 +323,11 @@
     display: none;
     height: 95%;
     left: 50%;
+    opacity: 0;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: all .45s ease-out;
     width: 95%;
     z-index: 100;
 
@@ -342,10 +344,6 @@
 
     @media (min-width: 1024px) {
       height: 70%;
-      width: 90%;
-    }
-    
-    @media (min-width: 1440px) {
       width: 80%;
     }
     
@@ -354,14 +352,14 @@
     }
 
     &[data-active='true'] {
-      display: block;
+      opacity: 1;
     }
 
     &--exit {
       height: 30px;
       position: absolute;
-      right: 20px;
-      top: 20px;
+      right: 30px;
+      top: 30px;
       width: 30px;
       z-index: 1;
 
@@ -402,7 +400,7 @@
           width: 90%;
 
           @media (min-width: 1024px) {
-            width: 90%;
+            width: 65%;
           }
           
           @media (min-width: 1920px) {
