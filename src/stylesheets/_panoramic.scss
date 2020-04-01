@@ -286,6 +286,17 @@
             width: 75px;
           }
         }
+        
+        @media (min-width: 1280px) {
+          left: 25vw;
+          top: 50vh;
+
+          &[data-active='true'] {
+            opacity: 1;
+            height: 75px;
+            width: 75px;
+          }
+        }
       }
       
       &[data-detail='level'] {
@@ -307,6 +318,17 @@
         @media (min-width: 768px) {
           left: 60vw;
           top: 20vh;
+
+          &[data-active='true'] {
+            opacity: 1;
+            height: 75px;
+            width: 75px;
+          }
+        }
+        
+        @media (min-width: 1280px) {
+          left: 60vw;
+          top: 25vh;
 
           &[data-active='true'] {
             opacity: 1;
