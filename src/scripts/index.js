@@ -668,7 +668,9 @@ class RDX {
     const rdxPreloaderSVGFill = document.querySelector('.rdx-logo--svg_fill');
     const rdxPreloaderSVG = document.querySelector('.rect--svg');
     const rdxBannerPlay = document.querySelector('.rdx-video--player.-banner');
+    const container = document.querySelector('.rdx');
 
+    container.style.overflow = "hidden";
     rdxPreloaderSVG.setAttribute('data-active', 'true');
 
     setTimeout(() => {
@@ -680,6 +682,7 @@ class RDX {
       rdxBannerPlay && rdxBannerPlay.play();
 
       setTimeout(() => {
+        container.style.overflow = "auto";
         rdxPreloader.style.display = "none";
       }, 3000);
       this.animateBanner();
@@ -717,6 +720,9 @@ class RDX {
         if(active === false) {
           active = true;
           rdxDropdown.style.display = 'block';
+          
+          const container = document.querySelector('.rdx');
+          container.style.overflow = "hidden";
 
           setTimeout(() => {
             rdxDropdown.setAttribute('data-active', `${active}`);
@@ -739,6 +745,9 @@ class RDX {
           
           setTimeout(() => {
             rdxDropdown.style.display = 'none';
+            
+            const container = document.querySelector('.rdx');
+            container.style.overflow = "auto";
           }, 1800);
         }
       });

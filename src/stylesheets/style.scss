@@ -9,10 +9,15 @@
 @import '_panoramic';
 
 .rdx {
+  background: $dark-base;
   box-sizing: border-box;
   position: absolute;
   height: 100vh;
   width: 100vw;
+
+  &.-light {
+    background: $light;
+  }
 
   &-video {
     background: rgba($darkest, .80);
@@ -615,7 +620,7 @@
       }
       
       @media (min-width: 1920px) {
-        margin: 260px auto 30px;
+        margin: 280px auto 30px;
         width: 50%;
       }
     }
@@ -652,7 +657,7 @@
         transform: translateY(-50%);
 
         @media (min-width: 768px) {
-          left: 1350px;
+          left: 1250px;
         }
       }
     }

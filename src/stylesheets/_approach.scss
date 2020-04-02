@@ -138,12 +138,13 @@ html {
   }
 
   &-banner--scroll {
+    @include BasicGothicProDemibold;
     bottom: 0;
     height: 100px;
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
-    width: 100px;
+    width: 120px;
     z-index: 1;
 
     @media (min-width: 1024px) {
@@ -189,6 +190,18 @@ html {
       background-size: cover;
       height: 70vh;
 
+      @media (min-width: 1024px) {
+        height: 100vh;
+      }
+      
+      @media (min-width: 1440px) {
+        height: 90vh;
+      }
+      
+      @media (min-width: 1920px) {
+        height: 100vh;
+      }
+
       .rdx-banner--full_copy {
         left: 50%;
         padding: 0;
@@ -201,6 +214,10 @@ html {
         
         @media (min-width: 1024px) {
           width: 70%;
+        }
+        
+        @media (min-width: 1440px) {
+          width: 50%;
         }
         
         @media (min-width: 1920px) {
@@ -232,10 +249,6 @@ html {
           font-size: 48px;
           // width: 100%;
         }
-      }
-
-      @media (min-width: 1024px) {
-        height: 100vh;
       }
     }
     
@@ -325,6 +338,7 @@ html {
       }
       
       @media (min-width: 1440px) {
+        padding: 200px 0 0 70px;
         width: 60%;
       }
       
@@ -378,7 +392,7 @@ html {
       transition: all .25s ease-out;
       
       @media (min-width: 1024px) {
-        height: 50vh;
+        height: 70vh;
       }
       
       &:hover {
@@ -599,7 +613,7 @@ html {
           }
           
           @media (min-width: 1440px) {
-            width: 70%;
+            width: 50%;
           }
           
           @media (min-width: 1920px) {
@@ -622,7 +636,7 @@ html {
         @include BasicGothicProBold;
         color: $light;
         font-size: 28px;
-        line-height: 1;
+        line-height: 1.5;
         margin: 0;
         margin-bottom: 10px;
         padding: 0;
@@ -762,12 +776,13 @@ html {
         @include BasicGothicProBold;
         color: $light;
         font-size: 28px;
+        line-height: 1.5;
         margin: 0;
         text-transform: uppercase;
         padding: 0;
 
         @media (min-width: 768px) {
-          font-size: 38px;
+          font-size: 64px;
         }
       }
       
@@ -1031,6 +1046,10 @@ html {
         color: $light;
         display: block;
         text-decoration: none;
+
+        &:hover {
+          color: $light-base;
+        }
       }
 
       &.-links {
