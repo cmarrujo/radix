@@ -148,7 +148,7 @@ html {
     z-index: 1;
 
     @media (min-width: 1024px) {
-      bottom: 50px;
+      bottom: 20px;
     }
 
     &_text {
@@ -191,7 +191,7 @@ html {
       height: 70vh;
 
       @media (min-width: 1024px) {
-        height: 100vh;
+        height: 74vh;
       }
       
       @media (min-width: 1440px) {
@@ -199,6 +199,10 @@ html {
       }
       
       @media (min-width: 1920px) {
+        height: 83vh;
+      }
+      
+      @media (min-width: 2560px) {
         height: 100vh;
       }
 
@@ -221,7 +225,7 @@ html {
         }
         
         @media (min-width: 1920px) {
-          width: 45%;
+          width: 50%;
         }
         
         @media (min-width: 2560px) {
@@ -381,8 +385,74 @@ html {
   }
 
   &-pillars {
-    display: flex;
-    justify-content: space-between;
+    
+    &--heading {
+      background: $darkest;
+      margin-top: 100px;
+      opacity: 0;
+      transition: margin-top 1s, opacity 2s;
+
+      &.fade-in {
+        margin-top: 0;
+        opacity: 1;
+      }
+
+      &_wrapper {
+        @include BasicGothicProDemibold;
+        border: thin solid $darkest;
+        outline: thin solid $darkest;
+        box-sizing: border-box;
+        color: $light;
+        font-size: 24px;
+        margin: 0 auto;
+        padding: 20px 0;
+        text-align: center;
+        width: 70%;
+  
+        @media (min-width: 375px) {
+          width: 60%;
+        }
+        
+        @media (min-width: 414px) {
+          width: 50%;
+        }
+        
+        @media (min-width: 768px) {
+          font-size: 34px;
+          padding: 30px 0;
+          width: 40%;
+        }
+        
+        @media (min-width: 1024px) {
+          width: 30%;
+        }
+        
+        @media (min-width: 1280px) {
+          width: 25%;
+        }
+        
+        @media (min-width: 1440px) {
+          width: 20%;
+        }
+        
+        @media (min-width: 1920px) {
+          font-size: 48px;
+          width: 21%;
+        }
+        
+        @media (min-width: 2560px) {
+          font-size: 48px;
+          margin: auto;
+          padding: 50px 0;
+          width: 18%;
+        }
+      }
+    }
+
+    &--wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
 
     &--image {
       flex-grow: 1;
@@ -483,7 +553,7 @@ html {
       flex-grow: 1;
 
       &_image {
-        height: 30vh;
+        height: 50vh;
         margin-top: 100px;
         opacity: 0;
         transition: margin-top 1.25s ease-out, opacity 1s ease-out;
@@ -559,7 +629,7 @@ html {
         padding: 25px 30px;
         line-height: 1.5;
         position: relative;
-        height: 70vh;
+        height: 50vh;
         text-align: left;
         margin-top: 100px;
         opacity: 0;
@@ -742,6 +812,29 @@ html {
           &-wrapper {
             position: absolute;
             right: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40%;
+            text-align: left;
+            margin-top: 100px;
+            opacity: 0;
+            transition: margin-top 1s .5s, opacity 2s .5s;
+            
+            &.fade-in {
+              margin-top: 0;
+              opacity: 1;
+            }
+          }
+        }
+        
+        @media (min-width: 1440px) {
+          height: 100vh;
+          padding: 0;
+          position: relative;
+
+          &-wrapper {
+            position: absolute;
+            right: 0;
             top: 50%;
             transform: translateY(-50%);
             width: 40%;

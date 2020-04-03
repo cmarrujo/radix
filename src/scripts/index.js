@@ -419,9 +419,20 @@ class RDX {
   initTrigger = () => {
     // init controller
     let controller = new ScrollMagic.Controller();
+    const rdxPillarsWrapper = document.querySelector('.rdx-pillars--heading') && document.querySelector('.rdx-pillars--heading');
     const rdxPillars = [].slice.call(document.querySelectorAll('.rdx-pillars--image'));
-    const offset = 400;
+    const offset = 500;
 
+    if(rdxPillarsWrapper) {
+      let scene = new ScrollMagic.Scene({
+        triggerElement: rdxPillarsWrapper,
+        offset: `-${offset}px`,
+        reverse: false
+      })
+      .setClassToggle(rdxPillarsWrapper, 'fade-in')
+      .addTo(controller);
+    }
+    
     if(rdxPillars.length) {
       rdxPillars.forEach((pillar) => {
         // create a scene
@@ -672,7 +683,6 @@ class RDX {
     const rdxBannerPlay = document.querySelector('.rdx-video--player.-banner');
     const container = document.querySelector('.rdx');
 
-    container.style.overflow = "hidden";
     rdxPreloaderSVG.setAttribute('data-active', 'true');
 
     setTimeout(() => {
