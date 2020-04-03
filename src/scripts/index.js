@@ -315,6 +315,7 @@ class RDX {
           const timeline = new TimelineLite();
     
           modal && modal.setAttribute('data-active', 'false');
+          modal && (modal.style.display = 'none');
 
           setTimeout(() => {
             let tween = timeline.to(camera.rotation, 1, {
@@ -349,6 +350,7 @@ class RDX {
           const timeline = new TimelineLite();
 
           modal && modal.setAttribute('data-active', 'false');
+          modal && (modal.style.display = 'none');
 
           setTimeout(() => {
             let tween = timeline.to(camera.rotation, 1, {
