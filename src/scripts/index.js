@@ -452,7 +452,7 @@ class RDX {
     let controller = new ScrollMagic.Controller();
     const rdxSplitImage = [].slice.call(document.querySelectorAll('.rdx-split--content_image'));
     const rdxSplitDesc = [].slice.call(document.querySelectorAll('.rdx-split--content_desc'));
-    const offset = 400;
+    const offset = 500;
 
     if(rdxSplitImage.length) {
       rdxSplitImage.forEach((image) => {
@@ -486,7 +486,7 @@ class RDX {
     let controller = new ScrollMagic.Controller();
     const rdxFullImage = [].slice.call(document.querySelectorAll('.rdx-full--content_image'));
     const rdxFullWrapper = [].slice.call(document.querySelectorAll('.rdx-full--content_image-wrapper'));
-    const offset = 400;
+    const offset = 500;
 
     rdxFullImage.forEach((image) => {
       // create a scene
@@ -518,7 +518,7 @@ class RDX {
     const rdxActionText = document.querySelector('.rdx-action--text');
     const rdxActionButton = document.querySelector('.btn.-line.-dark');
     const rdxFooter = document.querySelector('.rdx-footer');
-    const offset = 400;
+    const offset = 500;
 
     // create a scene
     if(rdxActionStrip) {

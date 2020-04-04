@@ -1,6 +1,6 @@
 .rdx {
   &-banner--full {
-    
+
     &.-performance {
       background: url('../images/performance-experts-banner-seq-3.jpg') top center no-repeat;
       background-size: cover;
@@ -211,11 +211,25 @@
         z-index: 1;
 
         @media (min-width: 375px) {
+          padding: 120px 25px 0;
           width: 85%;
+        }
+        
+        @media (min-width: 375px) 
+          and (min-height: 812px) {
+          padding: 140px 25px 0;
+        }
+        
+        @media (min-width: 768px) {
+          padding: 180px 25px 0;
         }
         
         @media (min-width: 1024px) {
           width: 60%;
+        }
+        
+        @media (min-width: 1280px) {
+          padding: 210px 25px 0;
         }
         
         @media (min-width: 1440px) {

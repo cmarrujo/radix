@@ -293,7 +293,7 @@ html {
       }
       
       @media (min-width: 1440px) {
-          // height: 100vh;
+          height: 100vh;
 
           &.-thank-you {
             height: 60vh;
@@ -717,6 +717,7 @@ html {
         }
         
         @media (min-width: 1024px) {
+          line-height: 1.25;
           font-size: 64px;
         }
       }
